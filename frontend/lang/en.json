@@ -1,0 +1,457 @@
+{
+  "common": {
+    "status": {
+      "loading": "Loading…",
+      "empty": "No data"
+    },
+    "nav": {
+      "home": "Home",
+      "products": "Products",
+      "news": "News",
+      "about": "About Us",
+      "contact": "Contact Us"
+    },
+    "header": {
+      "logo": "Zhi'ao Thread Industry",
+      "welcome": "Welcome to Zhi'ao Thread Industry", 
+      "get_quote": "Get Quote"
+    },
+    "footer": {
+      "desc": "Zhi'ao Thread Industry is a globally leading manufacturer of high-quality sewing threads, boasting over 20 years of production experience and committed to delivering exceptional sewing solutions to the global textile industry.",
+      "contact": "Contact Us",
+      "address": "Address",
+      "sitemap": "Sitemap",
+      "privacy": "Privacy",
+      "terms": "Terms of Service",
+      "copyright": "All rights reserved",
+      "quick_links": "Quick Links",
+      "product_categories": "Product Categories",
+      "contact_hours": "Monday to Friday: 9:00--18:00"
+    },
+    "actions": {
+      "view_details": "View Details",
+      "learn_more": "Learn More",
+      "submit": "Submit"
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "products": "Products",
+      "about": "About Us",
+      "contact": "Contact Us",
+      "news": "News Center"
+    }
+  },
+  "home": {
+    "seo": {
+      "title": "Hubei Zhiao Thread Co., Ltd. | Polyester Sewing Thread Supplier",
+      "keywords": "polyester sewing thread, sewing thread manufacturer, polyester thread for garment, industrial sewing thread",
+      "description": "Professional manufacturer of high-tenacity polyester sewing thread. Stable quality, competitive price, customized service, global export."
+    },
+    "hero": {
+      "title": "High-Quality Sewing Thread Solutions for All Industries",
+      "subtitle": "Excellence in every stitch, precision in every spool",
+      "browse": "Browse Products",
+      "contact": "Contact Sales",
+      "customization": "Customization Service",
+      "delivery": "Global Fast Delivery",
+      "certification": "ISO 9001 Certification"
+    },
+    "advantages": {
+      "title": "Our Core Advantages",
+      "subtitle": "Zhi'ao Thread Industry is committed to providing world-class products and services",
+      "items": [
+        {
+          "title": "Exceptional Quality",
+          "desc": "Using premium raw materials and strict ISO quality systems to ensure every inch meets international standards."
+        },
+        {
+          "title": "R&D Innovation",
+          "desc": "Our professional R&D team continuously develops new functional threads to meet evolving market needs."
+        },
+        {
+          "title": "Global Delivery",
+          "desc": "A comprehensive global warehousing and logistics network ensures timely delivery to over 100 countries."
+        },
+        {
+          "title": "Eco-Friendly",
+          "desc": "Committed to sustainability with OEKO-TEX certification, focusing on reducing environmental impact."
+        }
+      ]
+    },
+    "products": {
+      "title": "Featured Products",
+      "subtitle": "Explore our range of high-performance sewing threads to power your business",
+      "view_all": "View All Products"
+    },
+    "applications": {
+      "title": "Wide Range of Applications",
+      "subtitle": "Our threads are used across various industries to meet diverse sewing requirements",
+      "clothing": "Clothing Industry",
+      "footwear": "Footwear Industry",
+      "automotive": "Automotive Industry",
+      "home": "Home Industry",
+      "embroidery": "Embroidery Industry",
+      "textiles": "Textiles Industry"
+    },
+    "trust": {
+      "title": "Quality is Our Lifeline",
+      "desc": "We are more than just a thread manufacturer; we are your reliable partner. Through rigorous QC and international certifications, we ensure every delivery exceeds expectations.",
+      "assurance": "Quality Assurance",
+      "experience": "Industry Experience",
+      "certifications": "Certifications",
+      "color": "Color Options",
+      "global": "Global Markets",
+      "iso_certification": "International standard for quality management systems.",
+      "oeko_tex_certification": "Testing for harmful substances in textiles.",
+      "grs_certification": "Global Recycled Standard for sustainable products.",
+      "sgs_certification": "World-leading inspection and certification."
+    },
+    "blog": {
+      "title": "Latest News & Insights",
+      "subtitle": "Stay updated with industry trends, technical guides, and the latest from Zhi'ao Thread Industry",
+      "read_full": "READ FULL ARTICLE"
+    }
+  },
+  "products": {
+    "seo": {
+      "title": "Polyester Sewing Thread - Zhi'ao Thread Industry",
+      "keywords": "polyester sewing thread, sewing thread manufacturer, polyester thread for garment, industrial sewing thread",
+      "description": "Zhi'ao Thread Industry specializes in manufacturing high-quality, durable, threads for a wide range of applications, including fashion, home, and industrial use."
+    },
+    "list": {
+      "title": "Our Sewing Thread Products",
+      "subtitle": "Explore our range of high-quality sewing threads for all your needs",
+      "filter_title": "Filter Products",
+      "categories": "Categories",
+      "specs": "Specifications",
+      "colors": "Color Series",
+      "all_categories": "All Categories",
+      "polyester": "Polyester Thread",
+      "cotton": "Cotton Thread",
+      "nylon": "Nylon Thread",
+      "silk": "Silk Thread",
+      "aramid": "Aramid Thread",
+      "high_tenacity": "High Tenacity Thread",
+      "recycled": "Recycled Eco Thread",
+      "spec_20s2": "20s/2",
+      "spec_40s2": "40s/2",
+      "spec_50s2": "50s/2",
+      "spec_60s2": "60s/2",
+      "search_placeholder": "Search products...",
+      "no_results": "No products found matching your search",
+      "items_count": "{count} products total"
+    },
+    "detail": {
+      "inquiry": "Inquire Now",
+      "sku": "Model",
+      "color": "Color",
+      "length": "Length",
+      "tenacity": "Tenacity",
+      "category": "Category",
+      "tags": "Tags",
+      "description": "Product Details",
+      "specifications": "Specifications",
+      "faq": "FAQ",
+      "related_products": "Related Products",
+      "features": "Core Features",
+      "back_to_list": "Back to List"
+    }
+  },
+  "about": {
+    "seo": {
+      "title": "About Us | Hubei Zhi'ao Thread Industry",
+      "description": "Learn about SewPro (Hubei Zhi'ao Thread Industry): our story, core values, production process, and leadership team. We manufacture premium industrial sewing threads with customization and stable supply.",
+      "keywords": "Hubei Zhi'ao Thread Industry, SewPro, about us, industrial sewing thread manufacturer, polyester sewing thread, custom sewing thread, production process, quality control"
+    },
+    "hero": {
+      "title": "About Hubei Zhi'ao Thread Industry",
+      "subtitle": "Since 2003, your trusted partner for premium sewing thread solutions"
+    },
+    "story": {
+      "kicker": "Our Story",
+      "title": "A Leading Sewing Thread Manufacturer in China",
+      "desc": "Founded in 2003, Hubei Zhi'ao Thread Industry is a professional manufacturer and supplier of high-quality industrial sewing threads. With a 25,000㎡ modern facility equipped with advanced spinning, twisting, dyeing, and winding lines, we deliver an annual capacity of 6,000+ tons. Our products are exported to 50+ countries across North America, Europe, Asia, Africa, and Oceania, serving 2,000+ satisfied customers worldwide.",
+      "stats": {
+        "experience": "Years in Industry",
+        "capacity": "Tons / Year",
+        "countries": "Countries & Regions",
+        "customers": "Happy Customers"
+      }
+    },
+    "profile": {
+      "title": "Company Profile",
+      "desc1": "Founded in the 1990s, Zhi'ao Thread Industry is headquartered in China's primary sewing thread production hub. Through over 30 years of steady growth, we have evolved into a modern, large-scale enterprise integrating R&D, production, and sales.",
+      "desc2": "We operate modern production facilities spanning over 50,000 square meters, equipped with world-leading spinning, twisting, dyeing, and winding machinery. With an annual capacity exceeding 20,000 tons, our products reach over 100 countries worldwide."
+    },
+    "stats": {
+      "experience": "Years Experience",
+      "capacity": "Annual Capacity (Tons)",
+      "countries": "Export Countries",
+      "employees": "Professional Staff"
+    },
+    "mission": {
+      "title": "Mission & Vision",
+      "mission_title": "Our Mission",
+      "mission_desc": "To provide premium sewing thread products and outstanding service, helping customers produce high-quality goods efficiently and economically.",
+      "mission_bullets": [
+        "Every product we make carries a commitment to excellence",
+        "Continuous innovation to meet evolving industry needs",
+        "Long-term partnerships built on trust and mutual benefit",
+        "Sustainable production practices and environmental responsibility"
+      ],
+      "vision_title": "Our Vision",
+      "vision_desc": "To be a leading global sewing thread solutions provider, recognized for product quality, technical expertise, and commitment to customer success.",
+      "vision_bullets": [
+        "Expand globally and serve customers worldwide",
+        "Invest in R&D to create innovative sewing thread products",
+        "Adopt advanced manufacturing to improve efficiency",
+        "Set industry benchmarks for quality, sustainability, and ethical manufacturing",
+        "Build a more reliable and stable global supply capability"
+      ]
+    },
+    "values": {
+      "title": "Core Values That Drive Our Growth",
+      "subtitle": "These fundamental values guide our decisions and define who we are as a company.",
+      "items": [
+        { "title": "Quality First", "desc": "We focus on quality at every step—from material selection to final inspection—to ensure consistent performance." },
+        { "title": "Customer First", "desc": "We respond quickly with professional suggestions and support to help customers improve efficiency and competitiveness." },
+        { "title": "Innovation & Progress", "desc": "We continuously invest in R&D and process upgrades to deliver more stable, durable, and sustainable solutions." },
+        { "title": "Integrity", "desc": "We operate with honesty, transparency, and ethical standards, building long-term trust with partners." },
+        { "title": "Teamwork", "desc": "Collaboration across teams and continuous talent development drive our execution and growth." },
+        { "title": "Sustainability", "desc": "We integrate environmental responsibility into production, promoting energy saving and eco-friendly materials." }
+      ]
+    },
+    "process": {
+      "kicker": "Our Process",
+      "title": "Our Production Process",
+      "subtitle": "Advanced facilities and strict quality control ensure every spool meets our high standards.",
+      "steps": [
+        {
+          "title": "Raw Material Selection & Inspection",
+          "desc": "We source premium virgin polyester, nylon, and cotton fibers from qualified suppliers. Every batch is strictly inspected before entering production.",
+          "bullets": ["100% virgin fibers", "Qualified supplier checks", "Full quality inspection"]
+        },
+        {
+          "title": "Twisting & Plying",
+          "desc": "Fibers are spun into yarn, then twisted and plied to meet the required ticket and tensile strength. Precision equipment ensures uniformity and stability.",
+          "bullets": ["Precise twist control", "Consistent linear density", "Real-time monitoring"]
+        },
+        {
+          "title": "Dyeing & Color Matching",
+          "desc": "We use high-quality, eco-friendly dyes for excellent color fastness. Our color team supports customized color matching services.",
+          "bullets": ["10,000+ standard colors", "Custom color matching", "Eco-friendly dyeing"]
+        },
+        {
+          "title": "Winding & Lubrication",
+          "desc": "Dyed threads are wound into cones or spools per requirements. Special lubrication reduces friction and improves sewability and performance.",
+          "bullets": ["Accurate tension control", "Knotless winding option", "Special lubrication treatment"]
+        },
+        {
+          "title": "Quality Inspection & Testing",
+          "desc": "Each batch is tested in our in-house lab, including tensile strength, elongation, and color fastness. Detailed quality reports are available.",
+          "bullets": ["100% batch inspection", "Standards-compliant tests", "Detailed QC reports"]
+        },
+        {
+          "title": "Packaging & Delivery",
+          "desc": "Products are packaged per customer specifications with clear labeling and batch tracking. Our logistics team supports timely global delivery.",
+          "bullets": ["Custom packaging available", "Fast order handling", "Global delivery solutions"]
+        }
+      ]
+    },
+
+    "cta": {
+      "title": "Visit Our Factory",
+      "subtitle": "Book a tour to see our modern facility and the full quality-controlled process from raw materials to finished goods.",
+      "primary": "Book a Tour",
+      "secondary": "Browse Products"
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "Contact Us | Hubei Zhi'ao Thread Industry",
+      "description": "Contact SewPro (Hubei Zhi'ao Thread Industry) for quotes, samples, and custom industrial sewing thread solutions. Fast response and reliable global delivery support.",
+      "keywords": "contact us, SewPro, Hubei Zhi'ao Thread Industry, get a quote, sewing thread samples, custom industrial sewing thread, inquiry, wholesale sewing thread"
+    },
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We are here to answer your questions and provide the best sewing thread solutions for your business."
+    },
+    "section": {
+      "kicker": "Get in Touch",
+      "title": "Contact Information",
+      "desc": "Whether you have product questions, need a quote, or want to schedule a factory visit, our team is ready to help with all your sewing thread needs."
+    },
+    "cards": {
+      "address": {
+        "title": "Factory Address",
+        "value": "No. 123 Textile City Industrial Park, Shaoxing, Zhejiang, China 312000"
+      },
+      "phone": {
+        "title": "Phone & WeChat",
+        "value": "+86 138 0000 0000"
+      },
+      "email": {
+        "title": "Email",
+        "value": "sales{'@'}sewprothread.com"
+      },
+      "hours": {
+        "title": "Working Hours",
+        "value_1": "Mon - Fri: 9:00 - 18:00 (GMT+8)",
+        "value_2": "Sat: 9:00 - 12:00 (GMT+8)"
+      }
+    },
+    "follow": {
+      "title": "Follow Us"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "address_val": "No. 88 Chuangye Road, High-tech Zone, Yinzhou District, Ningbo, Zhejiang, China",
+      "phone": "Phone",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "hours": "Business Hours",
+      "hours_val": "Mon - Fri: 9:00 - 18:00 (GMT+8)"
+    },
+    "form": {
+      "title": "Leave a Message",
+      "subtitle": "Fill in the form below and we will reply within 24 hours on business days.",
+      "name": "Your Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "phone": "Phone / WeChat",
+      "country": "Country / Region",
+      "interest": "Interested Product",
+      "subject": "Subject",
+      "message": "Message",
+      "placeholder_name": "Enter your full name",
+      "placeholder_email": "Your email address",
+      "placeholder_company": "Enter your company name",
+      "placeholder_phone": "Enter your phone number",
+      "placeholder_country": "Select your country",
+      "placeholder_interest": "Select model",
+      "placeholder_subject": "Enter message subject",
+      "placeholder_message": "Describe your requirements in detail, including product type, specifications, quantity, application, etc.",
+      "countries": {
+        "CN": "China",
+        "VN": "Vietnam",
+        "TH": "Thailand",
+        "ID": "Indonesia",
+        "KH": "Cambodia",
+        "FR": "France",
+        "IT": "Italy",
+        "AE": "United Arab Emirates",
+        "US": "United States"
+      },
+      "product_types": {
+        "polyester": "Polyester Thread",
+        "cotton": "Cotton Thread",
+        "nylon": "Nylon Thread",
+        "high_tenacity": "High Tenacity Thread",
+        "recycled": "Recycled Thread"
+      },
+      "upload_title": "Click to upload or drag files here",
+      "upload_hint": "PDF, JPG, PNG supported. Max 10MB per file.",
+      "submit": "Send Message",
+      "submitting": "Sending",
+      "success_msg": "Your message has been sent successfully. We will get back to you soon!"
+    },
+    "faq": {
+      "kicker": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find common answers about our products, ordering process, and services.",
+      "items": [
+        {
+          "q": "What is your minimum order quantity (MOQ)?",
+          "a": "For standard items, the MOQ is 100 cartons per color. For custom colors, the MOQ is 300 cartons per color. We also accept small trial orders for new customers—please contact our sales team for details."
+        },
+        {
+          "q": "Can you provide free samples?",
+          "a": "Yes. We can provide standard color samples for testing and confirmation. Please share the product type, specification, and color requirements, and we will arrange delivery (shipping policy depends on the case)."
+        },
+        {
+          "q": "What is your production lead time?",
+          "a": "In-stock items can be shipped quickly. Custom orders typically take 7–15 business days, depending on product type, color, and quantity."
+        },
+        {
+          "q": "Do you offer custom color matching?",
+          "a": "Yes. We support color matching based on color codes or physical samples, and can adjust targets for shade and fastness according to your requirements."
+        },
+        {
+          "q": "What payment methods do you accept?",
+          "a": "We commonly support T/T. Payment terms for bulk orders can be discussed based on cooperation and order details."
+        },
+        {
+          "q": "Can you provide customized packaging with our logo?",
+          "a": "Yes. We support custom labels and carton printing. Please provide your artwork files and packaging requirements."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Get a Quote Now",
+      "subtitle": "Contact our sales team for competitive pricing, free samples, and tailored sewing thread solutions for your business.",
+      "email_label": "Email",
+      "wechat_label": "WeChat"
+    }
+  },
+  "inquiry": {
+    "seo": {
+      "title": "Request a Quote | Hubei Zhi'ao Thread Industry",
+      "description": "Submit your inquiry and purchasing requirements. We will provide a competitive quote and product information within 24 hours.",
+      "keywords": "request a quote, inquiry, sewing thread quote, industrial sewing thread, SewPro"
+    },
+    "hero": {
+      "title": "Request a Quote",
+      "subtitle": "Please fill in your requirements. We will provide a competitive quote and product information within 24 hours."
+    },
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "phone": "Phone / WeChat",
+      "country": "Country / Region",
+      "model": "Model",
+      "quantity": "Estimated Quantity",
+      "color": "Color Requirement",
+      "message": "Other Requirements",
+      "placeholder_name": "Enter your full name",
+      "placeholder_email": "Your email address",
+      "placeholder_company": "Enter your company name",
+      "placeholder_phone": "Enter your phone number",
+      "placeholder_country": "Select your country",
+      "placeholder_model": "Select model",
+      "placeholder_quantity": "e.g., 500 cartons / 10 tons",
+      "placeholder_color": "Select color",
+      "placeholder_message": "Describe your requirements, specifications, quantity, lead time, etc.",
+      "upload_title": "Click to upload or drag files here",
+      "upload_hint": "PDF, JPG, PNG supported. Max 10MB per file.",
+      "submit": "Submit Inquiry",
+      "submitting": "Submitting",
+      "success_msg": "Submitted successfully. We will contact you soon!",
+      "subject_default": "Product Inquiry"
+    }
+  },
+  "news": {
+    "seo": {
+      "title": "News Center | Hubei Zhi'ao Thread Industry",
+      "description": "News from SewPro (Hubei Zhi'ao Thread Industry): industry insights, product guides, and company updates about sewing thread materials, processes, and applications.",
+      "keywords": "news center, industry trends, product guides, company news, sewing thread knowledge, sewing thread insights"
+    },
+    "categories": {
+      "all": "All"
+    },
+    "list": {
+      "title": "News Center",
+      "subtitle": "Stay updated with industry trends, product guides, and company news"
+    },
+    "detail": {
+      "published_at": "Published on",
+      "category": "Category",
+      "back": "Back to List",
+      "related": "Related News",
+      "latest": "Latest News",
+      "categories": "Categories",
+      "share": "Share:"
+    }
+  }
+}

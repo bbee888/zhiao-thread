@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-slate-700 bg-gray-50;
+    font-family: 'Source Han Sans', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  }
+}
+
+.rtl {
+  direction: rtl;
+}

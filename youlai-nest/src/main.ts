@@ -1,0 +1,131 @@
+import { NestFactory, Reflector } from "@nestjs/core";
+import { AppModule } from "./app.module";
+import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
+import { ValidationPipe, HttpStatus } from "@nestjs/common";
+import { ResponseInterceptor } from "./core/interceptors/response.interceptor";
+import { ConfigService } from "@nestjs/config";
+import * as session from "express-session";
+import * as express from "express";
+import type { ValidationError } from "class-validator";
+import { BusinessException } from "./common/exceptions/business.exception";
+import { ErrorCode } from "./common/enums/error-code.enum";
+import { Logger } from "@nestjs/common";
+import * as path from "path";
+
+async function bootstrap() {
+  const logger = new Logger("Bootstrap");
+  // Ensure BigInt is always JSON-serializable (and matches Java Long/BigInteger -> string strategy)
+
+  if (typeof (BigInt.prototype as any).toJSON !== "function") {
+    (BigInt.prototype as any).toJSON = function () {
+      return this.toString();
+    };
+  }
+
+  const app = await NestFactory.create(AppModule);
+  const configService = app.get(ConfigService);
+
+  // 静态文件服务（必须在全局前缀之前配置）
+  // 为本地存储的文件提供访问服务
+  const ossType = configService.get<string>("oss.type");
+  if (ossType === "local") {
+    let storagePath = configService.get<string>("oss.local.storagePath");
+    if (storagePath) {
+      if (!path.isAbsolute(storagePath)) {
+        // 使用 process.cwd() 获取项目根目录，或者使用 __dirname 向上查找
+        storagePath = path.resolve(process.cwd(), storagePath);
+      }
+      logger.log(`本地存储路径: ${storagePath}`);
+      // 使用 express 的 static 中间件提供静态文件服务，挂载到 /oss 路径下
+      app.use("/oss", express.static(storagePath));
+      // 为了兼容旧路径，同时也挂载到根路径（可选）
+      app.use("/", express.static(storagePath));
+    }
+  }
+
+  // 全局前缀
+  app.setGlobalPrefix("/api/v1");
+
+  // 跨域设置
+  app.enableCors({
+    origin: true,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+    credentials: true,
+  });
+
+  // 全局拦截器
+  // Pass ConfigService to ResponseInterceptor so date formatting is configurable
+  app.useGlobalInterceptors(new ResponseInterceptor(app.get(Reflector), configService));
+
+  // 全局验证管道
+  app.useGlobalPipes(
+    new ValidationPipe({
+      transform: true,
+      transformOptions: {
+        enableImplicitConversion: true,
+      },
+      whitelist: true,
+      forbidNonWhitelisted: false,
+      exceptionFactory: (errors: ValidationError[]) => {
+        const collect = (es: ValidationError[]): string[] => {
+          const out: string[] = [];
+          for (const e of es) {
+            if (e.constraints) {
+              out.push(...Object.values(e.constraints));
+            }
+            if (e.children && e.children.length > 0) {
+              out.push(...collect(e.children));
+            }
+          }
+          return out;
+        };
+
+        const messages = collect(errors)
+          .map((m) => String(m).trim())
+          .filter(Boolean);
+        const msg = messages[0] || ErrorCode.USER_REQUEST_PARAMETER_ERROR.msg;
+        return new BusinessException({
+          code: ErrorCode.USER_REQUEST_PARAMETER_ERROR.code,
+          msg,
+          httpStatus: HttpStatus.BAD_REQUEST,
+        });
+      },
+    })
+  );
+
+  // Swagger 配置
+  const config = new DocumentBuilder()
+    .setTitle("youlai-nest")
+    .setDescription(`youlai 全家桶（Node/Nest 11）权限管理后台接口文档 new`)
+    .setVersion("1.0")
+    .addBearerAuth()
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  // 使用 alpha 排序
+  SwaggerModule.setup("api-docs", app, document, {
+    swaggerOptions: {
+      tagsSorter: "alpha",
+    },
+  });
+
+  // Session 配置
+  app.use(
+    session({
+      secret: configService.getOrThrow<string>("jwt.secretKey"),
+      resave: false,
+      saveUninitialized: false,
+      cookie: {
+        maxAge: 1000 * 60 * 60 * 24 * 7, // 7天
+      },
+    })
+  );
+
+  // 端口通过环境变量 SERVER_PORT 配置（默认 8000）
+  const portRaw = configService.get("APP_PORT") ?? configService.get("SERVER_PORT") ?? 8000;
+  const port = Number(portRaw) || 8000;
+  await app.listen(port);
+  logger.log(`应用已启动: http://localhost:${port}`);
+  logger.log(`接口文档: http://localhost:${port}/api-docs`);
+}
+
+void bootstrap();
