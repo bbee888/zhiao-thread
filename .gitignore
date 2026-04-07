@@ -10,6 +10,8 @@ stats.html
 *.local
 .env.local
 .env.*.local
+.env
+.env.*
 
 # Editor directories and files
 .idea/
@@ -37,3 +39,7 @@ yarn.lock
 
 # Local history
 .history
+
+# Backend local env
+youlai-nest/.env
+youlai-nest/.env.*
