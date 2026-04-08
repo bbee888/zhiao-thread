@@ -49,13 +49,16 @@ import { DataPermissionInterceptor } from "./core/interceptors/data-permission.i
 import { initDataPermissionPlugin } from "./core/plugins/data-permission.plugin";
 import { AuditSubscriber } from "./core/subscribers/audit.subscriber";
 
-const envPath = `.env.${process.env.NODE_ENV || "dev"}`;
+const rawNodeEnv = process.env.NODE_ENV || "dev";
+const normalizedNodeEnv =
+  rawNodeEnv === "development" ? "dev" : rawNodeEnv === "production" ? "prod" : rawNodeEnv;
+const envPath = `.env.${normalizedNodeEnv}`;
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: [".env", envPath],
+      envFilePath: [".env", `.env.${rawNodeEnv}`, envPath],
       load: [typeormConfig, redisConfig, ossConfig, jwtConfig],
     }),
     TypeOrmModule.forRootAsync({
