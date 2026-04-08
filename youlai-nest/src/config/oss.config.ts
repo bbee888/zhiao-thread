@@ -1,4 +1,4 @@
-﻿import { registerAs } from "@nestjs/config";
+import { registerAs } from "@nestjs/config";
 
 // OSS 对象存储配置
 // 支持 aliyun、minio、local 三种类型，通过 OSS_TYPE 切换
@@ -36,6 +36,6 @@ export default registerAs("oss", () => ({
   // 本地存储配置
   local: {
     // 文件存储路径
-    storagePath: process.env.OSS_LOCAL_STORAGE_PATH,
+    storagePath: process.env.OSS_LOCAL_STORAGE_PATH || "data/oss",
   },
 }));

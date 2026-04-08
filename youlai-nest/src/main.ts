@@ -29,18 +29,16 @@ async function bootstrap() {
   // 为本地存储的文件提供访问服务
   const ossType = configService.get<string>("oss.type");
   if (ossType === "local") {
-    let storagePath = configService.get<string>("oss.local.storagePath");
-    if (storagePath) {
-      if (!path.isAbsolute(storagePath)) {
-        // 使用 process.cwd() 获取项目根目录，或者使用 __dirname 向上查找
-        storagePath = path.resolve(process.cwd(), storagePath);
-      }
-      logger.log(`本地存储路径: ${storagePath}`);
-      // 使用 express 的 static 中间件提供静态文件服务，挂载到 /oss 路径下
-      app.use("/oss", express.static(storagePath));
-      // 为了兼容旧路径，同时也挂载到根路径（可选）
-      app.use("/", express.static(storagePath));
+    let storagePath = configService.get<string>("oss.local.storagePath") || "data/oss";
+    if (!path.isAbsolute(storagePath)) {
+      // 使用 process.cwd() 获取项目根目录，或者使用 __dirname 向上查找
+      storagePath = path.resolve(process.cwd(), storagePath);
     }
+    logger.log(`本地存储路径: ${storagePath}`);
+    // 使用 express 的 static 中间件提供静态文件服务，挂载到 /oss 路径下
+    app.use("/oss", express.static(storagePath));
+    // 为了兼容旧路径，同时也挂载到根路径（可选）
+    app.use("/", express.static(storagePath));
   }
 
   // 全局前缀
