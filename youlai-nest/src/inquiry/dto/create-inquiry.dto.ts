@@ -55,6 +55,12 @@ export class CreateInquiryDto {
   @MaxLength(255)
   attachmentName?: string;
 
+  @ApiProperty({ description: "附件URL", required: false })
+  @IsString()
+  @IsOptional()
+  @MaxLength(1024)
+  attachmentUrl?: string;
+
   @ApiProperty({ description: "提交语言", required: false })
   @IsString()
   @IsOptional()

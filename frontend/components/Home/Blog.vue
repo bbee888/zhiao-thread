@@ -1,15 +1,15 @@
 <template>
-  <section class="py-24 bg-white">
+  <section class="py-14 sm:py-16 md:py-24 bg-white">
     <div class="container mx-auto max-w-7xl px-4 md:px-8">
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{{ $t('home.blog.title') }}</h2>
         <div class="w-20 h-1.5 bg-blue-600 mx-auto mb-6 rounded-full"></div>
         <p class="text-lg text-slate-600">{{ $t('home.blog.subtitle') }}</p>
       </div>
 
       <!-- Blog Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
         <article v-for="post in posts" :key="post.id" class="group cursor-pointer">
           <NuxtLink :to="localePath(`/news/${post.id}`)" class="relative aspect-[16/10] rounded-xl overflow-hidden mb-6 block">
             <img
@@ -23,7 +23,7 @@
             </div>
           </NuxtLink>
           
-          <div class="flex items-center gap-4 text-slate-400 text-sm mb-4">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-slate-400 text-sm mb-4">
             <span class="flex items-center gap-1">
               <i class="ri-calendar-line"></i>
               {{ post.date }}
@@ -57,7 +57,7 @@
 
 <script setup>
 const localePath = useLocalePath()
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 const config = useRuntimeConfig()
 const apiBase = config.public.apiBase
 const fallbackCover = '/img/a3.jpg'
@@ -125,8 +125,7 @@ const handleCoverError = (e) => {
 const formatReadTime = (contentHtml) => {
   const text = toPlainText(contentHtml)
   const minutes = Math.max(1, Math.ceil(text.length / 600))
-  if (locale.value === 'zh') return `${minutes} 分钟阅读`
-  return `${minutes} min read`
+  return t('common.labels.read_time', { minutes })
 }
 
 const { data: categoryRes } = await useFetch('/articles/categories', {

@@ -21,7 +21,7 @@
     <header class="py-12 lg:py-20 bg-slate-50 border-b border-gray-100">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
-          <div class="flex items-center justify-center gap-4 mb-6">
+          <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mb-6">
             <span class="px-4 py-1 bg-blue-100 text-blue-600 text-xs font-bold rounded-full uppercase tracking-wider">
               {{ article.categoryName }}
             </span>
@@ -33,7 +33,7 @@
           <h1 class="text-3xl lg:text-5xl font-bold text-slate-900 mb-8 leading-tight">
             {{ article.title }}
           </h1>
-          <p class="text-xl text-slate-500 leading-relaxed italic">
+          <p class="text-base sm:text-lg lg:text-xl text-slate-500 leading-relaxed italic">
             {{ article.excerpt }}
           </p>
         </div>
@@ -79,7 +79,7 @@
 
         <!-- Sidebar -->
         <aside class="lg:w-1/3">
-          <div class="sticky top-24 space-y-12">
+          <div class="lg:sticky lg:top-24 space-y-10 lg:space-y-12">
             <!-- Latest News -->
             <div>
               <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center">
@@ -112,7 +112,7 @@
             </div>
 
             <!-- Categories Card -->
-            <div class="bg-slate-50 p-8 rounded-xl">
+            <div class="bg-slate-50 p-6 sm:p-8 rounded-xl">
               <h3 class="text-xl font-bold text-slate-900 mb-6">{{ $t('news.detail.categories') }}</h3>
               <div class="space-y-3">
                 <button
@@ -142,6 +142,7 @@ const localePath = useLocalePath()
 const { t, locale } = useI18n()
 const config = useRuntimeConfig()
 const apiBase = config.public.apiBase
+const requestURL = useRequestURL()
 
 const pickLangValue = (langData) => {
   if (!langData || typeof langData !== 'object') return undefined
@@ -258,12 +259,26 @@ const article = computed(() => {
   }
 })
 
+const canonicalUrl = computed(() => {
+  return `${requestURL.origin}${route.path}`
+})
+
 useHead(() => ({
   title: article.value.rawTitle || t('news.seo.title'),
   meta: [
     { name: 'description', content: article.value.description || article.value.excerpt, key: 'description' },
-    { name: 'keywords', content: article.value.keywords || t('news.seo.keywords'), key: 'keywords' }
-  ]
+    { name: 'keywords', content: article.value.keywords || t('news.seo.keywords'), key: 'keywords' },
+    { property: 'og:title', content: article.value.rawTitle || t('news.seo.title'), key: 'og:title' },
+    { property: 'og:description', content: article.value.description || article.value.excerpt, key: 'og:description' },
+    { property: 'og:type', content: 'article', key: 'og:type' },
+    { property: 'og:url', content: canonicalUrl.value, key: 'og:url' },
+    ...(article.value.image ? [{ property: 'og:image', content: article.value.image, key: 'og:image' }] : []),
+    { name: 'twitter:card', content: article.value.image ? 'summary_large_image' : 'summary', key: 'twitter:card' },
+    { name: 'twitter:title', content: article.value.rawTitle || t('news.seo.title'), key: 'twitter:title' },
+    { name: 'twitter:description', content: article.value.description || article.value.excerpt, key: 'twitter:description' },
+    ...(article.value.image ? [{ name: 'twitter:image', content: article.value.image, key: 'twitter:image' }] : [])
+  ],
+  link: [{ rel: 'canonical', href: canonicalUrl.value }]
 }))
 
 const { data: latestRes } = await useFetch('/articles', {

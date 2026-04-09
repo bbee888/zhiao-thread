@@ -8,7 +8,9 @@
     "nav": {
       "home": "首页",
       "products": "产品中心",
+      "applications": "应用领域",
       "about": "关于我们",
+      "quality": "质量管控",
       "news": "资讯中心",
       "contact": "联系我们"
     },
@@ -16,15 +18,13 @@
       "title": "湖北智奥线业有限公司",
       "logo": "智奥线业",
       "welcome": "欢迎来到智奥线业",
+      "free_shipping": "订单满 $500 免运费",
       "get_quote": "获取报价"
     },
     "footer": {
       "desc": "智奥线业是全球领先的高品质缝纫线制造商，拥有超过20年的生产经验，致力于为全球纺织行业提供卓越的缝纫解决方案。",
       "contact": "联系我们",
       "address": "湖北省汉川市城隍工业园区",
-      "sitemap": "网站地图",
-      "privacy": "隐私政策",
-      "terms": "服务条款",
       "copyright": "版权所有",
       "quick_links": "快速链接",
       "product_categories": "产品分类",
@@ -34,6 +34,10 @@
       "view_details": "查看详情",
       "learn_more": "了解更多",
       "submit": "提交"
+    },
+    "labels": {
+      "category_fallback": "分类 {id}",
+      "read_time": "{minutes} 分钟阅读"
     },
     "breadcrumbs": {
       "home": "首页",
@@ -58,6 +62,62 @@
       "delivery": "全球快速交付",
       "certification": "ISO 9001 认证"
     },
+    "hero_carousel": {
+      "common": {
+        "scene_title": "适用场景",
+        "params": {
+          "density": "线密度",
+          "tenacity": "断裂强度",
+          "elongation": "伸长率",
+          "wash_temp": "耐洗温度",
+          "color_fastness": "色牢度",
+          "package": "包装规格",
+          "heat_resistance": "耐温性能",
+          "abrasion": "耐磨次数"
+        }
+      },
+      "slide1": {
+        "badge": "20年专注缝纫线生产",
+        "title_line1": "为各行业提供高品质",
+        "title_line2": "缝纫线解决方案",
+        "subtitle": "专业生产高品质涤纶、尼龙、棉线及特种缝纫线，适用于服装、鞋类、家居软装及工业等多领域应用。",
+        "primary": "浏览产品",
+        "secondary": "联系销售",
+        "trust_title": "我们的核心优势",
+        "trust": {
+          "iso": { "title": "ISO 9001认证", "subtitle": "国际质量体系认证" },
+          "delivery": { "title": "7-15天快速交付", "subtitle": "高效生产供应链" },
+          "custom": { "title": "支持定制颜色", "subtitle": "满足个性化需求" }
+        },
+        "card": {
+          "title": "高品质缝纫线系列",
+          "subtitle": "适用于多种行业应用",
+          "tag": "热销产品"
+        }
+      },
+      "slide2": {
+        "badge": "爆款产品系列",
+        "title_line1": "40/2 涤纶缝纫线",
+        "title_line2": "高性价比之选",
+        "subtitle": "40/2规格涤纶缝纫线是我们的明星产品，采用高品质聚酯纤维原料制作，具有强度高、耐磨性好、色牢度高、不易断线等特点，适用于绝大多数服装生产场景。",
+        "primary": "立即咨询报价",
+        "secondary": "免费申请样品",
+        "values": {
+          "color_fastness": "≥4级"
+        },
+        "scene_tags": ["梭织服装", "针织服装", "童装", "家纺产品", "箱包", "皮革制品"]
+      },
+      "slide3": {
+        "badge": "粗线规格系列",
+        "title_line1": "20/2 涤纶缝纫线",
+        "title_line2": "高强度粗线",
+        "subtitle": "20/2规格粗涤纶缝纫线专为厚重面料设计，采用高强度聚酯纤维双股合捻，具有极佳的抗拉强度和耐磨性，适用于厚料、重料的缝纫需求，满足箱包、沙发、汽车内饰等特殊场景。",
+        "values": {
+          "abrasion": "≥3000次"
+        },
+        "scene_tags": ["皮革箱包", "沙发家具", "汽车内饰", "户外用品", "安全带", "工业帆布"]
+      }
+    },
     "advantages": {
       "title": "我们的核心优势",
       "subtitle": "智奥线业致力于为您提供世界一流的产品和服务",
@@ -72,7 +132,7 @@
         },
         {
           "title": "全球交付",
-          "desc": "完善的全球仓储和物流网络，确保订单准时送达全球100多个国家和地区。"
+          "desc": "与全球物流合作伙伴合作，提供快速、可靠的配送服务，确保订单准时送达全球100多个国家和地区。"
         },
         {
           "title": "绿色环保",
@@ -141,11 +201,14 @@
       "spec_60s2": "60s/2",
       "search_placeholder": "搜索产品...",
       "no_results": "未找到匹配的产品",
-      "items_count": "共 {count} 个产品"
+      "items_count": "共 {count} 个产品",
+      "reset_filters": "重置筛选",
+      "clear_filters": "尝试清除所有筛选条件"
     },
     "detail": {
       "inquiry": "立即询价",
       "model": "型号",
+      "sku": "SKU",
       "color": "颜色",
       "length": "长度",
       "tenacity": "强度",
@@ -255,10 +318,42 @@
         },
         {
           "title": "包装与配送",
-          "desc": "成品根据客户规格进行包装，清晰标注产品信息和批号。我们高效的物流团队确保全球范围内及时交货，并提供运输方案。",
+          "desc": "成品根据客户规格进行包装，清晰标注产品信息和批号。我们与全球物流合作伙伴合作，确保全球范围内及时交货，并提供运输方案。",
           "bullets": ["可提供定制包装", "快速订单处理", "全球配送方案"]
         }
       ]
+    },
+    "team": {
+      "kicker": "我们的团队",
+      "title": "认识我们的管理团队",
+      "subtitle": "经验丰富的管理团队，深耕纺织与缝纫线行业多年。",
+      "members": [
+        {
+          "name": "David Wang",
+          "role": "创始人 & CEO",
+          "desc": "拥有30年以上行业经验，于2009年创立智奥线业，负责公司战略与全球业务发展。"
+        },
+        {
+          "name": "Dr. Emily Zhang",
+          "role": "技术总监",
+          "desc": "负责研发与质量团队，专注产品创新、工艺优化与技术支持。"
+        },
+        {
+          "name": "Michael Johnson",
+          "role": "国际销售总监",
+          "desc": "负责海外市场与客户成功，建设海外渠道并为客户匹配合适的解决方案。"
+        },
+        {
+          "name": "Richard Liu",
+          "role": "生产经理",
+          "desc": "负责生产管理与交付保障，推动精益生产与持续改善。"
+        }
+      ]
+    },
+    "factory": {
+      "kicker": "我们的工厂",
+      "title": "工厂参观",
+      "subtitle": "带您了解我们的现代化生产基地与先进的生产设施。"
     },
 
     "cta": {
@@ -271,8 +366,8 @@
   "contact": {
     "seo": {
       "title": "联系我们｜湖北智奥线业",
-      "description": "联系湖北智奥线业（SewPro）获取报价、样品与工业缝纫线定制方案。支持邮箱/电话咨询，快速响应海外订单与交付需求。",
-      "keywords": "联系我们, 湖北智奥线业, SewPro, 获取报价, 缝纫线样品, 工业缝纫线定制, 外贸缝纫线, 询盘"
+      "description": "联系湖北智奥线业获取报价、样品与工业缝纫线定制方案。支持邮箱/电话咨询，快速响应海外订单与交付需求。",
+      "keywords": "联系我们, 湖北智奥线业, 获取报价, 缝纫线样品, 工业缝纫线定制, 外贸缝纫线, 询盘"
     },
     "hero": {
       "title": "联系我们",
@@ -282,6 +377,10 @@
       "kicker": "立即联系",
       "title": "联系信息",
       "desc": "无论您对产品有疑问、需要报价，还是想要预约参观工厂，我们的团队随时准备为您解决所有缝纫线相关需求。"
+    },
+    "location": {
+      "title": "我们的位置",
+      "subtitle": "欢迎到访我们的工厂与办公地点"
     },
     "cards": {
       "address": {
@@ -321,7 +420,7 @@
       "name": "姓名",
       "email": "电子邮箱",
       "company": "公司名称",
-      "phone": "电话 / 微信",
+      "phone": "电话 / WhatsApp",
       "country": "国家/地区",
       "interest": "感兴趣的产品",
       "subject": "主题",
@@ -410,7 +509,7 @@
       "name": "您的姓名",
       "email": "电子邮箱",
       "company": "公司名称",
-      "phone": "电话 / 微信",
+      "phone": "电话 / WhatsApp",
       "country": "国家/地区",
       "model": "型号",
       "quantity": "预估采购量",

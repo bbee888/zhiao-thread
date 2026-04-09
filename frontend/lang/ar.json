@@ -1,36 +1,121 @@
 {
   "common": {
+    "status": {
+      "loading": "جارٍ التحميل…",
+      "empty": "لا توجد بيانات"
+    },
     "nav": {
-      "home": "Home",
-      "products": "Products",
-      "applications": "Applications",
-      "about": "About Us",
-      "quality": "Quality Control",
-      "contact": "Contact Us"
+      "home": "الرئيسية",
+      "products": "المنتجات",
+      "applications": "التطبيقات",
+      "about": "من نحن",
+      "quality": "مراقبة الجودة",
+      "contact": "اتصل بنا",
+      "news": "الأخبار"
     },
     "header": {
-      "free_shipping": "Free shipping on orders over $500",
-      "get_quote": "Get Quote"
+      "title": "Hubei Zhi'ao Thread Industry Co., Ltd.",
+      "logo": "Zhi'ao Thread Industry",
+      "welcome": "مرحبًا بكم في Zhi'ao Thread",
+      "free_shipping": "شحن مجاني للطلبات التي تزيد عن $500",
+      "get_quote": "اطلب عرض سعر"
+    },
+    "footer": {
+      "desc": "Zhi'ao Thread هي شركة رائدة عالميًا في تصنيع خيوط الخياطة عالية الجودة، بخبرة إنتاج تزيد عن 20 عامًا، وتلتزم بتقديم حلول خياطة متميزة لصناعة النسيج العالمية.",
+      "contact": "اتصل بنا",
+      "address": "منتزه تشنغ هوانغ الصناعي، هانتشوان، هوبي، الصين",
+      "copyright": "جميع الحقوق محفوظة",
+      "quick_links": "روابط سريعة",
+      "product_categories": "فئات المنتجات",
+      "contact_hours": "الاثنين إلى الجمعة: 9:00–18:00"
     },
     "actions": {
-      "view_details": "View Details",
-      "learn_more": "Learn More",
-      "submit": "Submit"
+      "view_details": "عرض التفاصيل",
+      "learn_more": "اعرف المزيد",
+      "submit": "إرسال"
+    },
+    "labels": {
+      "category_fallback": "الفئة {id}",
+      "read_time": "{minutes} دقيقة قراءة"
     },
     "breadcrumbs": {
-      "home": "Home",
-      "products": "Products",
-      "about": "About Us",
-      "contact": "Contact Us",
-      "news": "News Center"
+      "home": "الرئيسية",
+      "products": "المنتجات",
+      "about": "من نحن",
+      "contact": "اتصل بنا",
+      "news": "مركز الأخبار"
     }
   },
   "home": {
+    "seo": {
+      "title": "Hubei Zhiao Thread Co., Ltd. - Polyester Sewing Thread Supplier",
+      "keywords": "polyester sewing thread, sewing thread manufacturer, polyester thread for garment, industrial sewing thread",
+      "description": "Professional manufacturer of high-tenacity polyester sewing thread. Stable quality, competitive price, customized service, global export."
+    },
     "hero": {
-      "title": "High-Quality Sewing Thread Solutions for All Industries",
-      "subtitle": "Excellence in every stitch, precision in every spool",
-      "browse": "Browse Products",
-      "contact": "Contact Sales"
+      "title": "حلول خيوط خياطة عالية الجودة لمختلف الصناعات",
+      "subtitle": "تميّز في كل غرزة، ودقة في كل بكرة",
+      "browse": "تصفح المنتجات",
+      "contact": "اتصل بالمبيعات",
+      "customization": "خدمة التخصيص",
+      "delivery": "تسليم سريع عالميًا",
+      "certification": "شهادة ISO 9001"
+    },
+    "hero_carousel": {
+      "common": {
+        "scene_title": "مجالات الاستخدام",
+        "params": {
+          "density": "Thread Density",
+          "tenacity": "Breaking Strength",
+          "elongation": "Elongation",
+          "wash_temp": "Wash Temp.",
+          "color_fastness": "Color Fastness",
+          "package": "Packing",
+          "heat_resistance": "Heat Resistance",
+          "abrasion": "Abrasion"
+        }
+      },
+      "slide1": {
+        "badge": "20 Years of Sewing Thread Manufacturing",
+        "title_line1": "High-Quality Solutions",
+        "title_line2": "for Every Industry",
+        "subtitle": "We manufacture premium polyester, nylon, cotton, and specialty threads for apparel, footwear, home textiles, and industrial applications.",
+        "primary": "Browse Products",
+        "secondary": "Contact Sales",
+        "trust_title": "Our Key Strengths",
+        "trust": {
+          "iso": { "title": "ISO 9001 Certified", "subtitle": "International quality management" },
+          "delivery": { "title": "7–15 Day Delivery", "subtitle": "Efficient supply chain" },
+          "custom": { "title": "Custom Colors", "subtitle": "Flexible customization" }
+        },
+        "card": {
+          "title": "Premium Thread Series",
+          "subtitle": "For a wide range of applications",
+          "tag": "Best Seller"
+        }
+      },
+      "slide2": {
+        "badge": "Bestselling Series",
+        "title_line1": "40/2 Polyester Sewing Thread",
+        "title_line2": "Great Value Choice",
+        "subtitle": "Our 40/2 polyester sewing thread is a bestseller made from high-quality polyester fibers. It features high strength, excellent abrasion resistance, and strong color fastness, suitable for most garment production scenarios.",
+        "primary": "Request a Quote",
+        "secondary": "Request Sample",
+        "values": {
+          "color_fastness": "≥ Grade 4"
+        },
+        "scene_tags": ["ملابس منسوجة", "ملابس محبوكة", "ملابس أطفال", "منسوجات منزلية", "حقائب", "منتجات جلدية"]
+      },
+      "slide3": {
+        "badge": "Thick Thread Series",
+        "title_line1": "20/2 Polyester Sewing Thread",
+        "title_line2": "High-Strength Thick Thread",
+        "subtitle": "Designed for heavy fabrics, our 20/2 thick polyester thread uses high-strength double-ply twisting for outstanding tensile strength and abrasion resistance, ideal for bags, sofas, automotive interiors, and other heavy-duty scenarios.",
+        "values": {
+          "abrasion": "≥ 3000 cycles"
+        },
+        "scene_tags": ["حقائب جلدية", "أرائك وأثاث", "ديكورات داخلية للسيارات", "معدات خارجية", "أحزمة أمان", "قماش صناعي"]
+      }
     },
     "advantages": {
       "title": "Our Core Advantages",
@@ -61,71 +146,100 @@
     },
     "applications": {
       "title": "Wide Range of Applications",
-      "subtitle": "Our threads are used across various industries to meet diverse sewing requirements"
+      "subtitle": "Our threads are used across various industries to meet diverse sewing requirements",
+      "clothing": "Clothing Industry",
+      "footwear": "Footwear Industry",
+      "automotive": "Automotive Industry",
+      "home": "Home Industry",
+      "embroidery": "Embroidery Industry",
+      "textiles": "Textiles Industry"
     },
     "trust": {
       "title": "Quality is Our Lifeline",
-      "desc": "We are more than just a thread manufacturer; we are your reliable partner. Through rigorous QC and international certifications, we ensure every delivery exceeds expectations."
+      "desc": "We are more than just a thread manufacturer; we are your reliable partner. Through rigorous QC and international certifications, we ensure every delivery exceeds expectations.",
+      "assurance": "Quality Assurance",
+      "experience": "Industry Experience",
+      "certifications": "Certifications",
+      "color": "Color Series",
+      "global": "Global Market",
+      "iso_certification": "World-leading inspection and certification.",
+      "oeko_tex_certification": "Testing for harmful substances in textiles.",
+      "grs_certification": "Global Recycled Standard for sustainable products.",
+      "sgs_certification": "World-leading inspection and certification."
     },
     "blog": {
       "title": "Latest News & Insights",
-      "subtitle": "Stay updated with industry trends, technical guides, and the latest from SewPro"
+      "subtitle": "Stay updated with industry trends, technical guides, and the latest from SewPro",
+      "read_full": "Read Full Article"
     }
   },
   "products": {
+    "seo": {
+      "title": "Sewing Threads - Zhi'ao Thread Industry",
+      "keywords": "polyester sewing thread, industrial sewing thread, sewing thread supplier",
+      "description": "Explore Zhi'ao Thread Industry sewing thread products with stable quality and customization support."
+    },
     "list": {
-      "title": "Our Sewing Thread Products",
-      "subtitle": "Explore our range of high-quality sewing threads for all your needs",
-      "filter_title": "Filter Products",
-      "categories": "Categories",
-      "specs": "Specifications",
-      "colors": "Color Series",
-      "all_categories": "All Categories",
-      "polyester": "Polyester Thread",
-      "cotton": "Cotton Thread",
-      "nylon": "Nylon Thread",
-      "silk": "Silk Thread",
-      "aramid": "Aramid Thread",
-      "high_tenacity": "High Tenacity Thread",
-      "recycled": "Recycled Eco Thread",
+      "title": "منتجات خيوط الخياطة لدينا",
+      "subtitle": "استكشف مجموعتنا من خيوط الخياطة عالية الجودة لتلبية جميع احتياجاتك",
+      "filter_title": "تصفية المنتجات",
+      "categories": "الفئات",
+      "specs": "المواصفات",
+      "colors": "سلسلة الألوان",
+      "all_categories": "جميع الفئات",
+      "polyester": "خيط بوليستر",
+      "cotton": "خيط قطن",
+      "nylon": "خيط نايلون",
+      "silk": "خيط حرير",
+      "aramid": "خيط أراميد",
+      "high_tenacity": "خيط عالي المتانة",
+      "recycled": "خيط معاد تدويره",
       "spec_20s2": "20s/2",
       "spec_40s2": "40s/2",
       "spec_50s2": "50s/2",
       "spec_60s2": "60s/2",
-      "search_placeholder": "Search products...",
-      "no_results": "No products found matching your search",
-      "items_count": "{count} products total"
+      "search_placeholder": "ابحث عن المنتجات…",
+      "no_results": "لم يتم العثور على منتجات مطابقة",
+      "items_count": "إجمالي {count} منتج",
+      "reset_filters": "إعادة ضبط الفلاتر",
+      "clear_filters": "مسح جميع الفلاتر"
     },
     "detail": {
-      "inquiry": "Inquire Now",
-      "sku": "Model",
-      "color": "Color",
-      "length": "Length",
-      "tenacity": "Tenacity",
-      "category": "Category",
-      "tags": "Tags",
-      "description": "Product Details",
-      "specifications": "Specifications",
-      "faq": "FAQ",
-      "related_products": "Related Products",
-      "features": "Core Features",
-      "back_to_list": "Back to List"
+      "inquiry": "اطلب عرض سعر",
+      "model": "الموديل",
+      "sku": "SKU",
+      "color": "اللون",
+      "length": "الطول",
+      "tenacity": "القوة",
+      "category": "الفئة",
+      "tags": "الوسوم",
+      "description": "تفاصيل المنتج",
+      "specifications": "المواصفات",
+      "faq": "الأسئلة الشائعة",
+      "related_products": "منتجات ذات صلة",
+      "features": "الميزات الأساسية",
+      "back_to_list": "العودة إلى القائمة"
     }
   },
   "about": {
+    "seo": {
+      "title": "About Us - Zhi'ao Thread Industry",
+      "keywords": "about zhi'ao, sewing thread manufacturer, factory",
+      "description": "Learn more about Zhi'ao Thread Industry, our factory capabilities, quality control and global delivery."
+    },
     "hero": {
-      "title": "About SewPro Sewing Thread",
-      "subtitle": "Since 2003, your trusted partner for premium sewing thread solutions"
+      "title": "من نحن",
+      "subtitle": "منذ عام 2009، شريكك الموثوق لحلول خيوط الخياطة عالية الجودة"
     },
     "story": {
-      "kicker": "Our Story",
-      "title": "A Leading Sewing Thread Manufacturer in China",
-      "desc": "Founded in 2003, SewPro Sewing Thread is a professional manufacturer and supplier of high-quality industrial sewing threads. With a 25,000㎡ modern facility equipped with advanced spinning, twisting, dyeing, and winding lines, we deliver an annual capacity of 6,000+ tons. Our products are exported to 50+ countries across North America, Europe, Asia, Africa, and Oceania, serving 2,000+ satisfied customers worldwide.",
+      "kicker": "قصتنا",
+      "title": "شركة رائدة في تصنيع خيوط الخياطة في الصين",
+      "desc": "تأسست في عام 2009، وتعد Zhi'ao Thread شركة تصنيع وتوريد متخصصة في خيوط الخياطة الصناعية عالية الجودة. نمتلك قاعدة إنتاج حديثة بمساحة 25,000㎡ مزودة بمعدات متقدمة للغزل والبرم والصباغة واللف، وبطاقة إنتاج سنوية تبلغ 5,000 طن. تُصدَّر منتجاتنا إلى أكثر من 50 دولة، ونخدم أكثر من 2,000 عميل حول العالم.",
       "stats": {
-        "experience": "Years in Industry",
-        "capacity": "Tons / Year",
-        "countries": "Countries & Regions",
-        "customers": "Happy Customers"
+        "experience": "سنوات الخبرة",
+        "capacity": "طن/سنة",
+        "countries": "الدول والمناطق",
+        "customers": "عملاء راضون"
       }
     },
     "profile": {
@@ -248,19 +362,24 @@
     }
   },
   "contact": {
+    "seo": {
+      "title": "Contact Us - Zhi'ao Thread Industry",
+      "description": "Contact Zhi'ao Thread Industry for quotes, samples and customized sewing thread solutions.",
+      "keywords": "contact, request a quote, sewing thread samples, inquiry"
+    },
     "hero": {
-      "title": "Contact Us",
-      "subtitle": "We're here to help. If you have any questions, please feel free to reach out to us."
+      "title": "اتصل بنا",
+      "subtitle": "نحن هنا للمساعدة. إذا كانت لديك أي أسئلة، فلا تتردد في التواصل معنا."
     },
     "section": {
-      "kicker": "Get in Touch",
-      "title": "Contact Information",
-      "desc": "Whether you have product questions, need a quote, or want to schedule a factory visit, our team is ready to help with all your sewing thread needs."
+      "kicker": "تواصل معنا",
+      "title": "معلومات الاتصال",
+      "desc": "سواء كانت لديك أسئلة حول المنتج، أو تحتاج إلى عرض سعر، أو ترغب في ترتيب زيارة للمصنع، فإن فريقنا جاهز لمساعدتك."
     },
     "cards": {
       "address": {
         "title": "Factory Address",
-        "value": "No. 123 Textile City Industrial Park, Shaoxing, Zhejiang, China 312000"
+        "value": "منتزه تشنغ هوانغ الصناعي، هانتشوان، هوبي، الصين"
       },
       "phone": {
         "title": "Phone & WeChat",
@@ -277,64 +396,64 @@
       }
     },
     "follow": {
-      "title": "Follow Us"
+      "title": "تابعنا"
     },
     "info": {
-      "title": "Contact Information",
-      "address": "Address",
-      "address_val": "No. 88 Chuangye Road, High-tech Zone, Yinzhou District, Ningbo, Zhejiang, China",
-      "phone": "Phone",
-      "email": "Email",
+      "title": "معلومات الاتصال",
+      "address": "العنوان",
+      "address_val": "منتزه تشنغ هوانغ الصناعي، هانتشوان، هوبي، الصين",
+      "phone": "الهاتف",
+      "email": "البريد الإلكتروني",
       "whatsapp": "WhatsApp",
-      "hours": "Business Hours",
-      "hours_val": "Mon - Fri: 9:00 - 18:00 (GMT+8)"
+      "hours": "ساعات العمل",
+      "hours_val": "الاثنين–الجمعة: 9:00–18:00 (GMT+8)"
     },
     "form": {
-      "title": "Leave a Message",
-      "subtitle": "Fill in the form below and we will reply within 24 hours on business days.",
-      "name": "Your Name",
-      "email": "Email Address",
-      "company": "Company Name",
-      "phone": "Phone / WeChat",
-      "country": "Country / Region",
-      "interest": "Interested Product",
-      "subject": "Subject",
-      "message": "Message",
-      "placeholder_name": "Enter your full name",
-      "placeholder_email": "Your email address",
-      "placeholder_company": "Enter your company name",
-      "placeholder_phone": "Enter your phone number",
-      "placeholder_country": "Select your country",
-      "placeholder_interest": "Select model",
-      "placeholder_subject": "Enter message subject",
-      "placeholder_message": "Describe your requirements in detail, including product type, specifications, quantity, application, etc.",
+      "title": "اترك رسالة",
+      "subtitle": "املأ النموذج أدناه وسنرد عليك خلال 24 ساعة في أيام العمل.",
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "company": "اسم الشركة",
+      "phone": "الهاتف / WhatsApp",
+      "country": "الدولة/المنطقة",
+      "interest": "المنتج المطلوب",
+      "subject": "الموضوع",
+      "message": "محتوى الرسالة",
+      "placeholder_name": "أدخل اسمك الكامل",
+      "placeholder_email": "بريدك الإلكتروني",
+      "placeholder_company": "أدخل اسم الشركة",
+      "placeholder_phone": "أدخل رقم الهاتف",
+      "placeholder_country": "اختر دولتك",
+      "placeholder_interest": "اختر الموديل",
+      "placeholder_subject": "أدخل موضوع الرسالة",
+      "placeholder_message": "يرجى وصف احتياجاتك بالتفصيل، بما في ذلك نوع المنتج والمواصفات والكمية وسيناريو الاستخدام، إلخ.",
       "countries": {
-        "CN": "China",
-        "VN": "Vietnam",
-        "TH": "Thailand",
-        "ID": "Indonesia",
-        "KH": "Cambodia",
-        "FR": "France",
-        "IT": "Italy",
-        "AE": "United Arab Emirates",
-        "US": "United States"
+        "CN": "الصين",
+        "VN": "فيتنام",
+        "TH": "تايلاند",
+        "ID": "إندونيسيا",
+        "KH": "كمبوديا",
+        "FR": "فرنسا",
+        "IT": "إيطاليا",
+        "AE": "الإمارات العربية المتحدة",
+        "US": "الولايات المتحدة"
       },
       "product_types": {
-        "polyester": "Polyester Thread",
-        "cotton": "Cotton Thread",
-        "nylon": "Nylon Thread",
-        "high_tenacity": "High Tenacity Thread",
-        "recycled": "Recycled Thread"
+        "polyester": "خيط بوليستر",
+        "cotton": "خيط قطن",
+        "nylon": "خيط نايلون",
+        "high_tenacity": "خيط عالي المتانة",
+        "recycled": "خيط معاد تدويره"
       },
-      "upload_title": "Click to upload or drag files here",
-      "upload_hint": "PDF, JPG, PNG supported. Max 10MB per file.",
-      "submit": "Send Message",
-      "submitting": "Sending",
-      "success_msg": "Your message has been sent successfully. We will get back to you soon!"
+      "upload_title": "انقر للرفع أو اسحب الملفات هنا",
+      "upload_hint": "يدعم PDF وJPG وPNG. الحد الأقصى 10MB لكل ملف.",
+      "submit": "إرسال الرسالة",
+      "submitting": "جارٍ الإرسال",
+      "success_msg": "تم إرسال رسالتك بنجاح. سنتواصل معك قريبًا!"
     },
     "location": {
       "title": "Our Location",
-      "subtitle": "Welcome to visit our modern manufacturing facility in Shaoxing, China. We are always happy to arrange a factory tour by appointment."
+      "subtitle": "مرحبًا بكم لزيارة منشأتنا الحديثة. يسعدنا ترتيب جولة في المصنع حسب الموعد."
     },
     "faq": {
       "kicker": "FAQ",
@@ -376,51 +495,62 @@
   },
   "inquiry": {
     "seo": {
-      "title": "Request a Quote | Hubei Zhi'ao Thread Industry",
-      "description": "Submit your inquiry and purchasing requirements. We will provide a competitive quote and product information within 24 hours.",
-      "keywords": "request a quote, inquiry, sewing thread quote, industrial sewing thread, SewPro"
+      "title": "طلب عرض سعر - Zhi'ao Thread",
+      "description": "قدّم طلبك واحتياجات الشراء، وسنزوّدك بعرض سعر تنافسي ومعلومات المنتج خلال 24 ساعة.",
+      "keywords": "طلب عرض سعر, استفسار, سعر خيوط الخياطة, خيوط صناعية"
     },
     "hero": {
-      "title": "Request a Quote",
-      "subtitle": "Please fill in your requirements. We will provide a competitive quote and product information within 24 hours."
+      "title": "طلب عرض سعر",
+      "subtitle": "يرجى تعبئة متطلباتك، وسنقدّم عرض سعر تنافسي ومعلومات المنتج خلال 24 ساعة."
     },
     "form": {
-      "name": "Your Name",
-      "email": "Email Address",
-      "company": "Company Name",
-      "phone": "Phone / WeChat",
-      "country": "Country / Region",
-      "model": "Model",
-      "quantity": "Estimated Quantity",
-      "color": "Color Requirement",
-      "message": "Other Requirements",
-      "placeholder_name": "Enter your full name",
-      "placeholder_email": "Your email address",
-      "placeholder_company": "Enter your company name",
-      "placeholder_phone": "Enter your phone number",
-      "placeholder_country": "Select your country",
-      "placeholder_model": "Select model",
-      "placeholder_quantity": "e.g., 500 cartons / 10 tons",
-      "placeholder_color": "Select color",
-      "placeholder_message": "Describe your requirements, specifications, quantity, lead time, etc.",
-      "upload_title": "Click to upload or drag files here",
-      "upload_hint": "PDF, JPG, PNG supported. Max 10MB per file.",
-      "submit": "Submit Inquiry",
-      "submitting": "Submitting",
-      "success_msg": "Submitted successfully. We will contact you soon!",
-      "subject_default": "Product Inquiry"
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "company": "اسم الشركة",
+      "phone": "الهاتف / WhatsApp",
+      "country": "الدولة/المنطقة",
+      "model": "الموديل",
+      "quantity": "الكمية التقديرية",
+      "color": "متطلبات اللون",
+      "message": "متطلبات أخرى",
+      "placeholder_name": "أدخل اسمك الكامل",
+      "placeholder_email": "بريدك الإلكتروني",
+      "placeholder_company": "أدخل اسم الشركة",
+      "placeholder_phone": "أدخل رقم الهاتف",
+      "placeholder_country": "اختر دولتك",
+      "placeholder_model": "اختر الموديل",
+      "placeholder_quantity": "مثال: 500 كرتون / 10 أطنان",
+      "placeholder_color": "اختر اللون",
+      "placeholder_message": "يرجى وصف المتطلبات والمواصفات والكمية وموعد التسليم، إلخ.",
+      "upload_title": "انقر للرفع أو اسحب الملفات هنا",
+      "upload_hint": "يدعم PDF وJPG وPNG. الحد الأقصى 10MB لكل ملف.",
+      "submit": "إرسال الاستفسار",
+      "submitting": "جارٍ الإرسال",
+      "success_msg": "تم الإرسال بنجاح. سنتواصل معك قريبًا!",
+      "subject_default": "استفسار عن المنتج"
     }
   },
   "news": {
+    "seo": {
+      "title": "مركز الأخبار - Zhi'ao Thread",
+      "description": "اطّلع على أحدث الأخبار واتجاهات الصناعة وتحديثات Zhi'ao Thread.",
+      "keywords": "الأخبار, اتجاهات الصناعة, إرشادات المنتج, خيوط الخياطة"
+    },
+    "categories": {
+      "all": "الكل"
+    },
     "list": {
-      "title": "News Center",
-      "subtitle": "Stay updated with industry trends, product guides, and company news"
+      "title": "مركز الأخبار",
+      "subtitle": "تابع اتجاهات الصناعة وإرشادات المنتج وأخبار الشركة"
     },
     "detail": {
-      "published_at": "Published on",
-      "category": "Category",
-      "back": "Back to List",
-      "related": "Related News"
+      "published_at": "نُشر في",
+      "category": "الفئة",
+      "back": "العودة إلى القائمة",
+      "related": "أخبار ذات صلة",
+      "latest": "أحدث الأخبار",
+      "categories": "الفئات",
+      "share": "مشاركة:"
     }
   }
 }

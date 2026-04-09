@@ -379,6 +379,52 @@ export class ProductService {
   }
 
   /**
+   * 获取前台产品详情（包含多语言与分类多语言）
+   */
+  async getProductDetail(id: number) {
+    const product = await this.productRepository.findOne({
+      where: { id, isDeleted: 0, status: 1 },
+    });
+
+    if (!product) {
+      throw new NotFoundException("产品不存在");
+    }
+
+    const [langData, categoryLangData] = await Promise.all([
+      this.productLangRepository.find({ where: { productId: product.id } }),
+      product.cateId
+        ? this.productCategoryLangRepository.find({ where: { cateId: product.cateId } })
+        : Promise.resolve([]),
+    ]);
+
+    const categoryLangMap = (categoryLangData || []).reduce((acc, item) => {
+      acc[item.lang] = { name: item.name, description: item.description };
+      return acc;
+    }, {} as Record<string, any>);
+
+    const productLangMap = (langData || []).reduce((acc, lang) => {
+      acc[lang.lang] = {
+        title: lang.title,
+        content: lang.content,
+        keywords: lang.keywords,
+        description: lang.description,
+      };
+      return acc;
+    }, {} as Record<string, any>);
+
+    const zhCategory = product.cateId
+      ? await this.productCategoryLangRepository.findOne({ where: { cateId: product.cateId, lang: "zh" } })
+      : null;
+
+    return {
+      ...product,
+      categoryName: zhCategory ? zhCategory.name : "",
+      categoryLangData: categoryLangMap,
+      langData: productLangMap,
+    };
+  }
+
+  /**
    * 获取产品表单数据（包含多语言）
    */
   async getProductForm(id: number) {

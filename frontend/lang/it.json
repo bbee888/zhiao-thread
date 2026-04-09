@@ -1,1 +1,556 @@
-{}
+{
+  "common": {
+    "status": {
+      "loading": "Caricamento…",
+      "empty": "Nessun dato"
+    },
+    "nav": {
+      "home": "Home",
+      "products": "Prodotti",
+      "applications": "Applicazioni",
+      "about": "Chi siamo",
+      "quality": "Controllo qualità",
+      "news": "News",
+      "contact": "Contatti"
+    },
+    "header": {
+      "title": "Hubei Zhi'ao Thread Industry Co., Ltd.",
+      "logo": "Zhi'ao Thread",
+      "welcome": "Benvenuto in Zhi'ao Thread",
+      "free_shipping": "Spedizione gratuita per ordini oltre $500",
+      "get_quote": "Richiedi un preventivo"
+    },
+    "footer": {
+      "desc": "Zhi'ao Thread è un produttore leader a livello globale di fili per cucire di alta qualità, con oltre 20 anni di esperienza produttiva, impegnato a fornire soluzioni di cucitura eccellenti all'industria tessile mondiale.",
+      "contact": "Contatti",
+      "address": "Parco Industriale Chenghuang, Hanchuan, Hubei, Cina",
+      "copyright": "Tutti i diritti riservati",
+      "quick_links": "Link rapidi",
+      "product_categories": "Categorie di prodotto",
+      "contact_hours": "Lun–Ven: 9:00–18:00"
+    },
+    "actions": {
+      "view_details": "Vedi dettagli",
+      "learn_more": "Scopri di più",
+      "submit": "Invia"
+    },
+    "labels": {
+      "category_fallback": "Categoria {id}",
+      "read_time": "{minutes} min di lettura"
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "products": "Prodotti",
+      "about": "Chi siamo",
+      "contact": "Contatti",
+      "news": "News"
+    }
+  },
+  "home": {
+    "seo": {
+      "title": "Hubei Zhi'ao Thread - Fornitore di filo per cucire in poliestere",
+      "keywords": "filo per cucire poliestere, produttore filo per cucire, filo industriale, filo per abbigliamento",
+      "description": "Produttore professionale di filo per cucire in poliestere ad alta tenacità. Qualità stabile, prezzo competitivo, personalizzazione, export globale."
+    },
+    "hero": {
+      "title": "Soluzioni di filo per cucire di alta qualità per tutti i settori",
+      "subtitle": "Eccellenza in ogni punto, precisione in ogni rocchetto",
+      "browse": "Sfoglia prodotti",
+      "contact": "Contatta vendite",
+      "customization": "Servizio di personalizzazione",
+      "delivery": "Consegna rapida globale",
+      "certification": "Certificazione ISO 9001"
+    },
+    "hero_carousel": {
+      "common": {
+        "scene_title": "Applicazioni",
+        "params": {
+          "density": "Densità del filo",
+          "tenacity": "Resistenza alla rottura",
+          "elongation": "Allungamento",
+          "wash_temp": "Temp. lavaggio",
+          "color_fastness": "Solidità del colore",
+          "package": "Imballaggio",
+          "heat_resistance": "Resistenza al calore",
+          "abrasion": "Abrasione"
+        }
+      },
+      "slide1": {
+        "badge": "20 anni dedicati alla produzione di filo per cucire",
+        "title_line1": "Soluzioni di alta qualità",
+        "title_line2": "per ogni settore",
+        "subtitle": "Produciamo fili premium in poliestere, nylon, cotone e speciali per abbigliamento, calzature, tessili per la casa e applicazioni industriali.",
+        "primary": "Sfoglia prodotti",
+        "secondary": "Contatta vendite",
+        "trust_title": "I nostri punti di forza",
+        "trust": {
+          "iso": { "title": "Certificazione ISO 9001", "subtitle": "Sistema qualità internazionale" },
+          "delivery": { "title": "Consegna in 7–15 giorni", "subtitle": "Supply chain efficiente" },
+          "custom": { "title": "Colori personalizzati", "subtitle": "Personalizzazione flessibile" }
+        },
+        "card": {
+          "title": "Serie di fili premium",
+          "subtitle": "Per molte applicazioni",
+          "tag": "Più venduto"
+        }
+      },
+      "slide2": {
+        "badge": "Serie bestseller",
+        "title_line1": "Filo per cucire in poliestere 40/2",
+        "title_line2": "Ottimo rapporto qualità/prezzo",
+        "subtitle": "Il nostro filo 40/2 è un prodotto di punta, realizzato con fibre di poliestere di alta qualità. Offre elevata resistenza, ottima abrasione e solidità del colore, adatto alla maggior parte delle produzioni di abbigliamento.",
+        "primary": "Richiedi preventivo",
+        "secondary": "Richiedi campione",
+        "values": {
+          "color_fastness": "≥ Grado 4"
+        },
+        "scene_tags": ["Abbigliamento tessuto", "Abbigliamento maglia", "Abbigliamento bimbo", "Tessili casa", "Borse", "Articoli in pelle"]
+      },
+      "slide3": {
+        "badge": "Serie filo grosso",
+        "title_line1": "Filo per cucire in poliestere 20/2",
+        "title_line2": "Filo grosso ad alta resistenza",
+        "subtitle": "Progettato per tessuti pesanti, il filo 20/2 utilizza una torsione a doppio capo ad alta resistenza per eccellente tenuta e abrasione. Ideale per borse, divani, interni auto e scenari gravosi.",
+        "values": {
+          "abrasion": "≥ 3000 cicli"
+        },
+        "scene_tags": ["Borse in pelle", "Divani e arredi", "Interni auto", "Outdoor", "Cinture di sicurezza", "Tela industriale"]
+      }
+    },
+    "advantages": {
+      "title": "I nostri vantaggi",
+      "subtitle": "Zhi'ao Thread è impegnata a fornire prodotti e servizi di livello mondiale",
+      "items": [
+        {
+          "title": "Qualità eccellente",
+          "desc": "Materie prime premium e rigoroso sistema qualità ISO per garantire standard internazionali."
+        },
+        {
+          "title": "Innovazione R&D",
+          "desc": "Un team R&D professionale sviluppa continuamente nuovi fili funzionali per esigenze in evoluzione."
+        },
+        {
+          "title": "Consegna globale",
+          "desc": "Partner logistici globali per consegne rapide e affidabili in oltre 100 paesi e regioni."
+        },
+        {
+          "title": "Eco-friendly",
+          "desc": "Sostenibilità, certificazione OEKO-TEX e riduzione dell'impatto ambientale."
+        }
+      ]
+    },
+    "products": {
+      "title": "Prodotti in evidenza",
+      "subtitle": "Esplora la nostra gamma di fili ad alte prestazioni per far crescere il tuo business",
+      "view_all": "Vedi tutti i prodotti"
+    },
+    "applications": {
+      "title": "Ampie applicazioni",
+      "subtitle": "I nostri fili sono utilizzati in molti settori per esigenze diverse",
+      "clothing": "Abbigliamento",
+      "footwear": "Calzature",
+      "automotive": "Industria",
+      "home": "Casa",
+      "embroidery": "Ricamo",
+      "textiles": "Tessili tecnici"
+    },
+    "trust": {
+      "title": "La qualità è la nostra priorità",
+      "desc": "Non produciamo solo filo: siamo il tuo partner affidabile. Con controlli rigorosi e certificazioni internazionali, ogni consegna supera le aspettative.",
+      "assurance": "Garanzia qualità",
+      "experience": "Esperienza",
+      "certifications": "Certificazioni",
+      "color": "Gamma colori",
+      "global": "Mercato globale",
+      "iso_certification": "Leader mondiale in ispezione e certificazione.",
+      "oeko_tex_certification": "Test per sostanze nocive nei tessili.",
+      "grs_certification": "Standard globale di riciclo per prodotti sostenibili.",
+      "sgs_certification": "Leader mondiale in ispezione e certificazione."
+    },
+    "blog": {
+      "title": "Ultime news e aggiornamenti",
+      "subtitle": "Trend di settore, guide tecniche e novità da Zhi'ao Thread",
+      "read_full": "Leggi tutto"
+    }
+  },
+  "products": {
+    "seo": {
+      "title": "Filo per cucire in poliestere - Zhi'ao Thread",
+      "keywords": "filo per cucire poliestere, produttore filo per cucire, filo industriale, filo per abbigliamento",
+      "description": "Zhi'ao Thread fornisce filo per cucire in poliestere per la confezione: alta resistenza, non si spezza facilmente, colori personalizzabili."
+    },
+    "list": {
+      "title": "I nostri prodotti di filo per cucire",
+      "subtitle": "Esplora fili di alta qualità per ogni esigenza",
+      "filter_title": "Filtri",
+      "categories": "Categorie",
+      "specs": "Specifiche",
+      "colors": "Colori",
+      "all_categories": "Tutte le categorie",
+      "polyester": "Filo in poliestere",
+      "cotton": "Filo in cotone",
+      "nylon": "Filo in nylon",
+      "silk": "Filo in seta",
+      "aramid": "Filo in aramide",
+      "high_tenacity": "Filo alta tenacità",
+      "recycled": "Filo riciclato",
+      "spec_20s2": "20s/2",
+      "spec_40s2": "40s/2",
+      "spec_50s2": "50s/2",
+      "spec_60s2": "60s/2",
+      "search_placeholder": "Cerca prodotti…",
+      "no_results": "Nessun prodotto corrispondente",
+      "items_count": "{count} prodotti",
+      "reset_filters": "Reimposta filtri",
+      "clear_filters": "Cancella tutti i filtri"
+    },
+    "detail": {
+      "inquiry": "Richiedi preventivo",
+      "model": "Modello",
+      "sku": "SKU",
+      "color": "Colore",
+      "length": "Lunghezza",
+      "tenacity": "Resistenza",
+      "category": "Categoria",
+      "tags": "Tag",
+      "description": "Dettagli prodotto",
+      "specifications": "Specifiche",
+      "faq": "FAQ",
+      "related_products": "Prodotti correlati",
+      "features": "Caratteristiche",
+      "back_to_list": "Torna alla lista"
+    }
+  },
+  "about": {
+    "seo": {
+      "title": "Chi siamo - Zhi'ao Thread",
+      "keywords": "preventivo, campioni, filo industriale personalizzato, export, richiesta",
+      "description": "Scopri la storia, i valori, il processo produttivo e la forza del team di Zhi'ao Thread. Fili industriali premium con personalizzazione e fornitura stabile."
+    },
+    "hero": {
+      "title": "Chi siamo",
+      "subtitle": "Dal 2009, il tuo partner di fiducia per soluzioni di filo per cucire di qualità"
+    },
+    "story": {
+      "kicker": "La nostra storia",
+      "title": "Un produttore leader di filo per cucire in Cina",
+      "desc": "Fondata nel 2009, Zhi'ao Thread è un produttore e fornitore professionale di fili per cucire industriali di alta qualità. Disponiamo di una base moderna di 25.000㎡ con impianti avanzati di filatura, torsione, tintura e avvolgimento, con capacità annua di 5.000 tonnellate. Esportiamo in oltre 50 paesi in Nord America, Europa, Asia, Africa e Oceania, servendo più di 2.000 clienti.",
+      "stats": {
+        "experience": "Anni di esperienza",
+        "capacity": "Tonnellate/anno",
+        "countries": "Paesi e regioni",
+        "customers": "Clienti soddisfatti"
+      }
+    },
+    "profile": {
+      "title": "Profilo aziendale",
+      "desc1": "Fondata negli anni '90, Zhi'ao Thread ha sede a Hanchuan (Hubei), uno dei principali poli cinesi per la produzione di filo per cucire. Dopo oltre vent'anni di crescita, siamo diventati un'azienda moderna che integra R&D, produzione e vendita.",
+      "desc2": "Disponiamo di stabilimenti moderni per oltre 50.000 m² con attrezzature di filatura, torsione, tintura e avvolgimento di livello mondiale. La capacità annua supera le 50.000 tonnellate e esportiamo in oltre 100 paesi e regioni."
+    },
+    "stats": {
+      "experience": "Esperienza",
+      "capacity": "Capacità annua (tonnellate)",
+      "countries": "Paesi di export",
+      "employees": "Personale qualificato"
+    },
+    "mission": {
+      "title": "Missione e visione",
+      "mission_title": "La nostra missione",
+      "mission_desc": "Fornire fili per cucire della massima qualità e un servizio eccellente, aiutando i clienti a produrre in modo efficiente ed economico prodotti di alta qualità.",
+      "mission_bullets": [
+        "Ogni prodotto riflette il nostro impegno per l'eccellenza",
+        "Innovazione continua per soddisfare le esigenze del settore",
+        "Partnership di lungo periodo basate su fiducia e reciproco beneficio",
+        "Pratiche sostenibili e responsabilità ambientale"
+      ],
+      "vision_title": "La nostra visione",
+      "vision_desc": "Diventare un fornitore globale leader di soluzioni per filo da cucire, riconosciuto per qualità, competenza tecnica e impegno verso il successo dei clienti.",
+      "vision_bullets": [
+        "Espandere il business a livello globale",
+        "Investire in R&D per prodotti innovativi",
+        "Applicare tecnologie avanzate per migliorare l'efficienza",
+        "Stabilire benchmark per qualità, sostenibilità ed etica",
+        "Costruire una supply chain globale più stabile e affidabile"
+      ]
+    },
+    "values": {
+      "title": "Valori fondamentali",
+      "subtitle": "Questi valori guidano ogni aspetto della nostra attività e definiscono chi siamo.",
+      "items": [
+        { "title": "Qualità prima di tutto", "desc": "Puntiamo alla massima qualità: dalla scelta delle materie prime all'ispezione finale, la qualità è in ogni fase." },
+        { "title": "Cliente al centro", "desc": "Risposta rapida e consulenza professionale per migliorare efficienza e competitività dei clienti." },
+        { "title": "Innovazione", "desc": "Investiamo in R&D e ottimizzazione dei processi per soluzioni più stabili, durevoli ed eco." },
+        { "title": "Integrità", "desc": "Operiamo con onestà, trasparenza e standard etici, costruendo relazioni di fiducia durature." },
+        { "title": "Lavoro di squadra", "desc": "Crediamo nella collaborazione e nello sviluppo dei talenti come base della crescita." },
+        { "title": "Sostenibilità", "desc": "Integriamo l'attenzione all'ambiente nella produzione e assumiamo responsabilità sociale." }
+      ]
+    },
+    "process": {
+      "kicker": "Il nostro processo",
+      "title": "Processo produttivo",
+      "subtitle": "Impianti avanzati e rigoroso controllo qualità garantiscono che ogni rocchetto rispetti i nostri standard.",
+      "steps": [
+        {
+          "title": "Selezione e controllo materie prime",
+          "desc": "Acquistiamo solo fibre vergini di poliestere, nylon e cotone da fornitori certificati. Ogni lotto viene controllato prima della produzione.",
+          "bullets": ["Fibre 100% vergini", "Verifica fornitori", "Controlli qualità completi"]
+        },
+        {
+          "title": "Torsione e ritorto",
+          "desc": "Le fibre vengono filate, poi ritorte e accoppiate per ottenere il titolo e la resistenza richiesti. Le macchine di precisione assicurano uniformità e stabilità.",
+          "bullets": ["Controllo preciso della torsione", "Densità uniforme", "Monitoraggio in tempo reale"]
+        },
+        {
+          "title": "Tintura e abbinamento colore",
+          "desc": "Usiamo coloranti eco di alta qualità per una grande solidità del colore. Il nostro team supporta l'abbinamento colore personalizzato.",
+          "bullets": ["10.000+ colori standard", "Abbinamento colore su misura", "Processo di tintura eco"]
+        },
+        {
+          "title": "Avvolgimento e lubrificazione",
+          "desc": "Il filo tinto viene avvolto su coni o rocchetti in base alle richieste. Un trattamento lubrificante riduce l'attrito e migliora la cucibilità.",
+          "bullets": ["Controllo preciso della tensione", "Opzione senza nodi", "Trattamento lubrificante speciale"]
+        },
+        {
+          "title": "Ispezione e test qualità",
+          "desc": "Ogni lotto è testato nel nostro laboratorio (resistenza, allungamento, solidità del colore, ecc.) e forniamo report qualità.",
+          "bullets": ["Controllo 100% lotti", "Test conformi agli standard", "Report QC dettagliati"]
+        },
+        {
+          "title": "Imballaggio e spedizione",
+          "desc": "I prodotti sono imballati secondo le specifiche del cliente con etichettatura chiara. Collaboriamo con partner logistici globali per consegne puntuali.",
+          "bullets": ["Imballaggio personalizzato", "Gestione ordini rapida", "Soluzioni di consegna globale"]
+        }
+      ]
+    },
+    "team": {
+      "kicker": "Il nostro team",
+      "title": "Conosci il nostro management",
+      "subtitle": "Un team di gestione esperto con competenze nel tessile e nei fili per cucire.",
+      "members": [
+        {
+          "name": "David Wang",
+          "role": "Fondatore e CEO",
+          "desc": "Con oltre 30 anni di esperienza, ha fondato l'azienda nel 2009 e guida strategia e sviluppo del business globale."
+        },
+        {
+          "name": "Dr. Emily Zhang",
+          "role": "Direttrice tecnica",
+          "desc": "Guida R&D e qualità, concentrandosi su innovazione di prodotto, ottimizzazione dei processi e supporto tecnico."
+        },
+        {
+          "name": "Michael Johnson",
+          "role": "Direttore vendite internazionali",
+          "desc": "Gestisce mercati globali e customer success, sviluppando canali esteri e soluzioni adatte ai clienti."
+        },
+        {
+          "name": "Richard Liu",
+          "role": "Responsabile produzione",
+          "desc": "Responsabile della produzione e delle consegne, promuove lean manufacturing e miglioramento continuo."
+        }
+      ]
+    },
+    "factory": {
+      "kicker": "La nostra fabbrica",
+      "title": "Tour della fabbrica",
+      "subtitle": "Scopri la nostra base produttiva moderna con impianti avanzati."
+    },
+    "cta": {
+      "title": "Visita la nostra fabbrica",
+      "subtitle": "Prenota un tour per vedere l'impianto moderno e l'intero processo controllato dalla materia prima al prodotto finito.",
+      "primary": "Prenota una visita",
+      "secondary": "Sfoglia prodotti"
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "Contatti - Zhi'ao Thread",
+      "description": "Contatta Zhi'ao Thread per preventivi, campioni e soluzioni personalizzate di filo industriale. Risposta rapida e supporto per ordini esteri.",
+      "keywords": "contatti, preventivo, campioni, filo industriale, richiesta"
+    },
+    "hero": {
+      "title": "Contatti",
+      "subtitle": "Siamo a disposizione per rispondere alle tue domande e offrirti la soluzione migliore"
+    },
+    "section": {
+      "kicker": "Contattaci",
+      "title": "Informazioni di contatto",
+      "desc": "Che tu abbia domande sui prodotti, bisogno di un preventivo o voglia visitare la fabbrica, il nostro team è pronto ad aiutarti."
+    },
+    "location": {
+      "title": "La nostra posizione",
+      "subtitle": "Sei il benvenuto a visitare fabbrica e uffici"
+    },
+    "cards": {
+      "address": {
+        "title": "Indirizzo fabbrica",
+        "value": "Parco Industriale Chenghuang, Hanchuan, Hubei, Cina"
+      },
+      "phone": {
+        "title": "Telefono & WeChat",
+        "value": "+86 138 0000 0000"
+      },
+      "email": {
+        "title": "Email",
+        "value": "sales{'@'}sewprothread.com"
+      },
+      "hours": {
+        "title": "Orari di lavoro",
+        "value_1": "Lun–Ven: 9:00–18:00 (GMT+8)",
+        "value_2": "Sab: 9:00–12:00 (GMT+8)"
+      }
+    },
+    "follow": {
+      "title": "Seguici"
+    },
+    "info": {
+      "title": "Informazioni di contatto",
+      "address": "Indirizzo",
+      "address_val": "Parco Industriale Chenghuang, Hanchuan, Hubei, Cina",
+      "phone": "Telefono",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "hours": "Orari",
+      "hours_val": "Lun–Ven: 9:00–18:00 (GMT+8)"
+    },
+    "form": {
+      "title": "Lasciaci un messaggio",
+      "subtitle": "Compila il modulo e risponderemo entro 24 ore nei giorni lavorativi.",
+      "name": "Nome",
+      "email": "Email",
+      "company": "Azienda",
+      "phone": "Telefono / WhatsApp",
+      "country": "Paese/Regione",
+      "interest": "Prodotto di interesse",
+      "subject": "Oggetto",
+      "message": "Messaggio",
+      "placeholder_name": "Inserisci il tuo nome",
+      "placeholder_email": "La tua email",
+      "placeholder_company": "Inserisci il nome dell'azienda",
+      "placeholder_phone": "Inserisci il numero di telefono",
+      "placeholder_country": "Seleziona il paese",
+      "placeholder_interest": "Seleziona il modello",
+      "placeholder_subject": "Inserisci l'oggetto",
+      "placeholder_message": "Descrivi le tue esigenze: tipo prodotto, specifiche, quantità, scenario d'uso, ecc.",
+      "countries": {
+        "CN": "Cina",
+        "VN": "Vietnam",
+        "TH": "Thailandia",
+        "ID": "Indonesia",
+        "KH": "Cambogia",
+        "FR": "Francia",
+        "IT": "Italia",
+        "AE": "Emirati Arabi Uniti",
+        "US": "Stati Uniti"
+      },
+      "product_types": {
+        "polyester": "Filo in poliestere",
+        "cotton": "Filo in cotone",
+        "nylon": "Filo in nylon",
+        "high_tenacity": "Filo alta tenacità",
+        "recycled": "Filo riciclato"
+      },
+      "upload_title": "Clicca per caricare o trascina qui il file",
+      "upload_hint": "Supporta PDF, JPG, PNG (max 10MB)",
+      "submit": "Invia",
+      "submitting": "Invio…",
+      "success_msg": "Messaggio inviato con successo. Ti contatteremo al più presto!"
+    },
+    "faq": {
+      "kicker": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Risposte alle domande comuni su prodotti, ordini e servizi.",
+      "items": [
+        {
+          "q": "Qual è il vostro MOQ (quantità minima)?",
+          "a": "Per i prodotti standard, il MOQ è 100 cartoni per colore. Per colori personalizzati, il MOQ è 300 cartoni per colore. Possiamo accettare piccoli ordini di prova per nuovi clienti; contatta il team vendite."
+        },
+        {
+          "q": "Fornite campioni gratuiti?",
+          "a": "Sì. Possiamo fornire campioni di colori standard per test e conferma. Indica tipo, specifiche e colore; organizzeremo la spedizione (politica trasporto in base alla comunicazione)."
+        },
+        {
+          "q": "Quali sono i tempi di produzione?",
+          "a": "I prodotti in stock possono essere spediti rapidamente. Gli ordini personalizzati richiedono in genere 7–15 giorni lavorativi in base a tipo, colore e quantità."
+        },
+        {
+          "q": "Offrite servizi di colore personalizzato?",
+          "a": "Sì. Supportiamo la corrispondenza colore tramite codice o campione e possiamo regolare tolleranze e requisiti di solidità."
+        },
+        {
+          "q": "Quali metodi di pagamento accettate?",
+          "a": "Di norma accettiamo bonifico bancario (T/T). Le condizioni per ordini di volume possono essere negoziate."
+        },
+        {
+          "q": "Potete fornire imballaggi personalizzati con il nostro logo?",
+          "a": "Sì. Supportiamo etichette personalizzate e stampa su cartone. Fornisci i file di design e le esigenze di imballaggio."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Richiedi un preventivo",
+      "subtitle": "Contatta il nostro team vendite per un preventivo competitivo, campioni gratuiti e soluzioni personalizzate.",
+      "email_label": "Email",
+      "wechat_label": "WeChat"
+    }
+  },
+  "inquiry": {
+    "seo": {
+      "title": "Richiesta preventivo - Zhi'ao Thread",
+      "description": "Invia la tua richiesta e i bisogni di acquisto. Ti risponderemo entro 24 ore con preventivo e informazioni prodotto.",
+      "keywords": "richiesta preventivo, richiesta prodotto, prezzo filo, filo industriale"
+    },
+    "hero": {
+      "title": "Richiesta preventivo",
+      "subtitle": "Compila le tue esigenze: ti forniremo un preventivo competitivo e informazioni prodotto entro 24 ore."
+    },
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "company": "Azienda",
+      "phone": "Telefono / WhatsApp",
+      "country": "Paese/Regione",
+      "model": "Modello",
+      "quantity": "Quantità stimata",
+      "color": "Colore richiesto",
+      "message": "Altre esigenze",
+      "placeholder_name": "Inserisci il tuo nome",
+      "placeholder_email": "La tua email",
+      "placeholder_company": "Inserisci il nome dell'azienda",
+      "placeholder_phone": "Inserisci il numero di telefono",
+      "placeholder_country": "Seleziona il paese",
+      "placeholder_model": "Seleziona il modello",
+      "placeholder_quantity": "Es.: 500 cartoni / 10 tonnellate",
+      "placeholder_color": "Seleziona il colore",
+      "placeholder_message": "Descrivi esigenze, specifiche, quantità, tempi di consegna, ecc.",
+      "upload_title": "Clicca per caricare o trascina qui il file",
+      "upload_hint": "Supporta PDF, JPG, PNG (max 10MB)",
+      "submit": "Invia richiesta",
+      "submitting": "Invio…",
+      "success_msg": "Inviato con successo. Ti contatteremo presto!",
+      "subject_default": "Richiesta prodotto"
+    }
+  },
+  "news": {
+    "seo": {
+      "title": "News - Zhi'ao Thread",
+      "description": "Centro news Zhi'ao Thread: trend di settore, guide prodotto e notizie aziendali.",
+      "keywords": "news, trend, guide prodotto, conoscenza filo per cucire"
+    },
+    "categories": {
+      "all": "Tutte"
+    },
+    "list": {
+      "title": "News",
+      "subtitle": "Scopri le ultime tendenze, guide prodotto e notizie aziendali"
+    },
+    "detail": {
+      "published_at": "Pubblicato il",
+      "category": "Categoria",
+      "back": "Torna alla lista",
+      "related": "Articoli correlati",
+      "latest": "Ultime news",
+      "categories": "Categorie",
+      "share": "Condividi:"
+    }
+  }
+}

@@ -31,6 +31,20 @@
         <el-table-column prop="email" label="邮箱" min-width="180" />
         <el-table-column prop="country" label="国家/地区" width="110" />
         <el-table-column prop="subject" label="主题" min-width="220" show-overflow-tooltip />
+        <el-table-column label="附件" width="110">
+          <template #default="{ row }">
+            <el-link
+              v-if="row.attachmentUrl"
+              :href="row.attachmentUrl"
+              target="_blank"
+              type="primary"
+              :underline="false"
+            >
+              查看
+            </el-link>
+            <span v-else class="text-slate-400">-</span>
+          </template>
+        </el-table-column>
         <el-table-column label="状态" width="110">
           <template #default="{ row }">
             <el-tag :type="row.status === 1 ? 'success' : 'warning'">
@@ -42,12 +56,7 @@
         <el-table-column label="操作" width="220" fixed="right">
           <template #default="{ row }">
             <el-button link type="primary" @click="openDetail(row)">查看</el-button>
-            <el-button
-              link
-              type="success"
-              :disabled="row.status === 1"
-              @click="markProcessed(row)"
-            >
+            <el-button link type="success" :disabled="row.status === 1" @click="markProcessed(row)">
               标记已处理
             </el-button>
             <el-button link type="danger" @click="handleDelete(row)">删除</el-button>
@@ -74,17 +83,32 @@
           <el-descriptions-item label="姓名">{{ detail?.name }}</el-descriptions-item>
           <el-descriptions-item label="邮箱">{{ detail?.email }}</el-descriptions-item>
           <el-descriptions-item label="公司">{{ detail?.company || "-" }}</el-descriptions-item>
-          <el-descriptions-item label="电话/微信">{{ detail?.phone || "-" }}</el-descriptions-item>
+          <el-descriptions-item label="电话/WhatsApp">{{ detail?.phone || "-" }}</el-descriptions-item>
           <el-descriptions-item label="国家/地区">{{ detail?.country }}</el-descriptions-item>
-          <el-descriptions-item label="型号">{{ detail?.model || detail?.interest || "-" }}</el-descriptions-item>
+          <el-descriptions-item label="型号">
+            {{ detail?.model || detail?.interest || "-" }}
+          </el-descriptions-item>
           <el-descriptions-item label="数量">{{ detail?.quantity || "-" }}</el-descriptions-item>
           <el-descriptions-item label="颜色">{{ detail?.color || "-" }}</el-descriptions-item>
           <el-descriptions-item label="长度">{{ detail?.length || "-" }}</el-descriptions-item>
           <el-descriptions-item label="强度">{{ detail?.tenacity || "-" }}</el-descriptions-item>
           <el-descriptions-item label="主题">{{ detail?.subject }}</el-descriptions-item>
+          <el-descriptions-item label="附件">
+            <el-link
+              v-if="detail?.attachmentUrl"
+              :href="detail?.attachmentUrl"
+              target="_blank"
+              type="primary"
+            >
+              {{ detail?.attachmentName || detail?.attachmentUrl }}
+            </el-link>
+            <span v-else>-</span>
+          </el-descriptions-item>
           <el-descriptions-item label="提交语言">{{ detail?.locale || "-" }}</el-descriptions-item>
           <el-descriptions-item label="IP">{{ detail?.ip || "-" }}</el-descriptions-item>
-          <el-descriptions-item label="提交时间">{{ detail?.createTime || "-" }}</el-descriptions-item>
+          <el-descriptions-item label="提交时间">
+            {{ detail?.createTime || "-" }}
+          </el-descriptions-item>
         </el-descriptions>
         <el-card shadow="never">
           <template #header>
@@ -103,7 +127,12 @@
 import { ref, reactive } from "vue";
 import { ElMessage, ElMessageBox } from "element-plus";
 import type { InquiryItem } from "@/api/inquiry/inquiry";
-import { deleteInquiry, getInquiryDetail, getInquiryPage, updateInquiryStatus } from "@/api/inquiry/inquiry";
+import {
+  deleteInquiry,
+  getInquiryDetail,
+  getInquiryPage,
+  updateInquiryStatus,
+} from "@/api/inquiry/inquiry";
 
 const loading = ref(false);
 const list = ref<InquiryItem[]>([]);

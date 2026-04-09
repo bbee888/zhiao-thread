@@ -80,6 +80,13 @@ export class ProductController {
     return await this.productService.findProducts(page, limit, cateId, keywords, status);
   }
 
+  @ApiOperation({ summary: "获取产品详情" })
+  @Public()
+  @Get(":id")
+  async getProductDetail(@Param("id") id: string) {
+    return await this.productService.getProductDetail(parseInt(id));
+  }
+
   @ApiOperation({ summary: "获取产品表单数据" })
   @Get(":id/form")
   async getProductForm(@Param("id") id: string) {

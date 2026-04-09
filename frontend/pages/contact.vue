@@ -365,16 +365,30 @@
 <script setup>
 const localePath = useLocalePath()
 const { t, locale, tm, rt } = useI18n()
+const requestURL = useRequestURL()
+const route = useRoute()
 const config = useRuntimeConfig()
 const apiBase = config.public.apiBase
 const isRtl = computed(() => locale.value === 'ar')
+
+const canonicalUrl = computed(() => {
+  return `${requestURL.origin}${route.path}`
+})
 
 useHead(() => ({
   title: t('contact.seo.title'),
   meta: [
     { name: 'description', content: t('contact.seo.description'), key: 'description' },
-    { name: 'keywords', content: t('contact.seo.keywords'), key: 'keywords' }
-  ]
+    { name: 'keywords', content: t('contact.seo.keywords'), key: 'keywords' },
+    { property: 'og:title', content: t('contact.seo.title'), key: 'og:title' },
+    { property: 'og:description', content: t('contact.seo.description'), key: 'og:description' },
+    { property: 'og:type', content: 'website', key: 'og:type' },
+    { property: 'og:url', content: canonicalUrl.value, key: 'og:url' },
+    { name: 'twitter:card', content: 'summary_large_image', key: 'twitter:card' },
+    { name: 'twitter:title', content: t('contact.seo.title'), key: 'twitter:title' },
+    { name: 'twitter:description', content: t('contact.seo.description'), key: 'twitter:description' }
+  ],
+  link: [{ rel: 'canonical', href: canonicalUrl.value }]
 }))
 
 const loading = ref(false)
@@ -392,6 +406,7 @@ const form = reactive({
 
 const fileInputRef = ref()
 const selectedFileName = ref('')
+const selectedFile = ref()
 
 const countries = ['CN', 'VN', 'TH', 'ID', 'KH', 'FR', 'IT', 'AE', 'US']
 const { data: modelOptions } = await useAsyncData('dict-model-options', async () => {
@@ -427,18 +442,35 @@ const toggleFaq = (index) => {
 const handleFileChange = (e) => {
   const file = e?.target?.files?.[0]
   selectedFileName.value = file?.name || ''
+  selectedFile.value = file
 }
 
 const handleSubmit = async () => {
   loading.value = true
   try {
+    let attachmentName = selectedFileName.value || ''
+    let attachmentUrl = ''
+    if (selectedFile.value) {
+      const fd = new FormData()
+      fd.append('file', selectedFile.value)
+      const uploadRes = await $fetch('/files', {
+        baseURL: apiBase,
+        method: 'POST',
+        body: fd
+      })
+      const payload = uploadRes?.data || uploadRes
+      attachmentName = payload?.name || attachmentName
+      attachmentUrl = payload?.url || ''
+    }
+
     await $fetch('/inquiries', {
       baseURL: apiBase,
       method: 'POST',
       body: {
         ...form,
         locale: locale.value,
-        attachmentName: selectedFileName.value || ''
+        attachmentName,
+        attachmentUrl
       }
     })
     submitted.value = true
@@ -454,6 +486,7 @@ const handleSubmit = async () => {
   form.subject = ''
   form.message = ''
   selectedFileName.value = ''
+  selectedFile.value = undefined
   setTimeout(() => {
     submitted.value = false
   }, 5000)

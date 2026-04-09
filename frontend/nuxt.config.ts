@@ -19,19 +19,18 @@ export default defineNuxtConfig({
     ],
     lazy: true,
     langDir: '../lang',
-    defaultLocale: 'zh',
+    defaultLocale: 'en',
     fallbackLocale: 'en',
     strategy: 'prefix_except_default',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',
-    }
+    detectBrowserLanguage: false,
+    seo: true,
+    baseUrl: (globalThis as any).process?.env?.NUXT_PUBLIC_SITE_URL || (globalThis as any).process?.env?.SITE_URL || ''
   } as any,
 
   runtimeConfig: {
     public: {
-      apiBase: (globalThis as any).process?.env?.NUXT_PUBLIC_API_BASE || 'http://localhost:8000/api/v1'
+      apiBase: (globalThis as any).process?.env?.NUXT_PUBLIC_API_BASE || 'http://localhost:8000/api/v1',
+      siteUrl: (globalThis as any).process?.env?.NUXT_PUBLIC_SITE_URL || (globalThis as any).process?.env?.SITE_URL || ''
     }
   },
 
@@ -39,12 +38,11 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: '湖北智奥线业_涤纶缝纫线生产厂家_工业缝纫线定制',
+      titleTemplate: '%s',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'keywords', content: '湖北智奥线业有限公司专注涤纶缝纫线研发生产，提供高品质工业缝纫线、服装专用线，支持定制，货源稳定，欢迎海内外客户洽谈合作。' },
-        { name: 'description', content: '湖北智奥线业有限公司专注涤纶缝纫线研发生产销售，提供高品质工业缝纫线、服装专用线，支持定制，货源稳定，欢迎海内外客户洽谈合作。' }
+        { name: 'robots', content: 'index,follow' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

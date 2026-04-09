@@ -2,7 +2,7 @@
   <div class="group bg-white rounded-xl overflow-hidden border border-slate-100 hover:shadow-xl transition-all duration-300">
     <!-- Product Image -->
     <div class="relative aspect-square overflow-hidden bg-slate-50">
-      <NuxtLink :to="`/products/${product.id}`" class="block w-full h-full">
+      <NuxtLink :to="localePath(`/products/${product.id}`)" class="block w-full h-full">
         <img :src="product.image" :alt="product.name" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
       </NuxtLink>
       <div class="absolute top-4 left-4">
@@ -24,7 +24,7 @@
       
       <!-- Footer -->
       <div class="flex items-center justify-between pt-4 border-t border-slate-50">
-        <NuxtLink :to="`/products/${product.id}`" class="text-blue-600 font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+        <NuxtLink :to="localePath(`/products/${product.id}`)" class="text-blue-600 font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all">
           {{ $t('common.actions.view_details') }}
           <i class="ri-arrow-right-line"></i>
         </NuxtLink>
@@ -37,6 +37,8 @@
 </template>
 
 <script setup>
+const localePath = useLocalePath()
+
 defineProps({
   product: {
     type: Object,

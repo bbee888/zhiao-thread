@@ -1,24 +1,24 @@
 <template>
-  <section id="quality" class="py-24 bg-slate-900 text-white overflow-hidden relative scroll-mt-24">
+  <section id="quality" class="py-14 sm:py-16 md:py-24 bg-slate-900 text-white overflow-hidden relative scroll-mt-24">
     <!-- Decorative background element -->
-    <div class="absolute top-0 right-0 w-1/2 h-full bg-blue-600/10 skew-x-12 translate-x-1/4"></div>
+    <div class="hidden sm:block absolute top-0 right-0 w-1/2 h-full bg-blue-600/10 skew-x-12 translate-x-1/4"></div>
     
     <div class="container mx-auto max-w-7xl px-4 md:px-8 relative z-10">
-      <div class="flex flex-col lg:flex-row items-center gap-16">
+      <div class="flex flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-16">
         <!-- Left: Text Content -->
         <div class="lg:w-1/2">
           <span class="inline-block px-4 py-1 bg-blue-600/20 text-blue-400 text-xs font-bold rounded-full mb-6 uppercase tracking-widest border border-blue-600/30">
             {{ $t('home.trust.assurance') }}
           </span>
-          <h2 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+          <h2 class="text-3xl md:text-5xl font-bold mb-5 sm:mb-8 leading-tight">
             {{ $t('home.trust.title') }}
           </h2>
-          <p class="text-slate-400 text-lg mb-10 leading-relaxed">
+          <p class="text-slate-400 text-base sm:text-lg mb-6 sm:mb-10 leading-relaxed">
             {{ $t('home.trust.desc') }}
           </p>
           
-          <div class="grid grid-cols-2 gap-8 mb-12">
-            <div v-for="(stat, index) in stats" :key="index" class="border-l-2 border-blue-600 pl-6">
+          <div class="grid grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12">
+            <div v-for="(stat, index) in stats" :key="index" class="border-l-2 border-blue-600 pl-4 sm:pl-6">
               <div class="text-3xl font-bold mb-1">{{ stat.value }}</div>
               <div class="text-slate-500 text-sm uppercase tracking-wider">{{ stat.label }}</div>
             </div>
@@ -32,8 +32,8 @@
         
         <!-- Right: Certifications Grid -->
         <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-          <div v-for="(cert, index) in certs" :key="index" class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 p-3">
+          <div v-for="(cert, index) in certs" :key="index" class="bg-white/5 border border-white/10 p-5 sm:p-8 rounded-2xl hover:bg-white/10 transition-colors flex flex-col items-center text-center">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center mb-4 sm:mb-6 p-3">
               <img :src="cert.logo" :alt="cert.name" class="max-w-full max-h-full grayscale hover:grayscale-0 transition-all" />
             </div>
             <h4 class="font-bold mb-2">{{ cert.name }}</h4>

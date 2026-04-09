@@ -44,3 +44,6 @@ yarn.lock
 !youlai-nest/.env
 !youlai-nest/.env.dev
 !youlai-nest/.env.prod
+
+# Backend uploaded files (runtime)
+youlai-nest/data/oss/

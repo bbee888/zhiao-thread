@@ -24,6 +24,7 @@ export interface InquiryItem {
   subject: string;
   message: string;
   attachmentName?: string;
+  attachmentUrl?: string;
   status: number;
   locale?: string;
   ip?: string;

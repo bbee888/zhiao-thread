@@ -27,8 +27,23 @@ export class Inquiry extends BaseEntity {
   @Column({ type: "text", comment: "留言内容" })
   message: string;
 
-  @Column({ name: "attachment_name", type: "varchar", length: 255, nullable: true, comment: "附件名称" })
+  @Column({
+    name: "attachment_name",
+    type: "varchar",
+    length: 255,
+    nullable: true,
+    comment: "附件名称",
+  })
   attachmentName?: string;
+
+  @Column({
+    name: "attachment_url",
+    type: "varchar",
+    length: 1024,
+    nullable: true,
+    comment: "附件URL",
+  })
+  attachmentUrl?: string;
 
   @Column({ type: "tinyint", default: 0, comment: "状态（0-未处理 1-已处理）" })
   status: number;
@@ -39,7 +54,13 @@ export class Inquiry extends BaseEntity {
   @Column({ type: "varchar", length: 45, nullable: true, comment: "IP" })
   ip?: string;
 
-  @Column({ name: "user_agent", type: "varchar", length: 255, nullable: true, comment: "User-Agent" })
+  @Column({
+    name: "user_agent",
+    type: "varchar",
+    length: 255,
+    nullable: true,
+    comment: "User-Agent",
+  })
   userAgent?: string;
 
   @Column({ type: "varchar", length: 50, nullable: true, comment: "型号" })

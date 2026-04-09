@@ -1,20 +1,23 @@
 <template>
-  <section class="py-24 bg-slate-50">
+  <section class="py-14 sm:py-16 md:py-24 bg-slate-50">
     <div class="container mx-auto max-w-7xl px-4 md:px-8">
       <!-- Section Header -->
-      <div class="flex flex-col md:flex-row items-end justify-between gap-8 mb-16">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-10 sm:mb-12 md:mb-16">
         <div class="max-w-2xl">
           <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{{ $t('home.products.title') }}</h2>
           <div class="w-20 h-1.5 bg-blue-600 mb-6 rounded-full"></div>
           <p class="text-lg text-slate-600">{{ $t('home.products.subtitle') }}</p>
         </div>
-        <NuxtLink to="/products" class="px-8 py-3 bg-white border border-slate-200 text-slate-900 font-bold rounded-full hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-300">
+        <NuxtLink
+          :to="localePath('/products')"
+          class="w-full md:w-auto px-6 md:px-8 py-3 bg-white border border-slate-200 text-slate-900 font-bold rounded-full hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-300 text-center"
+        >
           {{ $t('home.products.view_all') }}
         </NuxtLink>
       </div>
 
       <!-- Products Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-8">
         <ProductCard v-for="product in products" :key="product.id" :product="product" />
       </div>
     </div>
@@ -23,6 +26,7 @@
 
 <script setup>
 const { locale } = useI18n()
+const localePath = useLocalePath()
 const config = useRuntimeConfig()
 const apiBase = config.public.apiBase
 

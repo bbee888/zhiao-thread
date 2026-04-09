@@ -1,5 +1,11 @@
 <template>
   <div class="bg-gray-50 min-h-screen pb-16">
+    <div v-if="productFetchError" class="container mx-auto px-4 pt-6">
+      <div class="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+        {{ productFetchErrorMessage }}
+      </div>
+    </div>
+
     <!-- Breadcrumbs -->
     <div class="bg-white border-b border-gray-100">
       <div class="container mx-auto px-4 py-4">
@@ -48,10 +54,10 @@
               </div>
 
               <!-- Quick Specs -->
-              <div class="grid grid-cols-2 gap-4 mb-8">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8">
                 <div class="bg-slate-50 rounded-xl p-4">
                   <div class="text-xs text-slate-400 uppercase mb-1">{{ $t('products.detail.model') }}</div>
-                  <div class="font-semibold text-slate-900">{{ product.model || product.model || '-' }}</div>
+                  <div class="font-semibold text-slate-900">{{ product.model || product.sku || '-' }}</div>
                 </div>
                 <div class="bg-slate-50 rounded-xl p-4">
                   <div class="text-xs text-slate-400 uppercase mb-1">{{ $t('products.detail.color') }}</div>
@@ -113,13 +119,7 @@
           <!-- Tab Content -->
           <div class="p-6 lg:p-10">
             <div v-show="activeTab === 'description'" class="prose prose-slate max-w-none">
-              <p class="text-slate-600 leading-relaxed mb-6">
-                {{ product.longDesc }}
-              </p>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <img :src="product.detailImage1" class="rounded-2xl w-full">
-                <img :src="product.detailImage2" class="rounded-2xl w-full">
-              </div>
+              <div class="text-slate-600 leading-relaxed mb-6" v-html="product.longDesc"></div>
             </div>
 
             <div v-show="activeTab === 'specifications'">
@@ -184,7 +184,83 @@
 <script setup>
 const route = useRoute()
 const localePath = useLocalePath()
-const { tm, rt } = useI18n()
+const { t, tm, rt, locale } = useI18n()
+const requestURL = useRequestURL()
+const config = useRuntimeConfig()
+const apiBase = config.public.apiBase
+
+const unwrapItem = (res) => {
+  if (!res) return undefined
+  if (res && typeof res === 'object' && 'data' in res) return res.data
+  return res
+}
+
+const normalizeAssetUrl = (value) => {
+  const v = String(value || '').trim()
+  if (!v || v === 'null' || v === 'undefined') return ''
+  if (/^https?:\/\//i.test(v)) return v
+  try {
+    const origin = new URL(apiBase).origin
+    return `${origin}${v.startsWith('/') ? '' : '/'}${v}`
+  } catch {
+    return v
+  }
+}
+
+const id = computed(() => String(route.params.id || ''))
+
+const { data: productRes, error: productFetchError } = await useFetch(() => `/products/${id.value}`, {
+  baseURL: apiBase,
+  watch: [id, locale],
+})
+
+const productFetchErrorMessage = computed(() => {
+  if (!productFetchError.value) return ""
+  const statusCode = productFetchError.value?.statusCode
+  return statusCode ? `Failed to load product (HTTP ${statusCode})` : "Failed to load product"
+})
+
+const product = computed(() => {
+  const raw = unwrapItem(productRes.value) || {}
+  const lang = raw?.langData?.[locale.value] || raw?.langData?.zh || {}
+  const categoryLang = raw?.categoryLangData?.[locale.value] || raw?.categoryLangData?.zh || {}
+
+  const images = Array.isArray(raw.images) ? raw.images : []
+  const normalizedImages = images.map(normalizeAssetUrl).filter(Boolean)
+
+  const cover = normalizeAssetUrl(raw.cover)
+  const detailImage1 = normalizeAssetUrl(raw.detailImage1)
+  const detailImage2 = normalizeAssetUrl(raw.detailImage2)
+
+  const longDesc = String(lang?.content || raw.longDesc || raw.content || '').trim() || String(lang?.description || '').trim()
+  const shortDesc = String(lang?.description || raw.shortDesc || '').trim() || longDesc.slice(0, 160)
+
+  const specTableRaw = raw?.specTable && typeof raw.specTable === 'object' ? raw.specTable : undefined
+  const specTable = specTableRaw || {
+    [t('products.detail.model')]: raw.model || raw.sku || '-',
+    [t('products.detail.color')]: raw.color || '-',
+    [t('products.detail.length')]: raw.length || '-',
+    [t('products.detail.tenacity')]: raw.tenacity || '-',
+  }
+
+  return {
+    id: raw.id ?? (Number(id.value) || 0),
+    name: String(lang?.title || raw.name || `Product ${id.value}`),
+    sku: raw.sku,
+    model: raw.model,
+    color: raw.color,
+    length: raw.length,
+    tenacity: raw.tenacity,
+    categoryName: String(categoryLang?.name || raw.categoryName || ''),
+    shortDesc,
+    longDesc,
+    cover,
+    images: normalizedImages.length ? normalizedImages : (cover ? [cover] : []),
+    detailImage1: detailImage1 || (cover || ''),
+    detailImage2: detailImage2 || (cover || ''),
+    specTable,
+  }
+})
 
 const activeTab = ref('description')
 const tabs = [
@@ -199,82 +275,42 @@ const toggleFaq = (index) => {
   openFaqIndex.value = openFaqIndex.value === index ? -1 : index
 }
 
-// Mock dynamic product data based on ID
-const product = ref({
-  id: route.params.id,
-  name: '高强涤纶缝纫线 SP-100',
-  categoryName: '涤纶缝纫线',
-  sku: 'SEW-PL-100-BLUE',
-  model: '40s/2',
-  color: 'Blue',
-  length: '5000 yards',
-  tenacity: 'High',
-  spec: '40s/2',
-  shortDesc: '这款高品质涤纶缝纫线具有卓越的强度和色牢度，适用于各种中等厚度的织物，是服装制造和家用缝纫的理想选择。',
-  longDesc: '我们的高强涤纶缝纫线采用优质涤纶长丝制成，经过精密捻线和先进的染色工艺。具有耐磨损、抗紫外线、耐高温等特点。在高速工业缝纫机上表现卓越，不易断线。通过OEKO-TEX Standard 100认证，环保安全。',
-  features: [
-    '超高断裂强度，减少缝纫断线率',
-    '优异的色牢度，耐洗涤，不退色',
-    '表面光滑，经过特殊硅油处理，过机顺滑',
-    '通过OEKO-TEX环保认证，不含有害物质'
-  ],
-  images: [
-    'https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1528476513691-07e6f563d97f?q=80&w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1589149098258-3e9102ca63d3?q=80&w=800&auto=format&fit=crop'
-  ],
-  detailImage1: 'https://images.unsplash.com/photo-1584290867415-527a8475726d?q=80&w=800&auto=format&fit=crop',
-  detailImage2: 'https://images.unsplash.com/photo-1544441893-675973e31d85?q=80&w=800&auto=format&fit=crop',
-  specTable: {
-    '材质': '100% 涤纶',
-    '捻向': 'Z捻 (左捻)',
-    '颜色': '500+ 可选颜色',
-    '包装': '5000码/卷, 12卷/盒',
-    '用途': '服装, 衬衫, 内衣, 绣花'
-  },
-  faqs: [
-    { q: '这种线适合哪种缝纫机？', a: '适用于各种工业缝纫机和家用缝纫机。' },
-    { q: '起订量是多少？', a: '常规颜色12卷起订，定制颜色需要一定数量。' }
-  ]
+
+const mainImage = computed(() => product.value.images?.[0] || '/img/ba2.jpg')
+
+const canonicalUrl = computed(() => {
+  return `${requestURL.origin}${route.path}`
 })
 
-const mainImage = ref(product.value.images?.[0] || '')
+const pageTitle = computed(() => {
+  const name = String(product.value?.name || '').trim()
+  return name ? `${name} - ${t('products.seo.title')}` : t('products.seo.title')
+})
 
-const relatedProducts = [
-  {
-    id: 2,
-    name: '纯棉平光缝纫线 CT-200',
-    category: 2,
-    spec: '20s/2',
-    image: 'https://images.unsplash.com/photo-1528476513691-07e6f563d97f?q=80&w=800&auto=format&fit=crop',
-    tags: ['棉线', '柔软']
-  },
-  {
-    id: 3,
-    name: '尼龙高弹缝纫线 NY-300',
-    category: 3,
-    spec: '60s/2',
-    image: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800&auto=format&fit=crop',
-    tags: ['尼龙', '高弹']
-  },
-  {
-    id: 4,
-    name: '再生环保涤纶线 RE-400',
-    category: 5,
-    spec: '40s/2',
-    image: 'https://images.unsplash.com/photo-1584290867415-527a8475726d?q=80&w=800&auto=format&fit=crop',
-    tags: ['环保', '再生']
-  },
-  {
-    id: 5,
-    name: '工业用超高强线 HT-500',
-    category: 4,
-    spec: '20s/3',
-    image: 'https://images.unsplash.com/photo-1544441893-675973e31d85?q=80&w=800&auto=format&fit=crop',
-    tags: ['工业', '超强']
-  }
-]
+const pageDescription = computed(() => {
+  return String(product.value?.shortDesc || '').trim() || t('products.seo.description')
+})
+
+useHead(() => ({
+  title: pageTitle.value,
+  meta: [
+    { name: 'description', content: pageDescription.value, key: 'description' },
+    { name: 'keywords', content: t('products.seo.keywords'), key: 'keywords' },
+    { property: 'og:title', content: pageTitle.value, key: 'og:title' },
+    { property: 'og:description', content: pageDescription.value, key: 'og:description' },
+    { property: 'og:type', content: 'product', key: 'og:type' },
+    { property: 'og:url', content: canonicalUrl.value, key: 'og:url' },
+    ...(mainImage.value ? [{ property: 'og:image', content: mainImage.value, key: 'og:image' }] : []),
+    { name: 'twitter:card', content: mainImage.value ? 'summary_large_image' : 'summary', key: 'twitter:card' },
+    { name: 'twitter:title', content: pageTitle.value, key: 'twitter:title' },
+    { name: 'twitter:description', content: pageDescription.value, key: 'twitter:description' },
+    ...(mainImage.value ? [{ name: 'twitter:image', content: mainImage.value, key: 'twitter:image' }] : [])
+  ],
+  link: [{ rel: 'canonical', href: canonicalUrl.value }]
+}))
+
+const relatedProducts = []
+
 </script>
 
 <style scoped>

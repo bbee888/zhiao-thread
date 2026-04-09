@@ -30,13 +30,13 @@
 
     <!-- Categories / Tabs -->
     <div class="container mx-auto px-4 mt-8 lg:mt-12">
-      <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12">
         <button 
           v-for="cat in categories" 
           :key="cat.id"
           @click="selectCategory(cat.id)"
           :class="[
-            'px-6 py-2 rounded-full font-medium transition-all border',
+            'px-4 sm:px-6 py-2 rounded-full text-sm sm:text-base font-medium transition-all border',
             activeCategoryId === cat.id 
               ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-200' 
               : 'bg-white border-gray-200 text-slate-600 hover:border-blue-600 hover:text-blue-600'
@@ -94,9 +94,9 @@
 
       <!-- Pagination -->
       <div v-if="totalPages > 1" class="mt-16 flex justify-center">
-        <nav class="flex items-center gap-2">
+        <nav class="flex flex-wrap justify-center items-center gap-2">
           <button
-            class="w-12 h-12 rounded-2xl border border-gray-200 flex items-center justify-center hover:bg-white hover:border-blue-600 hover:text-blue-600 transition-all disabled:opacity-50"
+            class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl border border-gray-200 flex items-center justify-center hover:bg-white hover:border-blue-600 hover:text-blue-600 transition-all disabled:opacity-50"
             :disabled="page <= 1"
             @click="goToPage(page - 1)"
           >
@@ -105,14 +105,14 @@
           <button
             v-for="p in pageNumbers"
             :key="p"
-            class="w-12 h-12 rounded-2xl flex items-center justify-center font-bold transition-all"
+            class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center font-bold transition-all"
             :class="p === page ? 'bg-blue-600 text-white shadow-lg shadow-blue-200' : 'border border-gray-200 hover:bg-white hover:border-blue-600 hover:text-blue-600'"
             @click="goToPage(p)"
           >
             {{ p }}
           </button>
           <button
-            class="w-12 h-12 rounded-2xl border border-gray-200 flex items-center justify-center hover:bg-white hover:border-blue-600 hover:text-blue-600 transition-all disabled:opacity-50"
+            class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl border border-gray-200 flex items-center justify-center hover:bg-white hover:border-blue-600 hover:text-blue-600 transition-all disabled:opacity-50"
             :disabled="page >= totalPages"
             @click="goToPage(page + 1)"
           >
@@ -129,13 +129,26 @@ const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
 const config = useRuntimeConfig()
+const requestURL = useRequestURL()
+
+const canonicalUrl = computed(() => {
+  return `${requestURL.origin}${route.path}`
+})
 
 useHead(() => ({
   title: t('news.seo.title'),
   meta: [
     { name: 'description', content: t('news.seo.description'), key: 'description' },
-    { name: 'keywords', content: t('news.seo.keywords'), key: 'keywords' }
-  ]
+    { name: 'keywords', content: t('news.seo.keywords'), key: 'keywords' },
+    { property: 'og:title', content: t('news.seo.title'), key: 'og:title' },
+    { property: 'og:description', content: t('news.seo.description'), key: 'og:description' },
+    { property: 'og:type', content: 'website', key: 'og:type' },
+    { property: 'og:url', content: canonicalUrl.value, key: 'og:url' },
+    { name: 'twitter:card', content: 'summary_large_image', key: 'twitter:card' },
+    { name: 'twitter:title', content: t('news.seo.title'), key: 'twitter:title' },
+    { name: 'twitter:description', content: t('news.seo.description'), key: 'twitter:description' }
+  ],
+  link: [{ rel: 'canonical', href: canonicalUrl.value }]
 }))
 
 const apiBase = config.public.apiBase

@@ -118,21 +118,36 @@
 <script setup>
 const route = useRoute()
 const { t, locale } = useI18n()
+const localePath = useLocalePath()
+const requestURL = useRequestURL()
 const config = useRuntimeConfig()
 const apiBase = config.public.apiBase
 
-useHead({
+const canonicalUrl = computed(() => {
+  return `${requestURL.origin}${localePath('/inquiry')}`
+})
+
+useHead(() => ({
   title: t('inquiry.seo.title'),
   meta: [
     { name: 'description', content: t('inquiry.seo.description'), key: 'description' },
-    { name: 'keywords', content: t('inquiry.seo.keywords'), key: 'keywords' }
-  ]
-})
+    { name: 'keywords', content: t('inquiry.seo.keywords'), key: 'keywords' },
+    { property: 'og:title', content: t('inquiry.seo.title'), key: 'og:title' },
+    { property: 'og:description', content: t('inquiry.seo.description'), key: 'og:description' },
+    { property: 'og:type', content: 'website', key: 'og:type' },
+    { property: 'og:url', content: canonicalUrl.value, key: 'og:url' },
+    { name: 'twitter:card', content: 'summary_large_image', key: 'twitter:card' },
+    { name: 'twitter:title', content: t('inquiry.seo.title'), key: 'twitter:title' },
+    { name: 'twitter:description', content: t('inquiry.seo.description'), key: 'twitter:description' }
+  ],
+  link: [{ rel: 'canonical', href: canonicalUrl.value }]
+}))
 
 const loading = ref(false)
 const submitted = ref(false)
 const fileInputRef = ref()
 const selectedFileName = ref('')
+const selectedFile = ref()
 
 const countries = ['CN', 'VN', 'TH', 'ID', 'KH', 'FR', 'IT', 'AE', 'US']
 
@@ -179,6 +194,7 @@ onMounted(() => {
 const handleFileChange = (e) => {
   const file = e?.target?.files?.[0]
   selectedFileName.value = file?.name || ''
+  selectedFile.value = file
 }
 
 const resetForm = () => {
@@ -193,6 +209,7 @@ const resetForm = () => {
   form.message = ''
   form.productId = undefined
   selectedFileName.value = ''
+  selectedFile.value = undefined
   if (fileInputRef.value) fileInputRef.value.value = ''
   applyPrefillFromQuery()
 }
@@ -200,6 +217,21 @@ const resetForm = () => {
 const handleSubmit = async () => {
   loading.value = true
   try {
+    let attachmentName = selectedFileName.value || ""
+    let attachmentUrl = ""
+    if (selectedFile.value) {
+      const fd = new FormData()
+      fd.append("file", selectedFile.value)
+      const uploadRes = await $fetch("/files", {
+        baseURL: apiBase,
+        method: "POST",
+        body: fd,
+      })
+      const payload = uploadRes?.data || uploadRes
+      attachmentName = payload?.name || attachmentName
+      attachmentUrl = payload?.url || ""
+    }
+
     await $fetch('/inquiries', {
       baseURL: apiBase,
       method: 'POST',
@@ -207,7 +239,8 @@ const handleSubmit = async () => {
         ...form,
         subject: t('inquiry.form.subject_default'),
         locale: locale.value,
-        attachmentName: selectedFileName.value || ''
+        attachmentName,
+        attachmentUrl
       }
     })
     submitted.value = true

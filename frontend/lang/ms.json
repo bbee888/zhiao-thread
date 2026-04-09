@@ -1,1 +1,556 @@
-{}
+{
+  "common": {
+    "status": {
+      "loading": "Memuat…",
+      "empty": "Tiada data"
+    },
+    "nav": {
+      "home": "Laman Utama",
+      "products": "Produk",
+      "applications": "Aplikasi",
+      "about": "Tentang Kami",
+      "quality": "Kawalan Kualiti",
+      "news": "Berita",
+      "contact": "Hubungi Kami"
+    },
+    "header": {
+      "title": "Hubei Zhi'ao Thread Industry Co., Ltd.",
+      "logo": "Zhi'ao Thread",
+      "welcome": "Selamat datang ke Zhi'ao Thread",
+      "free_shipping": "Penghantaran percuma untuk pesanan melebihi $500",
+      "get_quote": "Dapatkan Sebut Harga"
+    },
+    "footer": {
+      "desc": "Zhi'ao Thread ialah pengeluar benang jahit berkualiti tinggi yang terkemuka di peringkat global, dengan pengalaman pengeluaran lebih 20 tahun dan komited menyediakan penyelesaian jahitan yang cemerlang untuk industri tekstil dunia.",
+      "contact": "Hubungi Kami",
+      "address": "Taman Perindustrian Chenghuang, Hanchuan, Hubei, China",
+      "copyright": "Hak cipta terpelihara",
+      "quick_links": "Pautan Pantas",
+      "product_categories": "Kategori Produk",
+      "contact_hours": "Isnin–Jumaat: 9:00–18:00"
+    },
+    "actions": {
+      "view_details": "Lihat Butiran",
+      "learn_more": "Ketahui Lebih Lanjut",
+      "submit": "Hantar"
+    },
+    "labels": {
+      "category_fallback": "Kategori {id}",
+      "read_time": "{minutes} minit bacaan"
+    },
+    "breadcrumbs": {
+      "home": "Laman Utama",
+      "products": "Produk",
+      "about": "Tentang Kami",
+      "contact": "Hubungi Kami",
+      "news": "Berita"
+    }
+  },
+  "home": {
+    "seo": {
+      "title": "Hubei Zhi'ao Thread - Pembekal Benang Jahit Poliester",
+      "keywords": "benang jahit poliester, pengeluar benang jahit, benang industri, benang untuk pakaian",
+      "description": "Pengeluar profesional benang jahit poliester berketahanan tinggi. Kualiti stabil, harga kompetitif, perkhidmatan kustom, eksport global."
+    },
+    "hero": {
+      "title": "Penyelesaian Benang Jahit Berkualiti Tinggi untuk Semua Industri",
+      "subtitle": "Kecemerlangan pada setiap jahitan, ketepatan pada setiap gelendong",
+      "browse": "Lihat Produk",
+      "contact": "Hubungi Jualan",
+      "customization": "Perkhidmatan Kustom",
+      "delivery": "Penghantaran Pantas Global",
+      "certification": "Pensijilan ISO 9001"
+    },
+    "hero_carousel": {
+      "common": {
+        "scene_title": "Aplikasi",
+        "params": {
+          "density": "Ketumpatan Benang",
+          "tenacity": "Kekuatan Putus",
+          "elongation": "Pemanjangan",
+          "wash_temp": "Suhu Basuhan",
+          "color_fastness": "Ketahanan Warna",
+          "package": "Pembungkusan",
+          "heat_resistance": "Rintangan Haba",
+          "abrasion": "Lelasan"
+        }
+      },
+      "slide1": {
+        "badge": "20 Tahun Fokus Pengeluaran Benang Jahit",
+        "title_line1": "Penyelesaian Berkualiti Tinggi",
+        "title_line2": "untuk Pelbagai Industri",
+        "subtitle": "Kami menghasilkan benang poliester, nilon, kapas dan benang khas untuk aplikasi pakaian, kasut, tekstil rumah dan industri.",
+        "primary": "Lihat Produk",
+        "secondary": "Hubungi Jualan",
+        "trust_title": "Kekuatan Utama Kami",
+        "trust": {
+          "iso": { "title": "Disahkan ISO 9001", "subtitle": "Sistem pengurusan kualiti antarabangsa" },
+          "delivery": { "title": "Penghantaran 7–15 Hari", "subtitle": "Rantaian bekalan yang cekap" },
+          "custom": { "title": "Warna Kustom", "subtitle": "Kustomisasi fleksibel" }
+        },
+        "card": {
+          "title": "Siri Benang Premium",
+          "subtitle": "Untuk pelbagai aplikasi",
+          "tag": "Produk Popular"
+        }
+      },
+      "slide2": {
+        "badge": "Siri Terlaris",
+        "title_line1": "Benang Jahit Poliester 40/2",
+        "title_line2": "Pilihan Nilai Tinggi",
+        "subtitle": "Benang poliester 40/2 ialah produk bintang kami, dibuat daripada gentian poliester berkualiti tinggi. Mempunyai kekuatan tinggi, rintangan lelasan yang baik dan ketahanan warna yang tinggi, sesuai untuk kebanyakan senario pengeluaran pakaian.",
+        "primary": "Minta Sebut Harga",
+        "secondary": "Minta Sampel",
+        "values": {
+          "color_fastness": "≥ Gred 4"
+        },
+        "scene_tags": ["Pakaian Tenun", "Pakaian Rajut", "Pakaian Kanak-kanak", "Tekstil Rumah", "Beg", "Produk Kulit"]
+      },
+      "slide3": {
+        "badge": "Siri Benang Tebal",
+        "title_line1": "Benang Jahit Poliester 20/2",
+        "title_line2": "Benang Tebal Berkekuatan Tinggi",
+        "subtitle": "Direka untuk fabrik tebal, benang poliester 20/2 menggunakan pintalan dua helai berketahanan tinggi untuk kekuatan tegangan dan rintangan lelasan yang sangat baik. Sesuai untuk beg, sofa, hiasan dalaman kereta dan aplikasi berat.",
+        "values": {
+          "abrasion": "≥ 3000 kali"
+        },
+        "scene_tags": ["Beg Kulit", "Sofa & Perabot", "Hiasan Dalaman Kereta", "Peralatan Luar", "Tali Pinggang Keselamatan", "Kanvas Industri"]
+      }
+    },
+    "advantages": {
+      "title": "Kelebihan Utama Kami",
+      "subtitle": "Zhi'ao Thread komited menyediakan produk dan perkhidmatan bertaraf dunia",
+      "items": [
+        {
+          "title": "Kualiti Cemerlang",
+          "desc": "Bahan mentah premium dan sistem ISO yang ketat memastikan setiap produk memenuhi piawaian antarabangsa."
+        },
+        {
+          "title": "Inovasi R&D",
+          "desc": "Pasukan R&D profesional sentiasa membangunkan benang fungsian baharu untuk memenuhi keperluan pasaran."
+        },
+        {
+          "title": "Penghantaran Global",
+          "desc": "Kerjasama dengan rakan logistik global untuk penghantaran cepat dan boleh dipercayai ke 100+ negara dan wilayah."
+        },
+        {
+          "title": "Mesra Alam",
+          "desc": "Mengamalkan pembangunan lestari, pensijilan OEKO-TEX dan mengurangkan impak terhadap alam sekitar."
+        }
+      ]
+    },
+    "products": {
+      "title": "Produk Pilihan",
+      "subtitle": "Terokai benang jahit berprestasi tinggi untuk menggerakkan perniagaan anda",
+      "view_all": "Lihat Semua Produk"
+    },
+    "applications": {
+      "title": "Pelbagai Bidang Aplikasi",
+      "subtitle": "Benang kami digunakan dalam pelbagai industri untuk memenuhi keperluan jahitan yang berbeza",
+      "clothing": "Industri Pakaian",
+      "footwear": "Industri Kasut",
+      "automotive": "Industri",
+      "home": "Industri Rumah",
+      "embroidery": "Industri Sulaman",
+      "textiles": "Tekstil Teknikal"
+    },
+    "trust": {
+      "title": "Kualiti Adalah Keutamaan Kami",
+      "desc": "Kami bukan sekadar pengeluar benang, tetapi rakan kongsi yang boleh dipercayai. Melalui kawalan kualiti yang ketat dan pensijilan antarabangsa, setiap penghantaran melebihi jangkaan pelanggan.",
+      "assurance": "Jaminan Kualiti",
+      "experience": "Pengalaman Industri",
+      "certifications": "Pensijilan",
+      "color": "Pilihan Warna",
+      "global": "Pasaran Global",
+      "iso_certification": "Pemeriksaan dan pensijilan bertaraf dunia.",
+      "oeko_tex_certification": "Ujian bahan berbahaya dalam tekstil.",
+      "grs_certification": "Global Recycled Standard untuk produk lestari.",
+      "sgs_certification": "Pemeriksaan dan pensijilan bertaraf dunia."
+    },
+    "blog": {
+      "title": "Berita & Wawasan Terkini",
+      "subtitle": "Ikuti trend industri, panduan teknikal dan perkembangan terkini Zhi'ao Thread",
+      "read_full": "Baca Penuh"
+    }
+  },
+  "products": {
+    "seo": {
+      "title": "Benang Jahit Poliester - Zhi'ao Thread",
+      "keywords": "benang jahit poliester, pengeluar benang jahit, benang industri, benang untuk pakaian",
+      "description": "Zhi'ao Thread membekalkan benang jahit poliester untuk pembuatan pakaian, kuat dan tidak mudah putus, menyokong kustom warna."
+    },
+    "list": {
+      "title": "Produk Benang Jahit Kami",
+      "subtitle": "Terokai pelbagai benang jahit berkualiti tinggi untuk semua keperluan anda",
+      "filter_title": "Tapis Produk",
+      "categories": "Kategori",
+      "specs": "Spesifikasi",
+      "colors": "Siri Warna",
+      "all_categories": "Semua Kategori",
+      "polyester": "Benang Poliester",
+      "cotton": "Benang Kapas",
+      "nylon": "Benang Nilon",
+      "silk": "Benang Sutera",
+      "aramid": "Benang Aramid",
+      "high_tenacity": "Benang Berketahanan Tinggi",
+      "recycled": "Benang Kitar Semula",
+      "spec_20s2": "20s/2",
+      "spec_40s2": "40s/2",
+      "spec_50s2": "50s/2",
+      "spec_60s2": "60s/2",
+      "search_placeholder": "Cari produk…",
+      "no_results": "Tiada produk sepadan",
+      "items_count": "Jumlah {count} produk",
+      "reset_filters": "Tetapkan semula",
+      "clear_filters": "Kosongkan semua tapisan"
+    },
+    "detail": {
+      "inquiry": "Minta Sebut Harga",
+      "model": "Model",
+      "sku": "SKU",
+      "color": "Warna",
+      "length": "Panjang",
+      "tenacity": "Kekuatan",
+      "category": "Kategori",
+      "tags": "Tag",
+      "description": "Butiran Produk",
+      "specifications": "Spesifikasi",
+      "faq": "Soalan Lazim",
+      "related_products": "Produk Berkaitan",
+      "features": "Ciri Utama",
+      "back_to_list": "Kembali ke Senarai"
+    }
+  },
+  "about": {
+    "seo": {
+      "title": "Tentang Kami - Zhi'ao Thread",
+      "keywords": "sebut harga, sampel benang, benang industri kustom, eksport, pertanyaan",
+      "description": "Ketahui sejarah, nilai teras, proses pengeluaran dan kekuatan pasukan Zhi'ao Thread. Fokus pada benang industri premium dengan kustomisasi dan bekalan stabil."
+    },
+    "hero": {
+      "title": "Tentang Zhi'ao Thread",
+      "subtitle": "Sejak 2009, rakan kongsi dipercayai untuk penyelesaian benang jahit berkualiti"
+    },
+    "story": {
+      "kicker": "Kisah Kami",
+      "title": "Pengeluar Benang Jahit Terkemuka di China",
+      "desc": "Ditubuhkan pada 2009, Zhi'ao Thread ialah pengeluar dan pembekal profesional benang jahit industri berkualiti tinggi. Kami mempunyai pangkalan pengeluaran moden 25,000㎡ dengan peralatan pemintalan, pintalan, pewarnaan dan penggulungan yang canggih, dengan kapasiti tahunan 5,000 tan. Produk dieksport ke 50+ negara merentasi Amerika Utara, Eropah, Asia, Afrika dan Oceania, melayani 2,000+ pelanggan.",
+      "stats": {
+        "experience": "Tahun Pengalaman",
+        "capacity": "Tan / Tahun",
+        "countries": "Negara & Wilayah",
+        "customers": "Pelanggan Puas"
+      }
+    },
+    "profile": {
+      "title": "Profil Syarikat",
+      "desc1": "Ditubuhkan pada 1990-an, Zhi'ao Thread beribu pejabat di Hanchuan, Hubei, salah satu pangkalan pengeluaran benang jahit di China. Selepas lebih dua dekad pembangunan, kami berkembang menjadi perusahaan moden yang mengintegrasikan R&D, pengeluaran dan jualan.",
+      "desc2": "Kami memiliki kemudahan pengeluaran moden melebihi 50,000 meter persegi dengan mesin pemintalan, pintalan, pewarnaan dan penggulungan bertaraf dunia. Kapasiti tahunan melebihi 50,000 tan dan produk dieksport ke 100+ negara dan wilayah."
+    },
+    "stats": {
+      "experience": "Pengalaman Industri",
+      "capacity": "Kapasiti Tahunan (Tan)",
+      "countries": "Negara Eksport",
+      "employees": "Kakitangan Profesional"
+    },
+    "mission": {
+      "title": "Misi & Visi",
+      "mission_title": "Misi Kami",
+      "mission_desc": "Menyediakan benang jahit berkualiti tertinggi dan perkhidmatan cemerlang, membantu pelanggan menghasilkan produk berkualiti dengan cekap dan kos efektif.",
+      "mission_bullets": [
+        "Setiap produk membawa komitmen kami terhadap kecemerlangan",
+        "Inovasi berterusan untuk memenuhi keperluan industri",
+        "Kerjasama jangka panjang berasaskan kepercayaan dan manfaat bersama",
+        "Amalan pengeluaran lestari dan tanggungjawab alam sekitar"
+      ],
+      "vision_title": "Visi Kami",
+      "vision_desc": "Menjadi penyedia penyelesaian benang jahit global yang terkemuka, diiktiraf kerana kualiti produk, kepakaran teknikal dan komitmen terhadap kejayaan pelanggan.",
+      "vision_bullets": [
+        "Mengembangkan perniagaan global dan melayani pelanggan di seluruh dunia",
+        "Melabur dalam R&D untuk mencipta produk benang inovatif",
+        "Mengguna pakai teknologi pembuatan maju untuk meningkatkan kecekapan",
+        "Menetapkan penanda aras industri untuk kualiti, kelestarian dan etika pembuatan",
+        "Membina keupayaan bekalan global yang lebih stabil dan boleh dipercayai"
+      ]
+    },
+    "values": {
+      "title": "Nilai Teras Kami",
+      "subtitle": "Nilai-nilai asas ini membimbing keputusan kami dan mentakrifkan identiti syarikat.",
+      "items": [
+        { "title": "Kualiti Diutamakan", "desc": "Kami komited menyediakan kualiti tertinggi. Kualiti merangkumi setiap proses daripada bahan mentah hingga pemeriksaan akhir." },
+        { "title": "Pelanggan Diutamakan", "desc": "Kami fokus pada keperluan pelanggan, memberi cadangan profesional dan respons pantas untuk meningkatkan kecekapan dan daya saing." },
+        { "title": "Inovasi", "desc": "Kami terus melabur dalam R&D dan peningkatan proses untuk penyelesaian yang lebih stabil, tahan lama dan mesra alam." },
+        { "title": "Integriti", "desc": "Kami menjalankan perniagaan dengan jujur, telus dan beretika, membina hubungan jangka panjang yang dipercayai." },
+        { "title": "Kerja Berpasukan", "desc": "Kami percaya pada kuasa kolaborasi dan pembangunan bakat untuk pertumbuhan berterusan." },
+        { "title": "Kelestarian", "desc": "Kami mengintegrasikan prinsip hijau dalam pengeluaran dan memikul tanggungjawab sosial korporat." }
+      ]
+    },
+    "process": {
+      "kicker": "Proses Kami",
+      "title": "Proses Pengeluaran",
+      "subtitle": "Kemudahan maju dan kawalan kualiti yang ketat memastikan setiap gelendong memenuhi standard tinggi kami.",
+      "steps": [
+        {
+          "title": "Pemilihan & Pemeriksaan Bahan Mentah",
+          "desc": "Kami hanya membeli gentian poliester, nilon dan kapas dara berkualiti tinggi daripada pembekal yang disahkan. Setiap batch diperiksa sebelum pengeluaran.",
+          "bullets": ["Gentian 100% dara", "Pemeriksaan pembekal", "Pemeriksaan kualiti menyeluruh"]
+        },
+        {
+          "title": "Pintalan & Penggabungan",
+          "desc": "Gentian dipintal menjadi benang, kemudian dipintal dan digabung untuk mencapai nombor benang dan kekuatan tegangan diperlukan. Peralatan tepat memastikan ketumpatan seragam dan prestasi stabil.",
+          "bullets": ["Kawalan pintalan tepat", "Ketumpatan seragam", "Pemantauan masa nyata"]
+        },
+        {
+          "title": "Pewarnaan & Padanan Warna",
+          "desc": "Kami menggunakan pewarna mesra alam berkualiti tinggi untuk ketahanan warna yang baik. Pasukan warna profesional menyokong padanan warna kustom.",
+          "bullets": ["10,000+ warna standard", "Padanan warna kustom", "Proses pewarnaan mesra alam"]
+        },
+        {
+          "title": "Penggulungan & Pelinciran",
+          "desc": "Benang selepas pewarnaan digulung mengikut keperluan. Rawatan pelincir khas mengurangkan geseran dan meningkatkan prestasi jahitan.",
+          "bullets": ["Kawalan ketegangan tepat", "Opsyen tanpa simpul", "Rawatan pelincir khas"]
+        },
+        {
+          "title": "Pemeriksaan & Ujian Kualiti",
+          "desc": "Setiap batch diuji di makmal dalaman termasuk kekuatan tegangan, pemanjangan dan ketahanan warna. Laporan kualiti tersedia.",
+          "bullets": ["Pemeriksaan 100% batch", "Ujian mengikut piawaian", "Laporan QC terperinci"]
+        },
+        {
+          "title": "Pembungkusan & Penghantaran",
+          "desc": "Produk dibungkus mengikut spesifikasi pelanggan dengan label yang jelas. Kami bekerjasama dengan rakan logistik global untuk penghantaran tepat masa.",
+          "bullets": ["Pembungkusan kustom tersedia", "Pemprosesan pesanan pantas", "Penyelesaian penghantaran global"]
+        }
+      ]
+    },
+    "team": {
+      "kicker": "Pasukan Kami",
+      "title": "Kenali Pasukan Pengurusan",
+      "subtitle": "Pasukan pengurusan berpengalaman dengan kepakaran dalam tekstil dan benang jahit.",
+      "members": [
+        {
+          "name": "David Wang",
+          "role": "Pengasas & CEO",
+          "desc": "Dengan pengalaman industri 30+ tahun, beliau mengasaskan syarikat pada 2009 dan memimpin strategi serta pembangunan perniagaan global."
+        },
+        {
+          "name": "Dr. Emily Zhang",
+          "role": "Pengarah Teknikal",
+          "desc": "Memimpin R&D dan kualiti, memberi tumpuan kepada inovasi produk, pengoptimuman proses dan sokongan teknikal."
+        },
+        {
+          "name": "Michael Johnson",
+          "role": "Pengarah Jualan Antarabangsa",
+          "desc": "Mengurus pasaran global dan kejayaan pelanggan, membina saluran luar negara dan memadankan penyelesaian yang sesuai."
+        },
+        {
+          "name": "Richard Liu",
+          "role": "Pengurus Pengeluaran",
+          "desc": "Bertanggungjawab terhadap pengurusan pengeluaran dan jaminan penghantaran, memacu lean manufacturing dan penambahbaikan berterusan."
+        }
+      ]
+    },
+    "factory": {
+      "kicker": "Kilang Kami",
+      "title": "Lawatan Kilang",
+      "subtitle": "Lihat pangkalan pembuatan moden kami yang dilengkapi kemudahan pengeluaran maju."
+    },
+    "cta": {
+      "title": "Lawati Kilang Kami",
+      "subtitle": "Tempah lawatan untuk melihat kemudahan moden dan proses berkawalan dari bahan mentah hingga produk siap.",
+      "primary": "Tempah Lawatan",
+      "secondary": "Lihat Produk"
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "Hubungi Kami - Zhi'ao Thread",
+      "description": "Hubungi Zhi'ao Thread untuk sebut harga, sampel dan penyelesaian benang industri kustom. Respons pantas dan sokongan penghantaran antarabangsa.",
+      "keywords": "hubungi, sebut harga, sampel, benang industri, pertanyaan"
+    },
+    "hero": {
+      "title": "Hubungi Kami",
+      "subtitle": "Kami sedia membantu menjawab soalan dan menyediakan penyelesaian terbaik"
+    },
+    "section": {
+      "kicker": "Hubungi Kami",
+      "title": "Maklumat Perhubungan",
+      "desc": "Sama ada anda mempunyai soalan produk, memerlukan sebut harga atau ingin melawat kilang, pasukan kami sedia membantu."
+    },
+    "location": {
+      "title": "Lokasi Kami",
+      "subtitle": "Anda dialu-alukan untuk melawat kilang dan pejabat kami"
+    },
+    "cards": {
+      "address": {
+        "title": "Alamat Kilang",
+        "value": "Taman Perindustrian Chenghuang, Hanchuan, Hubei, China"
+      },
+      "phone": {
+        "title": "Telefon & WeChat",
+        "value": "+86 138 0000 0000"
+      },
+      "email": {
+        "title": "Email",
+        "value": "sales{'@'}sewprothread.com"
+      },
+      "hours": {
+        "title": "Waktu Bekerja",
+        "value_1": "Isnin–Jumaat: 9:00–18:00 (GMT+8)",
+        "value_2": "Sabtu: 9:00–12:00 (GMT+8)"
+      }
+    },
+    "follow": {
+      "title": "Ikuti Kami"
+    },
+    "info": {
+      "title": "Maklumat Perhubungan",
+      "address": "Alamat",
+      "address_val": "Taman Perindustrian Chenghuang, Hanchuan, Hubei, China",
+      "phone": "Telefon",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "hours": "Waktu Bekerja",
+      "hours_val": "Isnin–Jumaat: 9:00–18:00 (GMT+8)"
+    },
+    "form": {
+      "title": "Tinggalkan Mesej",
+      "subtitle": "Isi borang di bawah dan kami akan membalas dalam 24 jam pada hari bekerja.",
+      "name": "Nama",
+      "email": "Email",
+      "company": "Nama Syarikat",
+      "phone": "Telefon / WhatsApp",
+      "country": "Negara/Wilayah",
+      "interest": "Produk diminati",
+      "subject": "Subjek",
+      "message": "Mesej",
+      "placeholder_name": "Masukkan nama anda",
+      "placeholder_email": "Email anda",
+      "placeholder_company": "Masukkan nama syarikat",
+      "placeholder_phone": "Masukkan nombor telefon",
+      "placeholder_country": "Pilih negara anda",
+      "placeholder_interest": "Pilih model",
+      "placeholder_subject": "Masukkan subjek",
+      "placeholder_message": "Sila terangkan keperluan anda: jenis produk, spesifikasi, kuantiti, aplikasi, dll.",
+      "countries": {
+        "CN": "China",
+        "VN": "Vietnam",
+        "TH": "Thailand",
+        "ID": "Indonesia",
+        "KH": "Kemboja",
+        "FR": "Perancis",
+        "IT": "Itali",
+        "AE": "Emiriah Arab Bersatu",
+        "US": "Amerika Syarikat"
+      },
+      "product_types": {
+        "polyester": "Benang Poliester",
+        "cotton": "Benang Kapas",
+        "nylon": "Benang Nilon",
+        "high_tenacity": "Benang Berketahanan Tinggi",
+        "recycled": "Benang Kitar Semula"
+      },
+      "upload_title": "Klik untuk muat naik atau seret fail ke sini",
+      "upload_hint": "Sokong PDF, JPG, PNG (maks 10MB)",
+      "submit": "Hantar",
+      "submitting": "Menghantar…",
+      "success_msg": "Mesej anda berjaya dihantar. Kami akan menghubungi anda secepat mungkin!"
+    },
+    "faq": {
+      "kicker": "Soalan Lazim",
+      "title": "Soalan Lazim",
+      "subtitle": "Cari jawapan untuk soalan lazim tentang produk, proses pesanan dan perkhidmatan kami.",
+      "items": [
+        {
+          "q": "Apakah MOQ (kuantiti pesanan minimum) anda?",
+          "a": "Untuk produk standard, MOQ ialah 100 karton bagi setiap warna. Untuk warna kustom, MOQ ialah 300 karton bagi setiap warna. Pesanan percubaan kecil untuk pelanggan baharu boleh dipertimbangkan; sila hubungi pasukan jualan kami."
+        },
+        {
+          "q": "Adakah anda menyediakan sampel percuma?",
+          "a": "Ya. Kami boleh menyediakan sampel warna standard untuk ujian dan pengesahan. Sila beritahu jenis produk, spesifikasi dan warna yang diperlukan; kami akan aturkan penghantaran (polisi kos penghantaran bergantung kepada komunikasi)."
+        },
+        {
+          "q": "Berapa lama masa pengeluaran?",
+          "a": "Produk stok boleh dihantar dengan cepat; pesanan kustom biasanya memerlukan 7–15 hari bekerja bergantung pada jenis produk, warna dan kuantiti."
+        },
+        {
+          "q": "Adakah anda menyokong padanan warna kustom?",
+          "a": "Ya. Kami menyokong padanan berdasarkan kod warna atau sampel dan boleh melaras toleransi perbezaan warna serta sasaran ketahanan mengikut keperluan."
+        },
+        {
+          "q": "Apakah kaedah pembayaran yang diterima?",
+          "a": "Kebiasaannya pindahan bank (T/T). Terma pembayaran untuk pesanan besar boleh dirunding."
+        },
+        {
+          "q": "Bolehkah anda menyediakan pembungkusan kustom dengan logo kami?",
+          "a": "Ya. Kami menyokong label kustom dan cetakan karton. Sila sediakan fail reka bentuk dan keperluan pembungkusan anda."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Dapatkan Sebut Harga Sekarang",
+      "subtitle": "Hubungi pasukan jualan kami untuk sebut harga kompetitif, sampel percuma dan penyelesaian benang jahit kustom untuk perniagaan anda.",
+      "email_label": "Email",
+      "wechat_label": "WeChat"
+    }
+  },
+  "inquiry": {
+    "seo": {
+      "title": "Permintaan Sebut Harga - Zhi'ao Thread",
+      "description": "Hantar pertanyaan dan keperluan pembelian anda. Kami akan membalas dalam 24 jam dengan sebut harga dan maklumat produk.",
+      "keywords": "permintaan sebut harga, pertanyaan produk, harga benang, benang industri"
+    },
+    "hero": {
+      "title": "Permintaan Sebut Harga",
+      "subtitle": "Sila isi maklumat keperluan anda. Kami akan memberikan sebut harga kompetitif dan maklumat produk dalam 24 jam."
+    },
+    "form": {
+      "name": "Nama",
+      "email": "Email",
+      "company": "Nama Syarikat",
+      "phone": "Telefon / WhatsApp",
+      "country": "Negara/Wilayah",
+      "model": "Model",
+      "quantity": "Anggaran Kuantiti",
+      "color": "Keperluan Warna",
+      "message": "Keperluan Lain",
+      "placeholder_name": "Masukkan nama anda",
+      "placeholder_email": "Email anda",
+      "placeholder_company": "Masukkan nama syarikat",
+      "placeholder_phone": "Masukkan nombor telefon",
+      "placeholder_country": "Pilih negara anda",
+      "placeholder_model": "Pilih model",
+      "placeholder_quantity": "Contoh: 500 karton / 10 tan",
+      "placeholder_color": "Pilih warna",
+      "placeholder_message": "Sila terangkan keperluan produk, spesifikasi, kuantiti, tarikh penghantaran, dll.",
+      "upload_title": "Klik untuk muat naik atau seret fail ke sini",
+      "upload_hint": "Sokong PDF, JPG, PNG (maks 10MB)",
+      "submit": "Hantar Pertanyaan",
+      "submitting": "Menghantar…",
+      "success_msg": "Berjaya dihantar. Kami akan menghubungi anda secepat mungkin!",
+      "subject_default": "Pertanyaan Produk"
+    }
+  },
+  "news": {
+    "seo": {
+      "title": "Berita - Zhi'ao Thread",
+      "description": "Pusat berita Zhi'ao Thread: trend industri, panduan produk dan berita syarikat.",
+      "keywords": "berita, trend industri, panduan produk, pengetahuan benang"
+    },
+    "categories": {
+      "all": "Semua"
+    },
+    "list": {
+      "title": "Berita",
+      "subtitle": "Ketahui trend industri terkini, panduan produk dan berita syarikat"
+    },
+    "detail": {
+      "published_at": "Diterbitkan pada",
+      "category": "Kategori",
+      "back": "Kembali",
+      "related": "Berita Berkaitan",
+      "latest": "Berita Terkini",
+      "categories": "Kategori",
+      "share": "Kongsi:"
+    }
+  }
+}

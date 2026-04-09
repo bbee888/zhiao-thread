@@ -1,10 +1,10 @@
 <template>
-  <footer class="bg-slate-900 text-slate-300 pt-16 pb-8">
+  <footer class="bg-slate-900 text-slate-300 pt-12 sm:pt-16 pb-8">
     <div class="container mx-auto max-w-7xl px-4 md:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-10 sm:mb-12">
         <!-- Brand Info -->
         <div class="flex flex-col space-y-6">
-          <NuxtLink to="/" class="flex items-center space-x-3 text-white">
+          <NuxtLink :to="localePath('/')" class="flex items-center space-x-3 text-white">
             <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
               <i class="ri-shining-line text-2xl"></i>
             </div>
@@ -13,7 +13,7 @@
           <p class="text-sm leading-relaxed">
             {{ $t('common.footer.desc') }}
           </p>
-          <div class="flex space-x-4">
+          <div class="flex flex-wrap gap-3 sm:gap-4">
             <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
               <i class="ri-facebook-fill"></i>
             </a>
@@ -33,11 +33,11 @@
         <div>
           <h4 class="text-white font-bold mb-6">{{ $t('common.footer.quick_links') }}</h4>
           <ul class="space-y-4 text-sm">
-            <li><NuxtLink to="/" class="hover:text-blue-400 transition-colors">{{ $t('common.nav.home') }}</NuxtLink></li>
-            <li><NuxtLink to="/products" class="hover:text-blue-400 transition-colors">{{ $t('common.nav.products') }}</NuxtLink></li>
-            <li><NuxtLink to="/news" class="hover:text-blue-400 transition-colors">{{ $t('common.nav.news') }}</NuxtLink></li>
-            <li><NuxtLink to="/about" class="hover:text-blue-400 transition-colors">{{ $t('common.nav.about') }}</NuxtLink></li>
-            <li><NuxtLink to="/contact" class="hover:text-blue-400 transition-colors">{{ $t('common.nav.contact') }}</NuxtLink></li>
+            <li><NuxtLink :to="localePath('/')" class="hover:text-blue-400 transition-colors">{{ $t('common.nav.home') }}</NuxtLink></li>
+            <li><NuxtLink :to="localePath('/products')" class="hover:text-blue-400 transition-colors">{{ $t('common.nav.products') }}</NuxtLink></li>
+            <li><NuxtLink :to="localePath('/news')" class="hover:text-blue-400 transition-colors">{{ $t('common.nav.news') }}</NuxtLink></li>
+            <li><NuxtLink :to="localePath('/about')" class="hover:text-blue-400 transition-colors">{{ $t('common.nav.about') }}</NuxtLink></li>
+            <li><NuxtLink :to="localePath('/contact')" class="hover:text-blue-400 transition-colors">{{ $t('common.nav.contact') }}</NuxtLink></li>
           </ul>
         </div>
 
@@ -45,11 +45,14 @@
         <div>
           <h4 class="text-white font-bold mb-6">{{ $t('common.footer.product_categories') }}</h4>
           <ul class="space-y-4 text-sm">
-            <li><a href="#" class="hover:text-blue-400 transition-colors">涤纶缝纫线</a></li>
-            <li><a href="#" class="hover:text-blue-400 transition-colors">高强力线</a></li>
-            <li><a href="#" class="hover:text-blue-400 transition-colors">尼龙缝纫线</a></li>
-            <li><a href="#" class="hover:text-blue-400 transition-colors">棉质缝纫线</a></li>
-            <li><a href="#" class="hover:text-blue-400 transition-colors">特种缝纫线</a></li>
+            <li v-for="c in footerCategories" :key="c.id">
+              <NuxtLink
+                :to="localePath({ path: '/products', query: { cateId: String(c.id) } })"
+                class="hover:text-blue-400 transition-colors"
+              >
+                {{ c.name }}
+              </NuxtLink>
+            </li>
           </ul>
         </div>
 
@@ -78,18 +81,62 @@
       </div>
 
       <!-- Bottom Bar -->
-      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs space-y-4 md:space-y-0">
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-center items-center text-xs gap-4">
         <p>&copy; {{ new Date().getFullYear() }} {{ $t('common.header.logo') }}. {{ $t('common.footer.copyright') }}</p>
-        <div class="flex space-x-6">
-          <a href="#" class="hover:text-white transition-colors">{{ $t('common.footer.privacy') }}</a>
-          <a href="#" class="hover:text-white transition-colors">{{ $t('common.footer.terms') }}</a>
-          <a href="#" class="hover:text-white transition-colors">{{ $t('common.footer.sitemap') }}</a>
-        </div>
       </div>
     </div>
   </footer>
 </template>
 
 <script setup>
-// Footer logic here
+const { t, locale } = useI18n()
+const localePath = useLocalePath()
+const config = useRuntimeConfig()
+const apiBase = config.public.apiBase
+
+const unwrapListData = (res) => {
+  if (!res) return []
+  if (Array.isArray(res)) return res
+  if (res && typeof res === 'object') {
+    const d = res.data ?? res
+    if (Array.isArray(d)) return d
+    if (Array.isArray(d.items)) return d.items
+    if (Array.isArray(d.list)) return d.list
+    if (d && typeof d === 'object' && Array.isArray(d.data)) return d.data
+  }
+  return []
+}
+
+const pickLangValue = (langData) => {
+  if (!langData || typeof langData !== 'object') return ''
+  return langData?.[locale.value] ?? langData?.zh ?? Object.values(langData)[0] ?? ''
+}
+
+const flattenCategoryTree = (nodes) => {
+  const res = []
+  const stack = Array.isArray(nodes) ? [...nodes] : []
+  while (stack.length) {
+    const n = stack.shift()
+    if (!n) continue
+    res.push(n)
+    if (Array.isArray(n.children) && n.children.length) {
+      stack.unshift(...n.children)
+    }
+  }
+  return res
+}
+
+const { data: categoryRes } = await useFetch('/products/categories', {
+  baseURL: apiBase,
+  query: { status: 1 },
+  watch: [locale],
+})
+
+const footerCategories = computed(() => {
+  const list = flattenCategoryTree(unwrapListData(categoryRes.value))
+  return list.slice(0, 5).map((c) => ({
+    id: c.id,
+    name: pickLangValue(c.langData) || t('common.labels.category_fallback', { id: c.id }),
+  }))
+})
 </script>

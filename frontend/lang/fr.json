@@ -1,1 +1,556 @@
-{}
+{
+  "common": {
+    "status": {
+      "loading": "Chargement…",
+      "empty": "Aucune donnée"
+    },
+    "nav": {
+      "home": "Accueil",
+      "products": "Produits",
+      "applications": "Applications",
+      "about": "À propos",
+      "quality": "Contrôle qualité",
+      "news": "Actualités",
+      "contact": "Contact"
+    },
+    "header": {
+      "title": "Hubei Zhi'ao Thread Industry Co., Ltd.",
+      "logo": "Zhi'ao Thread",
+      "welcome": "Bienvenue chez Zhi'ao Thread",
+      "free_shipping": "Livraison gratuite pour les commandes supérieures à 500 $",
+      "get_quote": "Demander un devis"
+    },
+    "footer": {
+      "desc": "Zhi'ao Thread est un fabricant mondial de fils à coudre de haute qualité, avec plus de 20 ans d'expérience de production, engagé à fournir des solutions de couture d'excellence à l'industrie textile mondiale.",
+      "contact": "Contact",
+      "address": "Parc industriel de Chenghuang, Hanchuan, Hubei, Chine",
+      "copyright": "Tous droits réservés",
+      "quick_links": "Liens rapides",
+      "product_categories": "Catégories de produits",
+      "contact_hours": "Du lundi au vendredi : 9:00–18:00"
+    },
+    "actions": {
+      "view_details": "Voir les détails",
+      "learn_more": "En savoir plus",
+      "submit": "Envoyer"
+    },
+    "labels": {
+      "category_fallback": "Catégorie {id}",
+      "read_time": "{minutes} min de lecture"
+    },
+    "breadcrumbs": {
+      "home": "Accueil",
+      "products": "Produits",
+      "about": "À propos",
+      "contact": "Contact",
+      "news": "Actualités"
+    }
+  },
+  "home": {
+    "seo": {
+      "title": "Hubei Zhi'ao Thread - Fournisseur de fil à coudre polyester",
+      "keywords": "fil à coudre polyester, fabricant de fil à coudre, fil industriel, fil pour vêtements",
+      "description": "Fabricant professionnel de fils à coudre polyester haute ténacité. Qualité stable, prix compétitif, personnalisation, exportation mondiale."
+    },
+    "hero": {
+      "title": "Des solutions de fil à coudre de haute qualité pour tous les secteurs",
+      "subtitle": "Excellence à chaque point, précision à chaque bobine",
+      "browse": "Voir les produits",
+      "contact": "Contacter les ventes",
+      "customization": "Service de personnalisation",
+      "delivery": "Livraison rapide dans le monde",
+      "certification": "Certification ISO 9001"
+    },
+    "hero_carousel": {
+      "common": {
+        "scene_title": "Applications",
+        "params": {
+          "density": "Densité de fil",
+          "tenacity": "Résistance à la rupture",
+          "elongation": "Allongement",
+          "wash_temp": "Temp. de lavage",
+          "color_fastness": "Solidité des couleurs",
+          "package": "Emballage",
+          "heat_resistance": "Résistance à la chaleur",
+          "abrasion": "Abrasion"
+        }
+      },
+      "slide1": {
+        "badge": "20 ans dédiés à la fabrication de fils à coudre",
+        "title_line1": "Des solutions de qualité",
+        "title_line2": "pour tous les secteurs",
+        "subtitle": "Nous produisons des fils polyester, nylon, coton et des fils spéciaux, adaptés à l'habillement, aux chaussures, au textile d'intérieur et aux usages industriels.",
+        "primary": "Voir les produits",
+        "secondary": "Contacter les ventes",
+        "trust_title": "Nos principaux atouts",
+        "trust": {
+          "iso": { "title": "Certifié ISO 9001", "subtitle": "Système qualité international" },
+          "delivery": { "title": "Livraison 7–15 jours", "subtitle": "Chaîne d'approvisionnement efficace" },
+          "custom": { "title": "Couleurs sur mesure", "subtitle": "Personnalisation flexible" }
+        },
+        "card": {
+          "title": "Séries de fils premium",
+          "subtitle": "Pour de nombreuses applications",
+          "tag": "Meilleure vente"
+        }
+      },
+      "slide2": {
+        "badge": "Série best-seller",
+        "title_line1": "Fil à coudre polyester 40/2",
+        "title_line2": "Un excellent rapport qualité-prix",
+        "subtitle": "Le fil polyester 40/2 est notre produit phare, fabriqué à partir de fibres polyester de haute qualité. Il offre une grande résistance, une excellente résistance à l'abrasion et une forte solidité des couleurs, idéal pour la plupart des scénarios de confection.",
+        "primary": "Demander un devis",
+        "secondary": "Demander un échantillon",
+        "values": {
+          "color_fastness": "≥ 4"
+        },
+        "scene_tags": ["Vêtements tissés", "Vêtements tricotés", "Vêtements enfant", "Textile d'intérieur", "Sacs", "Articles en cuir"]
+      },
+      "slide3": {
+        "badge": "Série gros fil",
+        "title_line1": "Fil à coudre polyester 20/2",
+        "title_line2": "Gros fil haute résistance",
+        "subtitle": "Conçu pour les tissus lourds, le fil polyester 20/2 utilise un retors double brin haute résistance, offrant une excellente résistance à la traction et à l'abrasion. Idéal pour les sacs, canapés, intérieurs automobiles et autres usages exigeants.",
+        "values": {
+          "abrasion": "≥ 3000 cycles"
+        },
+        "scene_tags": ["Sacs en cuir", "Canapés & mobilier", "Intérieurs automobiles", "Équipement outdoor", "Ceintures de sécurité", "Toile industrielle"]
+      }
+    },
+    "advantages": {
+      "title": "Nos atouts",
+      "subtitle": "Zhi'ao Thread s'engage à fournir des produits et services de classe mondiale",
+      "items": [
+        {
+          "title": "Qualité exceptionnelle",
+          "desc": "Matières premières premium et système ISO strict pour garantir une qualité conforme aux standards internationaux."
+        },
+        {
+          "title": "Innovation R&D",
+          "desc": "Une équipe R&D professionnelle développe en continu de nouveaux fils fonctionnels pour répondre aux besoins du marché."
+        },
+        {
+          "title": "Livraison mondiale",
+          "desc": "Réseau logistique fiable pour des livraisons ponctuelles dans plus de 100 pays et régions."
+        },
+        {
+          "title": "Écoresponsable",
+          "desc": "Développement durable, certification OEKO-TEX, réduction de l'impact environnemental."
+        }
+      ]
+    },
+    "products": {
+      "title": "Produits phares",
+      "subtitle": "Découvrez nos fils à coudre haute performance pour dynamiser votre activité",
+      "view_all": "Voir tous les produits"
+    },
+    "applications": {
+      "title": "Large éventail d'applications",
+      "subtitle": "Nos fils sont utilisés dans de nombreux secteurs pour répondre à des besoins variés",
+      "clothing": "Habillement",
+      "footwear": "Chaussure",
+      "automotive": "Industrie",
+      "home": "Maison",
+      "embroidery": "Broderie",
+      "textiles": "Textiles techniques"
+    },
+    "trust": {
+      "title": "La qualité est notre priorité",
+      "desc": "Nous ne faisons pas que fabriquer du fil : nous sommes votre partenaire fiable. Grâce à un contrôle qualité strict et à des certifications internationales, chaque livraison dépasse vos attentes.",
+      "assurance": "Assurance qualité",
+      "experience": "Expérience",
+      "certifications": "Certifications",
+      "color": "Gamme de couleurs",
+      "global": "Marché mondial",
+      "iso_certification": "Référence mondiale en inspection et certification.",
+      "oeko_tex_certification": "Tests des substances nocives dans les textiles.",
+      "grs_certification": "Norme mondiale du recyclage pour des produits durables.",
+      "sgs_certification": "Référence mondiale en inspection et certification."
+    },
+    "blog": {
+      "title": "Dernières actualités",
+      "subtitle": "Tendances, guides techniques et dernières nouvelles de Zhi'ao Thread",
+      "read_full": "Lire l'article"
+    }
+  },
+  "products": {
+    "seo": {
+      "title": "Fil à coudre polyester - Zhi'ao Thread",
+      "keywords": "fil à coudre polyester, fabricant de fil à coudre, fil industriel, fil pour vêtements",
+      "description": "Zhi'ao Thread fournit des fils à coudre polyester, adaptés à la confection, résistants et personnalisables en couleurs."
+    },
+    "list": {
+      "title": "Nos fils à coudre",
+      "subtitle": "Explorez une gamme de fils de haute qualité pour tous vos besoins",
+      "filter_title": "Filtres",
+      "categories": "Catégories",
+      "specs": "Spécifications",
+      "colors": "Couleurs",
+      "all_categories": "Toutes les catégories",
+      "polyester": "Fil polyester",
+      "cotton": "Fil coton",
+      "nylon": "Fil nylon",
+      "silk": "Fil soie",
+      "aramid": "Fil aramide",
+      "high_tenacity": "Fil haute ténacité",
+      "recycled": "Fil recyclé",
+      "spec_20s2": "20s/2",
+      "spec_40s2": "40s/2",
+      "spec_50s2": "50s/2",
+      "spec_60s2": "60s/2",
+      "search_placeholder": "Rechercher des produits…",
+      "no_results": "Aucun produit correspondant",
+      "items_count": "{count} produits au total",
+      "reset_filters": "Réinitialiser",
+      "clear_filters": "Effacer tous les filtres"
+    },
+    "detail": {
+      "inquiry": "Demander un devis",
+      "model": "Modèle",
+      "sku": "SKU",
+      "color": "Couleur",
+      "length": "Longueur",
+      "tenacity": "Résistance",
+      "category": "Catégorie",
+      "tags": "Tags",
+      "description": "Détails du produit",
+      "specifications": "Spécifications",
+      "faq": "FAQ",
+      "related_products": "Produits associés",
+      "features": "Caractéristiques",
+      "back_to_list": "Retour à la liste"
+    }
+  },
+  "about": {
+    "seo": {
+      "title": "À propos - Zhi'ao Thread",
+      "keywords": "demander un devis, échantillon, fil industriel sur mesure, export, demande",
+      "description": "Découvrez l'histoire, les valeurs, le processus de production et les capacités de Zhi'ao Thread. Fils industriels premium, personnalisation et approvisionnement stable."
+    },
+    "hero": {
+      "title": "À propos de Zhi'ao Thread",
+      "subtitle": "Depuis 2009, votre partenaire de confiance pour des solutions de fil à coudre de qualité"
+    },
+    "story": {
+      "kicker": "Notre histoire",
+      "title": "Un fabricant leader de fils à coudre en Chine",
+      "desc": "Fondée en 2009, Zhi'ao Thread est un fabricant et fournisseur professionnel de fils à coudre industriels de haute qualité. Nous disposons d'une base moderne de 25 000 m², équipée de lignes avancées de filature, retordage, teinture et bobinage, avec une capacité annuelle de 5 000 tonnes. Nos produits sont exportés vers plus de 50 pays en Amérique du Nord, Europe, Asie, Afrique et Océanie, au service de plus de 2 000 clients.",
+      "stats": {
+        "experience": "Années d'expérience",
+        "capacity": "Tonnes / an",
+        "countries": "Pays & régions",
+        "customers": "Clients satisfaits"
+      }
+    },
+    "profile": {
+      "title": "Présentation de l'entreprise",
+      "desc1": "Fondée dans les années 1990, Zhi'ao Thread a son siège à Hanchuan, Hubei, l'un des principaux pôles chinois du fil à coudre. Après plus de vingt ans de développement, nous sommes devenus une entreprise moderne intégrant R&D, production et vente.",
+      "desc2": "Nous disposons d'ateliers modernes de plus de 50 000 m², équipés d'équipements de filature, retordage, teinture et bobinage de niveau mondial. Notre capacité annuelle dépasse 50 000 tonnes et nous exportons vers plus de 100 pays et régions."
+    },
+    "stats": {
+      "experience": "Expérience",
+      "capacity": "Capacité annuelle (tonnes)",
+      "countries": "Pays d'export",
+      "employees": "Personnel qualifié"
+    },
+    "mission": {
+      "title": "Mission & vision",
+      "mission_title": "Notre mission",
+      "mission_desc": "Fournir à nos clients des fils à coudre de la plus haute qualité et un service excellent, afin de produire efficacement et économiquement des produits de qualité.",
+      "mission_bullets": [
+        "Chaque produit porte notre engagement de qualité",
+        "Innovation continue pour répondre aux besoins du secteur",
+        "Partenariats durables basés sur la confiance et le bénéfice mutuel",
+        "Pratiques durables et responsabilité environnementale"
+      ],
+      "vision_title": "Notre vision",
+      "vision_desc": "Devenir un fournisseur mondial de solutions de fil à coudre, reconnu pour la qualité, l'expertise technique et l'engagement envers la réussite de nos clients.",
+      "vision_bullets": [
+        "Développer notre présence mondiale et servir des clients partout",
+        "Investir en R&D pour créer des produits innovants",
+        "Adopter des technologies avancées pour améliorer l'efficacité",
+        "Établir des références en qualité, durabilité et éthique",
+        "Construire une chaîne d'approvisionnement mondiale plus fiable et stable"
+      ]
+    },
+    "values": {
+      "title": "Des valeurs qui nous guident",
+      "subtitle": "Ces valeurs fondamentales guident nos activités et définissent notre identité.",
+      "items": [
+        { "title": "Qualité d'abord", "desc": "Nous visons la meilleure qualité. De la sélection des matières au contrôle final, la qualité est au cœur de chaque étape." },
+        { "title": "Client au centre", "desc": "Nous répondons rapidement et conseillons professionnellement pour améliorer l'efficacité et la compétitivité de nos clients." },
+        { "title": "Innovation", "desc": "Nous investissons en R&D et améliorons nos procédés pour des solutions plus stables, durables et écoresponsables." },
+        { "title": "Intégrité", "desc": "Nous travaillons avec honnêteté et transparence, et construisons des relations durables basées sur la confiance." },
+        { "title": "Esprit d'équipe", "desc": "La collaboration et le développement des talents sont essentiels à notre croissance." },
+        { "title": "Durabilité", "desc": "Nous intégrons l'écologie dans la production et assumons notre responsabilité sociétale." }
+      ]
+    },
+    "process": {
+      "kicker": "Notre processus",
+      "title": "Processus de production",
+      "subtitle": "Des installations avancées et un contrôle strict garantissent que chaque bobine respecte nos standards.",
+      "steps": [
+        {
+          "title": "Sélection & contrôle des matières",
+          "desc": "Nous achetons uniquement des fibres polyester, nylon et coton de haute qualité auprès de fournisseurs certifiés. Chaque lot est inspecté avant production.",
+          "bullets": ["Fibres 100% vierges", "Contrôle des fournisseurs", "Tests qualité complets"]
+        },
+        {
+          "title": "Retordage & assemblage",
+          "desc": "Les fibres sont filées puis assemblées et retordues pour obtenir le titrage et la résistance requis. L'équipement de précision garantit une densité uniforme et des performances stables.",
+          "bullets": ["Contrôle précis du retord", "Densité uniforme", "Surveillance en temps réel"]
+        },
+        {
+          "title": "Teinture & contretypage",
+          "desc": "Nous utilisons des colorants écologiques de haute qualité offrant une excellente solidité. Notre équipe peut réaliser un contretypage sur mesure.",
+          "bullets": ["10 000+ couleurs standard", "Contretypage sur mesure", "Procédé de teinture écoresponsable"]
+        },
+        {
+          "title": "Bobinage & lubrification",
+          "desc": "Après teinture, le fil est bobiné selon les besoins. Un traitement lubrifiant réduit la friction et améliore la couture.",
+          "bullets": ["Contrôle précis de la tension", "Option bobinage sans nœuds", "Traitement lubrifiant spécial"]
+        },
+        {
+          "title": "Inspection & essais",
+          "desc": "Chaque lot est testé en laboratoire (résistance, allongement, solidité des couleurs, etc.) et un rapport qualité peut être fourni.",
+          "bullets": ["Contrôle 100% des lots", "Tests conformes aux standards", "Rapports qualité détaillés"]
+        },
+        {
+          "title": "Emballage & expédition",
+          "desc": "Les produits sont emballés selon les exigences du client avec un marquage clair. Nous collaborons avec des partenaires logistiques pour une livraison mondiale ponctuelle.",
+          "bullets": ["Emballage personnalisé", "Traitement rapide des commandes", "Solutions de livraison mondiale"]
+        }
+      ]
+    },
+    "team": {
+      "kicker": "Notre équipe",
+      "title": "Rencontrez notre équipe dirigeante",
+      "subtitle": "Une équipe de gestion expérimentée avec une solide expertise dans le textile et le fil à coudre.",
+      "members": [
+        {
+          "name": "David Wang",
+          "role": "Fondateur & PDG",
+          "desc": "Avec plus de 30 ans d'expérience, il a fondé l'entreprise en 2009 et dirige la stratégie et le développement international."
+        },
+        {
+          "name": "Dr. Emily Zhang",
+          "role": "Directrice technique",
+          "desc": "Dirige la R&D et la qualité, axée sur l'innovation produit, l'optimisation des procédés et le support technique."
+        },
+        {
+          "name": "Michael Johnson",
+          "role": "Directeur des ventes internationales",
+          "desc": "Supervise les marchés mondiaux et la réussite client, et construit les canaux à l'international."
+        },
+        {
+          "name": "Richard Liu",
+          "role": "Responsable de production",
+          "desc": "En charge de la production et des livraisons, il met en œuvre le lean manufacturing et l'amélioration continue."
+        }
+      ]
+    },
+    "factory": {
+      "kicker": "Notre usine",
+      "title": "Visite de l'usine",
+      "subtitle": "Découvrez notre base de production moderne et nos équipements avancés."
+    },
+    "cta": {
+      "title": "Visitez notre usine",
+      "subtitle": "Réservez une visite pour découvrir nos installations modernes et notre processus contrôlé de bout en bout.",
+      "primary": "Réserver une visite",
+      "secondary": "Voir les produits"
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "Contact - Zhi'ao Thread",
+      "description": "Contactez Zhi'ao Thread pour un devis, des échantillons et des solutions de fil industriel sur mesure. Réponse rapide et livraison internationale.",
+      "keywords": "contact, devis, échantillons, fil à coudre industriel, demande"
+    },
+    "hero": {
+      "title": "Contact",
+      "subtitle": "Nous sommes à votre écoute pour répondre à vos questions et vous proposer la meilleure solution"
+    },
+    "section": {
+      "kicker": "Nous contacter",
+      "title": "Coordonnées",
+      "desc": "Que vous ayez des questions, besoin d'un devis ou souhaitiez visiter l'usine, notre équipe est prête à vous accompagner."
+    },
+    "location": {
+      "title": "Notre localisation",
+      "subtitle": "Bienvenue dans notre usine et nos bureaux"
+    },
+    "cards": {
+      "address": {
+        "title": "Adresse de l'usine",
+        "value": "Parc industriel de Chenghuang, Hanchuan, Hubei, Chine"
+      },
+      "phone": {
+        "title": "Téléphone & WeChat",
+        "value": "+86 138 0000 0000"
+      },
+      "email": {
+        "title": "E-mail",
+        "value": "sales{'@'}sewprothread.com"
+      },
+      "hours": {
+        "title": "Horaires",
+        "value_1": "Lun–Ven : 9:00–18:00 (GMT+8)",
+        "value_2": "Sam : 9:00–12:00 (GMT+8)"
+      }
+    },
+    "follow": {
+      "title": "Suivez-nous"
+    },
+    "info": {
+      "title": "Coordonnées",
+      "address": "Adresse",
+      "address_val": "Parc industriel de Chenghuang, Hanchuan, Hubei, Chine",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "whatsapp": "WhatsApp",
+      "hours": "Horaires",
+      "hours_val": "Lun–Ven : 9:00–18:00 (GMT+8)"
+    },
+    "form": {
+      "title": "Laissez-nous un message",
+      "subtitle": "Remplissez le formulaire ci-dessous, nous vous répondrons sous 24h les jours ouvrés.",
+      "name": "Nom",
+      "email": "E-mail",
+      "company": "Entreprise",
+      "phone": "Téléphone / WhatsApp",
+      "country": "Pays/Région",
+      "interest": "Produit d'intérêt",
+      "subject": "Sujet",
+      "message": "Message",
+      "placeholder_name": "Entrez votre nom",
+      "placeholder_email": "Votre e-mail",
+      "placeholder_company": "Entrez le nom de votre entreprise",
+      "placeholder_phone": "Entrez votre numéro",
+      "placeholder_country": "Sélectionnez votre pays",
+      "placeholder_interest": "Sélectionnez le modèle",
+      "placeholder_subject": "Entrez le sujet",
+      "placeholder_message": "Décrivez vos besoins : type de produit, spécifications, quantité, application, etc.",
+      "countries": {
+        "CN": "Chine",
+        "VN": "Vietnam",
+        "TH": "Thaïlande",
+        "ID": "Indonésie",
+        "KH": "Cambodge",
+        "FR": "France",
+        "IT": "Italie",
+        "AE": "Émirats arabes unis",
+        "US": "États-Unis"
+      },
+      "product_types": {
+        "polyester": "Fil polyester",
+        "cotton": "Fil coton",
+        "nylon": "Fil nylon",
+        "high_tenacity": "Fil haute ténacité",
+        "recycled": "Fil recyclé"
+      },
+      "upload_title": "Cliquez pour téléverser ou glissez-déposez ici",
+      "upload_hint": "PDF, JPG, PNG (max 10 Mo)",
+      "submit": "Envoyer",
+      "submitting": "Envoi…",
+      "success_msg": "Votre message a été envoyé. Nous vous contacterons bientôt !"
+    },
+    "faq": {
+      "kicker": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Retrouvez les réponses aux questions courantes sur nos produits et services.",
+      "items": [
+        {
+          "q": "Quel est votre MOQ (quantité minimale) ?",
+          "a": "Pour les produits standard, le MOQ est de 100 cartons par couleur. Pour les couleurs personnalisées, le MOQ est de 300 cartons par couleur. Nous pouvons accepter une petite commande d'essai pour les nouveaux clients ; contactez notre équipe commerciale."
+        },
+        {
+          "q": "Pouvez-vous fournir des échantillons gratuits ?",
+          "a": "Oui. Nous pouvons fournir des échantillons de couleurs standard pour test et validation. Indiquez le type, la spécification et la couleur souhaités ; l'expédition sera organisée (politique de fret selon échange)."
+        },
+        {
+          "q": "Quels sont vos délais de production ?",
+          "a": "Les produits en stock peuvent être expédiés rapidement. Les commandes personnalisées nécessitent généralement 7 à 15 jours ouvrés selon le type, la couleur et la quantité."
+        },
+        {
+          "q": "Proposez-vous un service de contretypage ?",
+          "a": "Oui. Nous pouvons réaliser une correspondance couleur selon un code couleur ou un échantillon, et ajuster l'écart et les exigences de solidité si nécessaire."
+        },
+        {
+          "q": "Quels moyens de paiement acceptez-vous ?",
+          "a": "Le virement bancaire (T/T) est généralement accepté. Les conditions de paiement pour les commandes de volume peuvent être négociées."
+        },
+        {
+          "q": "Pouvez-vous proposer un emballage personnalisé avec notre logo ?",
+          "a": "Oui. Nous prenons en charge l'étiquetage personnalisé et l'impression sur cartons. Veuillez fournir vos fichiers de conception et vos exigences d'emballage."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Demandez un devis",
+      "subtitle": "Contactez notre équipe commerciale pour obtenir un devis compétitif, des échantillons et une solution sur mesure.",
+      "email_label": "E-mail",
+      "wechat_label": "WeChat"
+    }
+  },
+  "inquiry": {
+    "seo": {
+      "title": "Demande de devis - Zhi'ao Thread",
+      "description": "Soumettez votre demande et vos besoins d'achat ; nous vous répondrons sous 24 heures avec un devis et des informations produit.",
+      "keywords": "demande de devis, demande produit, prix fil à coudre, fil industriel"
+    },
+    "hero": {
+      "title": "Demande de devis",
+      "subtitle": "Indiquez vos besoins, nous vous répondrons sous 24 heures avec un devis compétitif."
+    },
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "company": "Entreprise",
+      "phone": "Téléphone / WhatsApp",
+      "country": "Pays/Région",
+      "model": "Modèle",
+      "quantity": "Quantité estimée",
+      "color": "Couleur",
+      "message": "Autres besoins",
+      "placeholder_name": "Entrez votre nom",
+      "placeholder_email": "Votre e-mail",
+      "placeholder_company": "Entrez le nom de votre entreprise",
+      "placeholder_phone": "Entrez votre numéro",
+      "placeholder_country": "Sélectionnez votre pays",
+      "placeholder_model": "Sélectionnez le modèle",
+      "placeholder_quantity": "Ex. : 500 cartons / 10 tonnes",
+      "placeholder_color": "Sélectionnez la couleur",
+      "placeholder_message": "Décrivez vos besoins, spécifications, quantité, délai, etc.",
+      "upload_title": "Cliquez pour téléverser ou glissez-déposez ici",
+      "upload_hint": "PDF, JPG, PNG (max 10 Mo)",
+      "submit": "Envoyer la demande",
+      "submitting": "Envoi…",
+      "success_msg": "Envoyé avec succès. Nous vous contacterons bientôt !",
+      "subject_default": "Demande de produit"
+    }
+  },
+  "news": {
+    "seo": {
+      "title": "Actualités - Zhi'ao Thread",
+      "description": "Centre d'actualités Zhi'ao Thread : tendances du secteur, guides produits et nouvelles de l'entreprise.",
+      "keywords": "actualités, tendances, guides produits, fil à coudre"
+    },
+    "categories": {
+      "all": "Tout"
+    },
+    "list": {
+      "title": "Actualités",
+      "subtitle": "Découvrez les dernières tendances, guides produits et nouvelles de l'entreprise"
+    },
+    "detail": {
+      "published_at": "Publié le",
+      "category": "Catégorie",
+      "back": "Retour à la liste",
+      "related": "Articles associés",
+      "latest": "Dernières actualités",
+      "categories": "Catégories",
+      "share": "Partager :"
+    }
+  }
+}

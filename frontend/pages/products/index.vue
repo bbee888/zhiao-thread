@@ -34,7 +34,7 @@
       <div class="flex flex-col lg:flex-row gap-8">
         <!-- Sidebar Filters -->
         <aside class="w-full lg:w-64 flex-shrink-0">
-          <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 sticky top-24">
+          <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5 sm:p-6 lg:sticky lg:top-24">
             <h2 class="text-lg font-bold text-slate-900 mb-6 flex items-center">
               <i class="ri-filter-3-line mr-2 text-blue-600"></i>
               {{ $t('products.list.filter_title') }}
@@ -90,7 +90,7 @@
               class="w-full py-2 text-sm text-gray-500 hover:text-blue-600 transition-colors flex items-center justify-center border border-dashed border-gray-200 rounded-lg"
             >
               <i class="ri-refresh-line mr-2"></i>
-              重置筛选
+              {{ $t('products.list.reset_filters') }}
             </button>
           </div>
         </aside>
@@ -134,15 +134,15 @@
               @click="resetFilters"
               class="text-blue-600 font-medium hover:underline"
             >
-              尝试清除所有筛选条件
+              {{ $t('products.list.clear_filters') }}
             </button>
           </div>
 
           <!-- Pagination -->
           <div v-if="totalPages > 1" class="mt-12 flex justify-center">
-            <nav class="flex items-center gap-2">
+            <nav class="flex flex-wrap justify-center items-center gap-2">
               <button
-                class="w-10 h-10 rounded-lg border border-gray-200 flex items-center justify-center hover:bg-white hover:border-blue-600 hover:text-blue-600 transition-all disabled:opacity-50"
+                class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg border border-gray-200 flex items-center justify-center hover:bg-white hover:border-blue-600 hover:text-blue-600 transition-all disabled:opacity-50"
                 :disabled="page <= 1"
                 @click="goPage(page - 1)"
               >
@@ -153,7 +153,7 @@
                 :key="p"
                 type="button"
                 :class="[
-                  'w-10 h-10 rounded-lg flex items-center justify-center font-bold transition-all',
+                  'w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold transition-all',
                   p === page
                     ? 'bg-blue-600 text-white'
                     : 'border border-gray-200 hover:bg-white hover:border-blue-600 hover:text-blue-600'
@@ -163,7 +163,7 @@
                 {{ p }}
               </button>
               <button
-                class="w-10 h-10 rounded-lg border border-gray-200 flex items-center justify-center hover:bg-white hover:border-blue-600 hover:text-blue-600 transition-all disabled:opacity-50"
+                class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg border border-gray-200 flex items-center justify-center hover:bg-white hover:border-blue-600 hover:text-blue-600 transition-all disabled:opacity-50"
                 :disabled="page >= totalPages"
                 @click="goPage(page + 1)"
               >
@@ -181,16 +181,29 @@
 const { t, locale } = useI18n()
 const config = useRuntimeConfig()
 const apiBase = config.public.apiBase
+const requestURL = useRequestURL()
+const localePath = useLocalePath()
+const route = useRoute()
 
-useHead({
+const canonicalUrl = computed(() => {
+  return `${requestURL.origin}${route.path}`
+})
+
+useHead(() => ({
   title: t('products.seo.title'),
   meta: [
     { name: 'description', content: t('products.seo.description'), key: 'description' },
-    { name: 'keywords', content: t('products.seo.keywords'), key: 'keywords' }
-  ]
-})
-const localePath = useLocalePath()
-const route = useRoute()
+    { name: 'keywords', content: t('products.seo.keywords'), key: 'keywords' },
+    { property: 'og:title', content: t('products.seo.title'), key: 'og:title' },
+    { property: 'og:description', content: t('products.seo.description'), key: 'og:description' },
+    { property: 'og:type', content: 'website', key: 'og:type' },
+    { property: 'og:url', content: canonicalUrl.value, key: 'og:url' },
+    { name: 'twitter:card', content: 'summary_large_image', key: 'twitter:card' },
+    { name: 'twitter:title', content: t('products.seo.title'), key: 'twitter:title' },
+    { name: 'twitter:description', content: t('products.seo.description'), key: 'twitter:description' }
+  ],
+  link: [{ rel: 'canonical', href: canonicalUrl.value }]
+}))
 
 const searchQuery = ref('')
 const selectedCategories = ref([])
@@ -286,7 +299,7 @@ const categories = computed(() => {
   const list = flattenCategoryTree(unwrapListData(categoryRes.value))
   return list.map((c) => ({
     id: c.id,
-    name: pickLangValue(c.langData) || `分类 ${c.id}`
+    name: pickLangValue(c.langData) || t('common.labels.category_fallback', { id: c.id })
   }))
 })
 

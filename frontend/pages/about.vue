@@ -40,14 +40,14 @@
       </div>
     </section> -->
 
-    <section class="bg-white py-20 px-4 md:px-8">
+    <section class="bg-white py-14 sm:py-16 md:py-20 px-4 md:px-8">
       <div class="container mx-auto max-w-7xl">
         <div :class="['grid grid-cols-1 lg:grid-cols-2 gap-12 items-center', isRtl ? 'lg:[direction:rtl]' : 'lg:[direction:ltr]']">
-          <div class="rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm">
+          <div class="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm">
             <img
               src="/assets/images/zhiao01.jpg"
               alt="Story"
-              class="w-full h-[420px] object-cover"
+              class="w-full h-[260px] sm:h-[360px] lg:h-[420px] object-cover"
               loading="lazy"
             >
           </div>
@@ -55,14 +55,14 @@
           <div class="lg:[direction:ltr]">
             <div class="text-blue-600 font-semibold text-base">{{ $t('about.story.kicker') }}</div>
             <div class="h-2"></div>
-            <h2 class="text-4xl font-bold text-slate-900">{{ $t('about.story.title') }}</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">{{ $t('about.story.title') }}</h2>
             <div class="h-4"></div>
             <p class="text-slate-600 leading-relaxed">{{ $t('about.story.desc') }}</p>
 
             <div class="h-10"></div>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
               <div v-for="(stat, index) in storyStats" :key="index">
-                <div class="text-4xl font-bold text-blue-600 leading-none">{{ stat.value }}</div>
+                <div class="text-3xl sm:text-4xl font-bold text-blue-600 leading-none">{{ stat.value }}</div>
                 <div class="h-2"></div>
                 <div class="text-sm text-slate-600">{{ $t(`about.story.stats.${stat.key}`) }}</div>
               </div>
@@ -72,11 +72,11 @@
       </div>
     </section>
 
-    <section class="bg-gray-50 py-16 px-4 md:px-8">
+    <section class="bg-gray-50 py-14 sm:py-16 px-4 md:px-8">
       <div class="container mx-auto max-w-7xl">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div class="rounded-2xl border border-gray-100 bg-white p-10 shadow-sm">
-            <div class="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center">
+          <div class="rounded-xl border border-gray-100 bg-white p-6 sm:p-8 lg:p-10 shadow-sm">
+            <div class="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center">
               <i class="ri-focus-2-line text-2xl text-blue-700"></i>
             </div>
             <div class="h-6"></div>
@@ -92,8 +92,8 @@
             </ul>
           </div>
 
-          <div class="rounded-2xl border border-gray-100 bg-white p-10 shadow-sm">
-            <div class="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center">
+          <div class="rounded-xl border border-gray-100 bg-white p-6 sm:p-8 lg:p-10 shadow-sm">
+            <div class="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center">
               <i class="ri-eye-line text-2xl text-blue-700"></i>
             </div>
             <div class="h-6"></div>
@@ -112,10 +112,10 @@
       </div>
     </section>
 
-    <section class="bg-white py-20 px-4 md:px-8">
+    <section class="bg-white py-14 sm:py-16 md:py-20 px-4 md:px-8">
       <div class="container mx-auto max-w-7xl">
         <div class="mx-auto w-full max-w-3xl text-center">
-          <h2 class="text-4xl font-bold text-slate-900">{{ $t('about.values.title') }}</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">{{ $t('about.values.title') }}</h2>
           <div class="h-4"></div>
           <p class="text-slate-600">{{ $t('about.values.subtitle') }}</p>
         </div>
@@ -125,7 +125,7 @@
           <div
             v-for="(item, index) in valuesItems"
             :key="index"
-            class="rounded-2xl border border-gray-100 bg-gray-50 p-8"
+            class="rounded-xl border border-gray-100 bg-gray-50 p-6 sm:p-8"
           >
             <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
               <i :class="[valueIcons[index] || 'ri-award-line', 'text-2xl text-blue-700']"></i>
@@ -138,13 +138,13 @@
         </div>
       </div>
     </section>
-
-    <section class="bg-gray-50 py-20 px-4 md:px-8">
+<!-- 生产流程 -->
+    <section class="bg-gray-50 py-14 sm:py-16 md:py-20 px-4 md:px-8">
       <div class="container mx-auto max-w-7xl">
         <div class="mx-auto w-full max-w-3xl text-center">
           <div class="text-blue-600 font-semibold text-base">{{ $t('about.process.kicker') }}</div>
           <div class="h-2"></div>
-          <h2 class="text-4xl font-bold text-slate-900">{{ $t('about.process.title') }}</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">{{ $t('about.process.title') }}</h2>
           <div class="h-4"></div>
           <p class="text-slate-600">{{ $t('about.process.subtitle') }}</p>
         </div>
@@ -154,10 +154,10 @@
           <div
             v-for="(step, index) in processSteps"
             :key="index"
-            class="rounded-2xl border border-gray-100 bg-white overflow-hidden"
+            class="rounded-xl border border-gray-100 bg-white overflow-hidden"
           >
             <div v-if="step.layout === 'stack'" class="p-6 md:p-10">
-              <div class="rounded-2xl overflow-hidden border border-gray-100 bg-gray-50">
+              <div class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50">
                 <img :src="step.image" alt="Process" class="w-full h-[240px] md:h-[320px] object-cover" loading="lazy">
               </div>
               <div class="h-8"></div>
@@ -182,7 +182,7 @@
 
             <div v-else class="grid grid-cols-1 lg:grid-cols-2">
               <div class="p-6 md:p-10 lg:p-0">
-                <div class="rounded-2xl overflow-hidden border border-gray-100 bg-gray-50 lg:rounded-none lg:border-0">
+                <div class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50 lg:rounded-none lg:border-0">
                   <img :src="step.image" alt="Process" class="w-full h-[260px] lg:h-full object-cover" loading="lazy">
                 </div>
               </div>
@@ -211,12 +211,12 @@
       </div>
     </section>
 
-
-    <section class="bg-blue-700 py-16 px-4 md:px-8">
+<!-- 参观工厂 -->
+    <section class="bg-blue-700 py-12 sm:py-16 px-4 md:px-8">
       <div class="container mx-auto max-w-7xl">
         <div :class="['flex flex-col gap-8', isRtl ? 'lg:flex-row-reverse' : 'lg:flex-row', 'lg:items-center lg:justify-between']">
           <div class="w-full max-w-2xl">
-            <h2 class="text-4xl font-bold text-white">{{ $t('about.cta.title') }}</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white">{{ $t('about.cta.title') }}</h2>
             <div class="h-3"></div>
             <p class="text-white/90">{{ $t('about.cta.subtitle') }}</p>
           </div>
@@ -245,13 +245,27 @@
 const localePath = useLocalePath()
 const { t, locale, tm, rt } = useI18n()
 const isRtl = computed(() => locale.value === 'ar')
+const requestURL = useRequestURL()
+const route = useRoute()
+
+const canonicalUrl = computed(() => {
+  return `${requestURL.origin}${route.path}`
+})
 
 useHead(() => ({
   title: t('about.seo.title'),
   meta: [
     { name: 'description', content: t('about.seo.description'), key: 'description' },
-    { name: 'keywords', content: t('about.seo.keywords'), key: 'keywords' }
-  ]
+    { name: 'keywords', content: t('about.seo.keywords'), key: 'keywords' },
+    { property: 'og:title', content: t('about.seo.title'), key: 'og:title' },
+    { property: 'og:description', content: t('about.seo.description'), key: 'og:description' },
+    { property: 'og:type', content: 'website', key: 'og:type' },
+    { property: 'og:url', content: canonicalUrl.value, key: 'og:url' },
+    { name: 'twitter:card', content: 'summary_large_image', key: 'twitter:card' },
+    { name: 'twitter:title', content: t('about.seo.title'), key: 'twitter:title' },
+    { name: 'twitter:description', content: t('about.seo.description'), key: 'twitter:description' }
+  ],
+  link: [{ rel: 'canonical', href: canonicalUrl.value }]
 }))
 
 const storyStats = [
@@ -278,27 +292,27 @@ const visionBullets = computed(() => tm('about.mission.vision_bullets') || [])
 const processStepMeta = [
   {
     layout: 'side',
-    image: 'https://images.unsplash.com/photo-1526481280695-3c687fd643ed?q=80&w=2400&auto=format&fit=crop'
+    image: '/img/ba1.jpg'
   },
   {
     layout: 'stack',
-    image: 'https://images.unsplash.com/photo-1465447142348-e9952c393450?q=80&w=2400&auto=format&fit=crop'
+    image: '/img/ba2.jpg'
   },
   {
     layout: 'side',
-    image: 'https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=2400&auto=format&fit=crop'
+    image: '/img/ba5.jpg'
   },
   {
     layout: 'stack',
-    image: 'https://images.unsplash.com/photo-1465447142348-e9952c393450?q=80&w=2400&auto=format&fit=crop'
+    image: '/img/ba4.jpg'
   },
   {
     layout: 'side',
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2400&auto=format&fit=crop'
+    image: '/img/ba6.jpg'
   },
   {
     layout: 'stack',
-    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2400&auto=format&fit=crop'
+    image: '/img/ba7.jpg'
   }
 ]
 

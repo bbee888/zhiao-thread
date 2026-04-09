@@ -7,22 +7,23 @@
     "nav": {
       "home": "Home",
       "products": "Products",
+      "applications": "Applications",
       "news": "News",
       "about": "About Us",
+      "quality": "Quality Control",
       "contact": "Contact Us"
     },
     "header": {
+      "title": "Hubei Zhi'ao Thread Industry Co., Ltd.",
       "logo": "Zhi'ao Thread Industry",
       "welcome": "Welcome to Zhi'ao Thread Industry", 
+      "free_shipping": "Free shipping on orders over $500",
       "get_quote": "Get Quote"
     },
     "footer": {
       "desc": "Zhi'ao Thread Industry is a globally leading manufacturer of high-quality sewing threads, boasting over 20 years of production experience and committed to delivering exceptional sewing solutions to the global textile industry.",
       "contact": "Contact Us",
-      "address": "Address",
-      "sitemap": "Sitemap",
-      "privacy": "Privacy",
-      "terms": "Terms of Service",
+      "address": "Chenghuang Industrial Park, Hanchuan, Hubei, China",
       "copyright": "All rights reserved",
       "quick_links": "Quick Links",
       "product_categories": "Product Categories",
@@ -32,6 +33,10 @@
       "view_details": "View Details",
       "learn_more": "Learn More",
       "submit": "Submit"
+    },
+    "labels": {
+      "category_fallback": "Category {id}",
+      "read_time": "{minutes} min read"
     },
     "breadcrumbs": {
       "home": "Home",
@@ -43,7 +48,7 @@
   },
   "home": {
     "seo": {
-      "title": "Hubei Zhiao Thread Co., Ltd. | Polyester Sewing Thread Supplier",
+      "title": "Hubei Zhiao Thread Co., Ltd. - Polyester Sewing Thread Supplier",
       "keywords": "polyester sewing thread, sewing thread manufacturer, polyester thread for garment, industrial sewing thread",
       "description": "Professional manufacturer of high-tenacity polyester sewing thread. Stable quality, competitive price, customized service, global export."
     },
@@ -55,6 +60,62 @@
       "customization": "Customization Service",
       "delivery": "Global Fast Delivery",
       "certification": "ISO 9001 Certification"
+    },
+    "hero_carousel": {
+      "common": {
+        "scene_title": "Applications",
+        "params": {
+          "density": "Thread Density",
+          "tenacity": "Breaking Strength",
+          "elongation": "Elongation",
+          "wash_temp": "Wash Temp.",
+          "color_fastness": "Color Fastness",
+          "package": "Packing",
+          "heat_resistance": "Heat Resistance",
+          "abrasion": "Abrasion"
+        }
+      },
+      "slide1": {
+        "badge": "20 Years of Sewing Thread Manufacturing",
+        "title_line1": "High-Quality Solutions",
+        "title_line2": "for Every Industry",
+        "subtitle": "We manufacture premium polyester, nylon, cotton, and specialty threads for apparel, footwear, home textiles, and industrial applications.",
+        "primary": "Browse Products",
+        "secondary": "Contact Sales",
+        "trust_title": "Our Key Strengths",
+        "trust": {
+          "iso": { "title": "ISO 9001 Certified", "subtitle": "International quality management" },
+          "delivery": { "title": "7–15 Day Delivery", "subtitle": "Efficient supply chain" },
+          "custom": { "title": "Custom Colors", "subtitle": "Flexible customization" }
+        },
+        "card": {
+          "title": "Premium Thread Series",
+          "subtitle": "For a wide range of applications",
+          "tag": "Best Seller"
+        }
+      },
+      "slide2": {
+        "badge": "Bestselling Series",
+        "title_line1": "40/2 Polyester Sewing Thread",
+        "title_line2": "Great Value Choice",
+        "subtitle": "Our 40/2 polyester sewing thread is a bestseller made from high-quality polyester fibers. It features high strength, excellent abrasion resistance, and strong color fastness, suitable for most garment production scenarios.",
+        "primary": "Request a Quote",
+        "secondary": "Request Sample",
+        "values": {
+          "color_fastness": "≥ Grade 4"
+        },
+        "scene_tags": ["Woven Apparel", "Knitted Apparel", "Kidswear", "Home Textiles", "Bags", "Leather Goods"]
+      },
+      "slide3": {
+        "badge": "Thick Thread Series",
+        "title_line1": "20/2 Polyester Sewing Thread",
+        "title_line2": "High-Strength Thick Thread",
+        "subtitle": "Designed for heavy fabrics, our 20/2 thick polyester thread uses high-strength double-ply twisting for outstanding tensile strength and abrasion resistance, ideal for bags, sofas, automotive interiors, and other heavy-duty scenarios.",
+        "values": {
+          "abrasion": "≥ 3000 cycles"
+        },
+        "scene_tags": ["Leather Bags", "Sofa & Furniture", "Automotive Interiors", "Outdoor Gear", "Seat Belts", "Industrial Canvas"]
+      }
     },
     "advantages": {
       "title": "Our Core Advantages",
@@ -139,11 +200,14 @@
       "spec_60s2": "60s/2",
       "search_placeholder": "Search products...",
       "no_results": "No products found matching your search",
-      "items_count": "{count} products total"
+      "items_count": "{count} products total",
+      "reset_filters": "Reset filters",
+      "clear_filters": "Clear all filters"
     },
     "detail": {
       "inquiry": "Inquire Now",
-      "sku": "Model",
+      "model": "Model",
+      "sku": "SKU",
       "color": "Color",
       "length": "Length",
       "tenacity": "Tenacity",
@@ -159,18 +223,18 @@
   },
   "about": {
     "seo": {
-      "title": "About Us | Hubei Zhi'ao Thread Industry",
+      "title": "About Us - Hubei Zhi'ao Thread Industry",
       "description": "Learn about SewPro (Hubei Zhi'ao Thread Industry): our story, core values, production process, and leadership team. We manufacture premium industrial sewing threads with customization and stable supply.",
       "keywords": "Hubei Zhi'ao Thread Industry, SewPro, about us, industrial sewing thread manufacturer, polyester sewing thread, custom sewing thread, production process, quality control"
     },
     "hero": {
       "title": "About Hubei Zhi'ao Thread Industry",
-      "subtitle": "Since 2003, your trusted partner for premium sewing thread solutions"
+      "subtitle": "Since 2009, your trusted partner for premium sewing thread solutions"
     },
     "story": {
       "kicker": "Our Story",
       "title": "A Leading Sewing Thread Manufacturer in China",
-      "desc": "Founded in 2003, Hubei Zhi'ao Thread Industry is a professional manufacturer and supplier of high-quality industrial sewing threads. With a 25,000㎡ modern facility equipped with advanced spinning, twisting, dyeing, and winding lines, we deliver an annual capacity of 6,000+ tons. Our products are exported to 50+ countries across North America, Europe, Asia, Africa, and Oceania, serving 2,000+ satisfied customers worldwide.",
+      "desc": "Founded in 2009, Hubei Zhi'ao Thread Industry is a professional manufacturer and supplier of high-quality industrial sewing threads. With a 25,000㎡ modern facility equipped with advanced spinning, twisting, dyeing, and winding lines, we deliver an annual capacity of 5,000 tons. Our products are exported to 50+ countries across North America, Europe, Asia, Africa, and Oceania, serving 2,000+ customers worldwide.",
       "stats": {
         "experience": "Years in Industry",
         "capacity": "Tons / Year",
@@ -258,6 +322,38 @@
         }
       ]
     },
+    "team": {
+      "kicker": "Our Team",
+      "title": "Meet Our Leadership Team",
+      "subtitle": "Our experienced management team brings years of expertise in textiles and sewing threads.",
+      "members": [
+        {
+          "name": "David Wang",
+          "role": "Founder & CEO",
+          "desc": "With 30+ years of industry experience, he founded the company in 2009 and leads strategy and global business development."
+        },
+        {
+          "name": "Dr. Emily Zhang",
+          "role": "Technical Director",
+          "desc": "Leads R&D and quality teams, focusing on product innovation, process optimization, and technical support."
+        },
+        {
+          "name": "Michael Johnson",
+          "role": "International Sales Director",
+          "desc": "Oversees global markets and customer success, building overseas channels and matching customers with the right solutions."
+        },
+        {
+          "name": "Richard Liu",
+          "role": "Production Manager",
+          "desc": "Responsible for production management and delivery assurance, driving lean manufacturing and continuous improvement."
+        }
+      ]
+    },
+    "factory": {
+      "kicker": "Our Factory",
+      "title": "Factory Tour",
+      "subtitle": "Take a look at our modern manufacturing base equipped with advanced production facilities."
+    },
 
     "cta": {
       "title": "Visit Our Factory",
@@ -268,7 +364,7 @@
   },
   "contact": {
     "seo": {
-      "title": "Contact Us | Hubei Zhi'ao Thread Industry",
+      "title": "Contact Us - Hubei Zhi'ao Thread Industry",
       "description": "Contact SewPro (Hubei Zhi'ao Thread Industry) for quotes, samples, and custom industrial sewing thread solutions. Fast response and reliable global delivery support.",
       "keywords": "contact us, SewPro, Hubei Zhi'ao Thread Industry, get a quote, sewing thread samples, custom industrial sewing thread, inquiry, wholesale sewing thread"
     },
@@ -280,6 +376,10 @@
       "kicker": "Get in Touch",
       "title": "Contact Information",
       "desc": "Whether you have product questions, need a quote, or want to schedule a factory visit, our team is ready to help with all your sewing thread needs."
+    },
+    "location": {
+      "title": "Our Location",
+      "subtitle": "You're welcome to visit our factory and office"
     },
     "cards": {
       "address": {
@@ -319,7 +419,7 @@
       "name": "Your Name",
       "email": "Email Address",
       "company": "Company Name",
-      "phone": "Phone / WeChat",
+      "phone": "Phone / WhatsApp",
       "country": "Country / Region",
       "interest": "Interested Product",
       "subject": "Subject",
@@ -396,7 +496,7 @@
   },
   "inquiry": {
     "seo": {
-      "title": "Request a Quote | Hubei Zhi'ao Thread Industry",
+      "title": "Request a Quote - Hubei Zhi'ao Thread Industry",
       "description": "Submit your inquiry and purchasing requirements. We will provide a competitive quote and product information within 24 hours.",
       "keywords": "request a quote, inquiry, sewing thread quote, industrial sewing thread, SewPro"
     },
@@ -408,7 +508,7 @@
       "name": "Your Name",
       "email": "Email Address",
       "company": "Company Name",
-      "phone": "Phone / WeChat",
+      "phone": "Phone / WhatsApp",
       "country": "Country / Region",
       "model": "Model",
       "quantity": "Estimated Quantity",
@@ -433,7 +533,7 @@
   },
   "news": {
     "seo": {
-      "title": "News Center | Hubei Zhi'ao Thread Industry",
+      "title": "News Center - Hubei Zhi'ao Thread Industry",
       "description": "News from SewPro (Hubei Zhi'ao Thread Industry): industry insights, product guides, and company updates about sewing thread materials, processes, and applications.",
       "keywords": "news center, industry trends, product guides, company news, sewing thread knowledge, sewing thread insights"
     },

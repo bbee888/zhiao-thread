@@ -2,12 +2,12 @@
   <header class="w-full">
     <!-- Top Bar -->
     <div class="bg-blue-700 text-white py-2 px-4 md:px-8">
-      <div class="container mx-auto max-w-7xl flex flex-row md:flex-row justify-between items-center text-sm">
+      <div class="container mx-auto max-w-7xl flex flex-row justify-between items-center text-sm">
         <div class="flex items-center space-x-2">
           <i class="ri-truck-line"></i>
           <span>{{ $t('common.header.welcome') }}</span>
         </div>
-        <div class="flex items-center space-x-6 mt-2 md:mt-0">
+        <div class="flex items-center space-x-4 sm:space-x-6">
           <!-- Language Selector -->
           <div
             ref="localeDropdownRef"
@@ -171,9 +171,13 @@
               {{ $t(item.label) }}
             </NuxtLink>
           </template>
-          <button class="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-center">
+          <NuxtLink
+            :to="localePath('/inquiry')"
+            class="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-center"
+            @click="isMobileMenuOpen = false"
+          >
             {{ $t('common.header.get_quote') }}
-          </button>
+          </NuxtLink>
         </div>
       </Transition>
     </nav>
@@ -181,7 +185,7 @@
 </template>
 
 <script setup>
-const { locale, locales, setLocale } = useI18n()
+const { t, locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
 const apiBase = config.public.apiBase
@@ -195,7 +199,7 @@ const isProductsMenuOpen = ref(false)
 const closeProductsTimer = ref()
 
 const currentLocaleName = computed(() => {
-  return locales.value.find(l => l.code === locale.value)?.name || '中文'
+  return locales.value.find(l => l.code === locale.value)?.name || 'English'
 })
 
 const availableLocales = computed(() => {
@@ -252,7 +256,7 @@ const productCategories = computed(() => {
   const list = flattenCategoryTree(unwrapListData(categoryRes.value))
   return list.map((c) => ({
     id: c.id,
-    name: pickLangValue(c.langData) || `分类 ${c.id}`,
+    name: pickLangValue(c.langData) || t('common.labels.category_fallback', { id: c.id }),
   }))
 })
 

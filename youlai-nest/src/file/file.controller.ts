@@ -1,6 +1,7 @@
-﻿import { Controller, Delete, Post, Query, UploadedFile, UseInterceptors } from "@nestjs/common";
+import { Controller, Delete, Post, Query, UploadedFile, UseInterceptors } from "@nestjs/common";
 import { FileInterceptor } from "@nestjs/platform-express";
 import { ApiOperation, ApiTags } from "@nestjs/swagger";
+import { Public } from "src/common/decorators/public.decorator";
 import { FileService } from "./file.service";
 
 /**
@@ -13,6 +14,7 @@ export class FileController {
   constructor(private readonly fileService: FileService) {}
 
   @ApiOperation({ summary: "上传文件" })
+  @Public()
   @Post()
   @UseInterceptors(FileInterceptor("file"))
   async upload(@UploadedFile() file: any) {

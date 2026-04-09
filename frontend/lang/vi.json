@@ -1,36 +1,121 @@
 {
   "common": {
+    "status": {
+      "loading": "Đang tải…",
+      "empty": "Không có dữ liệu"
+    },
     "nav": {
-      "home": "Home",
-      "products": "Products",
-      "applications": "Applications",
-      "about": "About Us",
-      "quality": "Quality Control",
-      "contact": "Contact Us"
+      "home": "Trang chủ",
+      "products": "Sản phẩm",
+      "applications": "Ứng dụng",
+      "about": "Giới thiệu",
+      "quality": "Kiểm soát chất lượng",
+      "contact": "Liên hệ",
+      "news": "Tin tức"
     },
     "header": {
-      "free_shipping": "Free shipping on orders over $500",
-      "get_quote": "Get Quote"
+      "title": "Hubei Zhi'ao Thread Industry Co., Ltd.",
+      "logo": "Zhi'ao Thread Industry",
+      "welcome": "Chào mừng đến với Zhi'ao Thread",
+      "free_shipping": "Miễn phí vận chuyển cho đơn hàng trên $500",
+      "get_quote": "Nhận báo giá"
+    },
+    "footer": {
+      "desc": "Zhi'ao Thread là nhà sản xuất chỉ may chất lượng cao hàng đầu toàn cầu với hơn 20 năm kinh nghiệm sản xuất, cam kết mang đến giải pháp may vượt trội cho ngành dệt may trên toàn thế giới.",
+      "contact": "Liên hệ",
+      "address": "Khu công nghiệp Chenghuang, Hanchuan, Hubei, Trung Quốc",
+      "copyright": "Bảo lưu mọi quyền",
+      "quick_links": "Liên kết nhanh",
+      "product_categories": "Danh mục sản phẩm",
+      "contact_hours": "Thứ 2–Thứ 6: 9:00–18:00"
     },
     "actions": {
-      "view_details": "View Details",
-      "learn_more": "Learn More",
-      "submit": "Submit"
+      "view_details": "Xem chi tiết",
+      "learn_more": "Tìm hiểu thêm",
+      "submit": "Gửi"
+    },
+    "labels": {
+      "category_fallback": "Danh mục {id}",
+      "read_time": "{minutes} phút đọc"
     },
     "breadcrumbs": {
-      "home": "Home",
-      "products": "Products",
-      "about": "About Us",
-      "contact": "Contact Us",
-      "news": "News Center"
+      "home": "Trang chủ",
+      "products": "Sản phẩm",
+      "about": "Giới thiệu",
+      "contact": "Liên hệ",
+      "news": "Tin tức"
     }
   },
   "home": {
+    "seo": {
+      "title": "Hubei Zhiao Thread Co., Ltd. - Polyester Sewing Thread Supplier",
+      "keywords": "polyester sewing thread, sewing thread manufacturer, polyester thread for garment, industrial sewing thread",
+      "description": "Professional manufacturer of high-tenacity polyester sewing thread. Stable quality, competitive price, customized service, global export."
+    },
     "hero": {
-      "title": "High-Quality Sewing Thread Solutions for All Industries",
-      "subtitle": "Excellence in every stitch, precision in every spool",
-      "browse": "Browse Products",
-      "contact": "Contact Sales"
+      "title": "Giải pháp chỉ may chất lượng cao cho mọi ngành",
+      "subtitle": "Tỉ mỉ trong từng mũi may, chính xác trong từng cuộn chỉ",
+      "browse": "Xem sản phẩm",
+      "contact": "Liên hệ kinh doanh",
+      "customization": "Dịch vụ tùy chỉnh",
+      "delivery": "Giao hàng nhanh toàn cầu",
+      "certification": "Chứng nhận ISO 9001"
+    },
+    "hero_carousel": {
+      "common": {
+        "scene_title": "Ứng dụng",
+        "params": {
+          "density": "Thread Density",
+          "tenacity": "Breaking Strength",
+          "elongation": "Elongation",
+          "wash_temp": "Wash Temp.",
+          "color_fastness": "Color Fastness",
+          "package": "Packing",
+          "heat_resistance": "Heat Resistance",
+          "abrasion": "Abrasion"
+        }
+      },
+      "slide1": {
+        "badge": "20 Years of Sewing Thread Manufacturing",
+        "title_line1": "High-Quality Solutions",
+        "title_line2": "for Every Industry",
+        "subtitle": "We manufacture premium polyester, nylon, cotton, and specialty threads for apparel, footwear, home textiles, and industrial applications.",
+        "primary": "Browse Products",
+        "secondary": "Contact Sales",
+        "trust_title": "Our Key Strengths",
+        "trust": {
+          "iso": { "title": "ISO 9001 Certified", "subtitle": "International quality management" },
+          "delivery": { "title": "7–15 Day Delivery", "subtitle": "Efficient supply chain" },
+          "custom": { "title": "Custom Colors", "subtitle": "Flexible customization" }
+        },
+        "card": {
+          "title": "Premium Thread Series",
+          "subtitle": "For a wide range of applications",
+          "tag": "Best Seller"
+        }
+      },
+      "slide2": {
+        "badge": "Bestselling Series",
+        "title_line1": "40/2 Polyester Sewing Thread",
+        "title_line2": "Great Value Choice",
+        "subtitle": "Our 40/2 polyester sewing thread is a bestseller made from high-quality polyester fibers. It features high strength, excellent abrasion resistance, and strong color fastness, suitable for most garment production scenarios.",
+        "primary": "Request a Quote",
+        "secondary": "Request Sample",
+        "values": {
+          "color_fastness": "≥ Grade 4"
+        },
+        "scene_tags": ["Hàng dệt thoi", "Hàng dệt kim", "Đồ trẻ em", "Dệt may gia dụng", "Túi xách", "Đồ da"]
+      },
+      "slide3": {
+        "badge": "Thick Thread Series",
+        "title_line1": "20/2 Polyester Sewing Thread",
+        "title_line2": "High-Strength Thick Thread",
+        "subtitle": "Designed for heavy fabrics, our 20/2 thick polyester thread uses high-strength double-ply twisting for outstanding tensile strength and abrasion resistance, ideal for bags, sofas, automotive interiors, and other heavy-duty scenarios.",
+        "values": {
+          "abrasion": "≥ 3000 cycles"
+        },
+        "scene_tags": ["Túi da", "Sofa & nội thất", "Nội thất ô tô", "Đồ dùng ngoài trời", "Dây an toàn", "Vải bạt công nghiệp"]
+      }
     },
     "advantages": {
       "title": "Our Core Advantages",
@@ -61,71 +146,100 @@
     },
     "applications": {
       "title": "Wide Range of Applications",
-      "subtitle": "Our threads are used across various industries to meet diverse sewing requirements"
+      "subtitle": "Our threads are used across various industries to meet diverse sewing requirements",
+      "clothing": "Clothing Industry",
+      "footwear": "Footwear Industry",
+      "automotive": "Automotive Industry",
+      "home": "Home Industry",
+      "embroidery": "Embroidery Industry",
+      "textiles": "Textiles Industry"
     },
     "trust": {
       "title": "Quality is Our Lifeline",
-      "desc": "We are more than just a thread manufacturer; we are your reliable partner. Through rigorous QC and international certifications, we ensure every delivery exceeds expectations."
+      "desc": "We are more than just a thread manufacturer; we are your reliable partner. Through rigorous QC and international certifications, we ensure every delivery exceeds expectations.",
+      "assurance": "Quality Assurance",
+      "experience": "Industry Experience",
+      "certifications": "Certifications",
+      "color": "Color Series",
+      "global": "Global Market",
+      "iso_certification": "World-leading inspection and certification.",
+      "oeko_tex_certification": "Testing for harmful substances in textiles.",
+      "grs_certification": "Global Recycled Standard for sustainable products.",
+      "sgs_certification": "World-leading inspection and certification."
     },
     "blog": {
       "title": "Latest News & Insights",
-      "subtitle": "Stay updated with industry trends, technical guides, and the latest from SewPro"
+      "subtitle": "Stay updated with industry trends, technical guides, and the latest from SewPro",
+      "read_full": "Read Full Article"
     }
   },
   "products": {
+    "seo": {
+      "title": "Sewing Threads - Zhi'ao Thread Industry",
+      "keywords": "polyester sewing thread, industrial sewing thread, sewing thread supplier",
+      "description": "Explore Zhi'ao Thread Industry sewing thread products with stable quality and customization support."
+    },
     "list": {
-      "title": "Our Sewing Thread Products",
-      "subtitle": "Explore our range of high-quality sewing threads for all your needs",
-      "filter_title": "Filter Products",
-      "categories": "Categories",
-      "specs": "Specifications",
-      "colors": "Color Series",
-      "all_categories": "All Categories",
-      "polyester": "Polyester Thread",
-      "cotton": "Cotton Thread",
-      "nylon": "Nylon Thread",
-      "silk": "Silk Thread",
-      "aramid": "Aramid Thread",
-      "high_tenacity": "High Tenacity Thread",
-      "recycled": "Recycled Eco Thread",
+      "title": "Sản phẩm chỉ may của chúng tôi",
+      "subtitle": "Khám phá các dòng chỉ may chất lượng cao đáp ứng mọi nhu cầu",
+      "filter_title": "Bộ lọc sản phẩm",
+      "categories": "Danh mục",
+      "specs": "Thông số",
+      "colors": "Bảng màu",
+      "all_categories": "Tất cả danh mục",
+      "polyester": "Chỉ Polyester",
+      "cotton": "Chỉ Cotton",
+      "nylon": "Chỉ Nylon",
+      "silk": "Chỉ Lụa",
+      "aramid": "Chỉ Aramid",
+      "high_tenacity": "Chỉ độ bền cao",
+      "recycled": "Chỉ tái chế",
       "spec_20s2": "20s/2",
       "spec_40s2": "40s/2",
       "spec_50s2": "50s/2",
       "spec_60s2": "60s/2",
-      "search_placeholder": "Search products...",
-      "no_results": "No products found matching your search",
-      "items_count": "{count} products total"
+      "search_placeholder": "Tìm kiếm sản phẩm…",
+      "no_results": "Không tìm thấy sản phẩm phù hợp",
+      "items_count": "Tổng {count} sản phẩm",
+      "reset_filters": "Đặt lại bộ lọc",
+      "clear_filters": "Xóa tất cả bộ lọc"
     },
     "detail": {
-      "inquiry": "Inquire Now",
-      "sku": "Model",
-      "color": "Color",
-      "length": "Length",
-      "tenacity": "Tenacity",
-      "category": "Category",
-      "tags": "Tags",
-      "description": "Product Details",
-      "specifications": "Specifications",
-      "faq": "FAQ",
-      "related_products": "Related Products",
-      "features": "Core Features",
-      "back_to_list": "Back to List"
+      "inquiry": "Yêu cầu báo giá",
+      "model": "Mã/Model",
+      "sku": "SKU",
+      "color": "Màu sắc",
+      "length": "Chiều dài",
+      "tenacity": "Độ bền",
+      "category": "Danh mục",
+      "tags": "Thẻ",
+      "description": "Chi tiết sản phẩm",
+      "specifications": "Thông số kỹ thuật",
+      "faq": "Câu hỏi thường gặp",
+      "related_products": "Sản phẩm liên quan",
+      "features": "Tính năng nổi bật",
+      "back_to_list": "Quay lại danh sách"
     }
   },
   "about": {
+    "seo": {
+      "title": "About Us - Zhi'ao Thread Industry",
+      "keywords": "about zhi'ao, sewing thread manufacturer, factory",
+      "description": "Learn more about Zhi'ao Thread Industry, our factory capabilities, quality control and global delivery."
+    },
     "hero": {
-      "title": "About SewPro Sewing Thread",
-      "subtitle": "Since 2003, your trusted partner for premium sewing thread solutions"
+      "title": "Giới thiệu",
+      "subtitle": "Từ năm 2009, đối tác tin cậy cho giải pháp chỉ may chất lượng cao"
     },
     "story": {
-      "kicker": "Our Story",
-      "title": "A Leading Sewing Thread Manufacturer in China",
-      "desc": "Founded in 2003, SewPro Sewing Thread is a professional manufacturer and supplier of high-quality industrial sewing threads. With a 25,000㎡ modern facility equipped with advanced spinning, twisting, dyeing, and winding lines, we deliver an annual capacity of 6,000+ tons. Our products are exported to 50+ countries across North America, Europe, Asia, Africa, and Oceania, serving 2,000+ satisfied customers worldwide.",
+      "kicker": "Câu chuyện của chúng tôi",
+      "title": "Nhà sản xuất chỉ may hàng đầu tại Trung Quốc",
+      "desc": "Thành lập năm 2009, Zhi'ao Thread là nhà sản xuất và cung cấp chỉ may công nghiệp chất lượng cao. Chúng tôi sở hữu nhà máy hiện đại 25.000㎡ với dây chuyền kéo sợi, se, nhuộm và quấn ống tiên tiến, công suất 5.000 tấn/năm. Sản phẩm được xuất khẩu tới hơn 50 quốc gia, phục vụ hơn 2.000 khách hàng trên toàn thế giới.",
       "stats": {
-        "experience": "Years in Industry",
-        "capacity": "Tons / Year",
-        "countries": "Countries & Regions",
-        "customers": "Happy Customers"
+        "experience": "Năm kinh nghiệm",
+        "capacity": "Tấn/năm",
+        "countries": "Quốc gia & khu vực",
+        "customers": "Khách hàng hài lòng"
       }
     },
     "profile": {
@@ -248,19 +362,24 @@
     }
   },
   "contact": {
+    "seo": {
+      "title": "Contact Us - Zhi'ao Thread Industry",
+      "description": "Contact Zhi'ao Thread Industry for quotes, samples and customized sewing thread solutions.",
+      "keywords": "contact, request a quote, sewing thread samples, inquiry"
+    },
     "hero": {
-      "title": "Contact Us",
-      "subtitle": "We're here to help. If you have any questions, please feel free to reach out to us."
+      "title": "Liên hệ",
+      "subtitle": "Chúng tôi luôn sẵn sàng hỗ trợ. Nếu bạn có bất kỳ câu hỏi nào, hãy liên hệ với chúng tôi."
     },
     "section": {
-      "kicker": "Get in Touch",
-      "title": "Contact Information",
-      "desc": "Whether you have product questions, need a quote, or want to schedule a factory visit, our team is ready to help with all your sewing thread needs."
+      "kicker": "Liên hệ ngay",
+      "title": "Thông tin liên hệ",
+      "desc": "Dù bạn có thắc mắc về sản phẩm, cần báo giá hay muốn đặt lịch thăm nhà máy, đội ngũ của chúng tôi luôn sẵn sàng hỗ trợ."
     },
     "cards": {
       "address": {
         "title": "Factory Address",
-        "value": "No. 123 Textile City Industrial Park, Shaoxing, Zhejiang, China 312000"
+        "value": "Khu công nghiệp Chenghuang, Hanchuan, Hubei, Trung Quốc"
       },
       "phone": {
         "title": "Phone & WeChat",
@@ -277,64 +396,64 @@
       }
     },
     "follow": {
-      "title": "Follow Us"
+      "title": "Theo dõi chúng tôi"
     },
     "info": {
-      "title": "Contact Information",
-      "address": "Address",
-      "address_val": "No. 88 Chuangye Road, High-tech Zone, Yinzhou District, Ningbo, Zhejiang, China",
-      "phone": "Phone",
+      "title": "Thông tin liên hệ",
+      "address": "Địa chỉ",
+      "address_val": "Khu công nghiệp Chenghuang, Hanchuan, Hubei, Trung Quốc",
+      "phone": "Điện thoại",
       "email": "Email",
       "whatsapp": "WhatsApp",
-      "hours": "Business Hours",
-      "hours_val": "Mon - Fri: 9:00 - 18:00 (GMT+8)"
+      "hours": "Giờ làm việc",
+      "hours_val": "Thứ 2–Thứ 6: 9:00–18:00 (GMT+8)"
     },
     "form": {
-      "title": "Leave a Message",
-      "subtitle": "Fill in the form below and we will reply within 24 hours on business days.",
-      "name": "Your Name",
-      "email": "Email Address",
-      "company": "Company Name",
-      "phone": "Phone / WeChat",
-      "country": "Country / Region",
-      "interest": "Interested Product",
-      "subject": "Subject",
-      "message": "Message",
-      "placeholder_name": "Enter your full name",
-      "placeholder_email": "Your email address",
-      "placeholder_company": "Enter your company name",
-      "placeholder_phone": "Enter your phone number",
-      "placeholder_country": "Select your country",
-      "placeholder_interest": "Select model",
-      "placeholder_subject": "Enter message subject",
-      "placeholder_message": "Describe your requirements in detail, including product type, specifications, quantity, application, etc.",
+      "title": "Gửi lời nhắn",
+      "subtitle": "Vui lòng điền form bên dưới, chúng tôi sẽ phản hồi trong 24 giờ vào ngày làm việc.",
+      "name": "Họ tên",
+      "email": "Email",
+      "company": "Tên công ty",
+      "phone": "Điện thoại / WhatsApp",
+      "country": "Quốc gia/Khu vực",
+      "interest": "Sản phẩm quan tâm",
+      "subject": "Chủ đề",
+      "message": "Nội dung",
+      "placeholder_name": "Nhập họ tên",
+      "placeholder_email": "Email của bạn",
+      "placeholder_company": "Nhập tên công ty",
+      "placeholder_phone": "Nhập số điện thoại",
+      "placeholder_country": "Chọn quốc gia",
+      "placeholder_interest": "Chọn model",
+      "placeholder_subject": "Nhập chủ đề",
+      "placeholder_message": "Mô tả chi tiết nhu cầu: loại sản phẩm, thông số, số lượng, ứng dụng, v.v.",
       "countries": {
-        "CN": "China",
-        "VN": "Vietnam",
-        "TH": "Thailand",
+        "CN": "Trung Quốc",
+        "VN": "Việt Nam",
+        "TH": "Thái Lan",
         "ID": "Indonesia",
-        "KH": "Cambodia",
-        "FR": "France",
-        "IT": "Italy",
-        "AE": "United Arab Emirates",
-        "US": "United States"
+        "KH": "Campuchia",
+        "FR": "Pháp",
+        "IT": "Ý",
+        "AE": "Các Tiểu vương quốc Ả Rập Thống nhất",
+        "US": "Hoa Kỳ"
       },
       "product_types": {
-        "polyester": "Polyester Thread",
-        "cotton": "Cotton Thread",
-        "nylon": "Nylon Thread",
-        "high_tenacity": "High Tenacity Thread",
-        "recycled": "Recycled Thread"
+        "polyester": "Chỉ Polyester",
+        "cotton": "Chỉ Cotton",
+        "nylon": "Chỉ Nylon",
+        "high_tenacity": "Chỉ độ bền cao",
+        "recycled": "Chỉ tái chế"
       },
-      "upload_title": "Click to upload or drag files here",
-      "upload_hint": "PDF, JPG, PNG supported. Max 10MB per file.",
-      "submit": "Send Message",
-      "submitting": "Sending",
-      "success_msg": "Your message has been sent successfully. We will get back to you soon!"
+      "upload_title": "Nhấn để tải lên hoặc kéo thả tệp vào đây",
+      "upload_hint": "Hỗ trợ PDF, JPG, PNG. Tối đa 10MB mỗi tệp.",
+      "submit": "Gửi",
+      "submitting": "Đang gửi",
+      "success_msg": "Đã gửi thành công. Chúng tôi sẽ liên hệ lại sớm!"
     },
     "location": {
       "title": "Our Location",
-      "subtitle": "Welcome to visit our modern manufacturing facility in Shaoxing, China. We are always happy to arrange a factory tour by appointment."
+      "subtitle": "Chào mừng bạn ghé thăm nhà máy của chúng tôi. Chúng tôi sẵn sàng sắp xếp tham quan theo lịch hẹn."
     },
     "faq": {
       "kicker": "FAQ",
@@ -376,51 +495,62 @@
   },
   "inquiry": {
     "seo": {
-      "title": "Request a Quote | Hubei Zhi'ao Thread Industry",
-      "description": "Submit your inquiry and purchasing requirements. We will provide a competitive quote and product information within 24 hours.",
-      "keywords": "request a quote, inquiry, sewing thread quote, industrial sewing thread, SewPro"
+      "title": "Yêu cầu báo giá - Zhi'ao Thread",
+      "description": "Gửi yêu cầu và nhu cầu mua hàng. Chúng tôi sẽ cung cấp báo giá cạnh tranh và thông tin sản phẩm trong 24 giờ.",
+      "keywords": "yêu cầu báo giá, inquiry, báo giá chỉ may, chỉ may công nghiệp"
     },
     "hero": {
-      "title": "Request a Quote",
-      "subtitle": "Please fill in your requirements. We will provide a competitive quote and product information within 24 hours."
+      "title": "Yêu cầu báo giá",
+      "subtitle": "Vui lòng điền nhu cầu của bạn. Chúng tôi sẽ phản hồi trong 24 giờ với báo giá và thông tin sản phẩm."
     },
     "form": {
-      "name": "Your Name",
-      "email": "Email Address",
-      "company": "Company Name",
-      "phone": "Phone / WeChat",
-      "country": "Country / Region",
+      "name": "Họ tên",
+      "email": "Email",
+      "company": "Tên công ty",
+      "phone": "Điện thoại / WhatsApp",
+      "country": "Quốc gia/Khu vực",
       "model": "Model",
-      "quantity": "Estimated Quantity",
-      "color": "Color Requirement",
-      "message": "Other Requirements",
-      "placeholder_name": "Enter your full name",
-      "placeholder_email": "Your email address",
-      "placeholder_company": "Enter your company name",
-      "placeholder_phone": "Enter your phone number",
-      "placeholder_country": "Select your country",
-      "placeholder_model": "Select model",
-      "placeholder_quantity": "e.g., 500 cartons / 10 tons",
-      "placeholder_color": "Select color",
-      "placeholder_message": "Describe your requirements, specifications, quantity, lead time, etc.",
-      "upload_title": "Click to upload or drag files here",
-      "upload_hint": "PDF, JPG, PNG supported. Max 10MB per file.",
-      "submit": "Submit Inquiry",
-      "submitting": "Submitting",
-      "success_msg": "Submitted successfully. We will contact you soon!",
-      "subject_default": "Product Inquiry"
+      "quantity": "Số lượng dự kiến",
+      "color": "Yêu cầu màu sắc",
+      "message": "Yêu cầu khác",
+      "placeholder_name": "Nhập họ tên",
+      "placeholder_email": "Email của bạn",
+      "placeholder_company": "Nhập tên công ty",
+      "placeholder_phone": "Nhập số điện thoại",
+      "placeholder_country": "Chọn quốc gia",
+      "placeholder_model": "Chọn model",
+      "placeholder_quantity": "Ví dụ: 500 thùng / 10 tấn",
+      "placeholder_color": "Chọn màu",
+      "placeholder_message": "Mô tả nhu cầu, thông số, số lượng, thời gian giao hàng, v.v.",
+      "upload_title": "Nhấn để tải lên hoặc kéo thả tệp vào đây",
+      "upload_hint": "Hỗ trợ PDF, JPG, PNG. Tối đa 10MB mỗi tệp.",
+      "submit": "Gửi yêu cầu",
+      "submitting": "Đang gửi",
+      "success_msg": "Đã gửi thành công. Chúng tôi sẽ liên hệ lại sớm!",
+      "subject_default": "Yêu cầu sản phẩm"
     }
   },
   "news": {
+    "seo": {
+      "title": "Tin tức - Zhi'ao Thread",
+      "description": "Cập nhật tin tức mới nhất, xu hướng ngành và thông tin từ Zhi'ao Thread.",
+      "keywords": "tin tức, xu hướng ngành, hướng dẫn sản phẩm, chỉ may"
+    },
+    "categories": {
+      "all": "Tất cả"
+    },
     "list": {
-      "title": "News Center",
-      "subtitle": "Stay updated with industry trends, product guides, and company news"
+      "title": "Tin tức",
+      "subtitle": "Cập nhật xu hướng ngành, hướng dẫn sản phẩm và tin tức công ty"
     },
     "detail": {
-      "published_at": "Published on",
-      "category": "Category",
-      "back": "Back to List",
-      "related": "Related News"
+      "published_at": "Đăng ngày",
+      "category": "Danh mục",
+      "back": "Quay lại",
+      "related": "Bài viết liên quan",
+      "latest": "Tin mới nhất",
+      "categories": "Danh mục",
+      "share": "Chia sẻ:"
     }
   }
 }
