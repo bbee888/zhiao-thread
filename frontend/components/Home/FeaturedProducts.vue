@@ -22,41 +22,54 @@
 </template>
 
 <script setup>
-const { t } = useI18n()
+const { locale } = useI18n()
+const config = useRuntimeConfig()
+const apiBase = config.public.apiBase
 
-// Mock data - in production this would come from an API
-const products = [
-  {
-    id: 1,
-    name: '100% Spun Polyester Sewing Thread',
-    category: 'Polyester',
-    description: 'High tenacity, low shrinkage, and excellent color fastness. Ideal for apparel, sportswear, and home textiles.',
-    image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&auto=format&fit=crop&q=60',
-    specs: ['40/2', '20/2', '50/3']
-  },
-  {
-    id: 2,
-    name: 'High Tenacity Nylon 66 Thread',
-    category: 'Nylon',
-    description: 'Superior strength and durability. Perfect for leather goods, footwear, and automotive upholstery.',
-    image: 'https://images.unsplash.com/photo-1584184924103-e310d9dc82fc?w=800&auto=format&fit=crop&q=60',
-    specs: ['210D/3', '280D/3', '420D/3']
-  },
-  {
-    id: 3,
-    name: 'Premium Cotton Sewing Thread',
-    category: 'Cotton',
-    description: 'Natural touch and soft feel. Suitable for delicate fabrics, children\'s wear, and organic clothing.',
-    image: 'https://images.unsplash.com/photo-1528476513691-07e6f563d97f?w=800&auto=format&fit=crop&q=60',
-    specs: ['40/2', '50/3', '60/3']
-  },
-  {
-    id: 4,
-    name: 'Core Spun Sewing Thread',
-    category: 'Core Spun',
-    description: 'Combining the strength of polyester core with the softness of cotton or polyester wrap.',
-    image: 'https://images.unsplash.com/photo-1544441893-675973e31985?w=800&auto=format&fit=crop&q=60',
-    specs: ['29tex', '40tex', '60tex']
+const unwrapItems = (res) => {
+  if (!res) return []
+  if (Array.isArray(res)) return res
+  if (res && typeof res === 'object') {
+    const d = res.data ?? res
+    if (Array.isArray(d.items)) return d.items
+    if (Array.isArray(d.list)) return d.list
+    if (Array.isArray(d)) return d
   }
-]
+  return []
+}
+
+const normalizeCover = (cover) => {
+  const fallbackCover = '/img/a3.jpg'
+  const v = String(cover || '').trim()
+  if (!v || v === 'null' || v === 'undefined') return fallbackCover
+  if (/^https?:\/\//i.test(v)) return v
+  try {
+    const origin = new URL(apiBase).origin
+    return `${origin}${v.startsWith('/') ? '' : '/'}${v}`
+  } catch {
+    return v
+  }
+}
+
+const { data: productsRes } = await useFetch('/products', {
+  baseURL: apiBase,
+  query: { page: 1, limit: 4, status: 1 },
+  watch: [locale],
+})
+
+const products = computed(() => {
+  const list = unwrapItems(productsRes.value)
+  return list.map((p) => {
+    const lang = p?.langData?.[locale.value] || p?.langData?.zh || {}
+    const model = String(p?.model || '')
+    return {
+      id: p.id,
+      name: String(lang?.title || `Product ${p.id}`),
+      category: String(p.categoryName || ''),
+      description: String(lang?.description || ''),
+      image: normalizeCover(p.cover),
+      specs: [model, p?.color, p?.length, p?.tenacity].map((v) => String(v || '')).filter(Boolean)
+    }
+  })
+})
 </script>
