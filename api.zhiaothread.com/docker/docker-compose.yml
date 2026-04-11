@@ -1,0 +1,72 @@
+# youlai-nest（MySQL + Redis + API）Docker Compose 配置
+# 使用方法：在 docker 目录下执行 docker compose up -d --build
+
+networks:
+  youlai-nest:
+    driver: bridge
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: youlai-nest-mysql
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+      - MYSQL_DATABASE=zhiao-thread
+      - MYSQL_USER=zhiao-thread
+      - MYSQL_PASSWORD=sdWQtEsptYsyCpXd
+      - MYSQL_ROOT_PASSWORD=please-change
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - youlai-nest
+
+  # Redis 缓存
+  redis:
+    image: redis:7.2.3
+    container_name: youlai-nest-redis
+    restart: unless-stopped
+    command: redis-server --requirepass please-change --appendonly no
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./redis/data:/data
+    ports:
+      - 6379:6379
+    networks:
+      - youlai-nest
+
+  api:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: youlai-nest-api
+    restart: unless-stopped
+    depends_on:
+      - mysql
+      - redis
+    environment:
+      - NODE_ENV=prod
+      - APP_PORT=8000
+      - MYSQL_HOST=mysql
+      - MYSQL_PORT=3306
+      - MYSQL_USER=youlai
+      - MYSQL_PASSWORD=please-change
+      - MYSQL_DB=youlai_admin
+      - TYPEORM_LOGGING=false
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=please-change
+      - JWT_SECRET_KEY=please-change
+      - JWT_EXPIRES_IN=7200
+      - JWT_ISSUER=youlai-nest
+      - OSS_TYPE=local
+      - OSS_LOCAL_STORAGE_PATH=/data/oss
+    volumes:
+      - ./oss:/data/oss
+    ports:
+      - 127.0.0.1:8000:8000
+    networks:
+      - youlai-nest

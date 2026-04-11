@@ -1,0 +1,11 @@
+node_modules
+dist
+logs
+*.log
+.DS_Store
+.env
+.env.*
+docker/mongodb
+docker/mysql
+docker/redis
+docker/minio

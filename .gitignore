@@ -40,10 +40,3 @@ yarn.lock
 # Local history
 .history
 
-# Backend local env
-!youlai-nest/.env
-!youlai-nest/.env.dev
-!youlai-nest/.env.prod
-
-# Backend uploaded files (runtime)
-youlai-nest/data/oss/
