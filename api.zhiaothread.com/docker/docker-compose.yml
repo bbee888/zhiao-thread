@@ -15,7 +15,7 @@ services:
       - MYSQL_DATABASE=zhiao-thread
       - MYSQL_USER=zhiao-thread
       - MYSQL_PASSWORD=sdWQtEsptYsyCpXd
-      - MYSQL_ROOT_PASSWORD=please-change
+      - MYSQL_ROOT_PASSWORD=mysql_nn867Z
     volumes:
       - ./mysql/data:/var/lib/mysql
     ports:
@@ -52,16 +52,16 @@ services:
       - APP_PORT=8000
       - MYSQL_HOST=mysql
       - MYSQL_PORT=3306
-      - MYSQL_USER=youlai
-      - MYSQL_PASSWORD=please-change
-      - MYSQL_DB=youlai_admin
+      - MYSQL_USER=zhiao-thread
+      - MYSQL_PASSWORD=sdWQtEsptYsyCpXd
+      - MYSQL_DB=zhiao-thread
       - TYPEORM_LOGGING=false
       - REDIS_HOST=redis
       - REDIS_PORT=6379
-      - REDIS_PASSWORD=please-change
-      - JWT_SECRET_KEY=please-change
+      - REDIS_PASSWORD=redis_htTTAD
+      - JWT_SECRET_KEY=shangXBandSzy
       - JWT_EXPIRES_IN=7200
-      - JWT_ISSUER=youlai-nest
+      - JWT_ISSUER=zhiao-thread
       - OSS_TYPE=local
       - OSS_LOCAL_STORAGE_PATH=/data/oss
     volumes:
@@ -69,4 +69,4 @@ services:
     ports:
       - 127.0.0.1:8000:8000
     networks:
-      - youlai-nest
+      - zhiao-thread
