@@ -1,4 +1,4 @@
-import { Injectable, Inject } from "@nestjs/common";
+import { Injectable, Inject, OnModuleInit } from "@nestjs/common";
 
 import * as Client from "ali-oss";
 import * as dayjs from "dayjs";
@@ -104,6 +104,14 @@ export class FileService {
 
       this.minioClient = new Minio.Client(this.minioConfig as any);
       this.minioBucket = minio.bucketName;
+    }
+  }
+
+  async onModuleInit() {
+    if (this.ossType !== "minio" || !this.minioClient || !this.minioBucket) return;
+    const exists = await this.minioClient.bucketExists(this.minioBucket);
+    if (!exists) {
+      await this.minioClient.makeBucket(this.minioBucket, "us-east-1");
     }
   }
 
@@ -264,6 +272,31 @@ export class FileService {
     }
   }
 
+  async getFileStream(
+    key: string
+  ): Promise<{ stream: NodeJS.ReadableStream; contentType?: string; contentLength?: number }> {
+    // local
+    if (this.ossType === "local") {
+      const storageRoot = this.ossConf.local.storagePath;
+      const safeKey = decodeURIComponent(String(key || "").replace(/^\/+/, ""));
+      const fullPath = path.join(storageRoot, safeKey);
+      const stat = await fs.promises.stat(fullPath);
+      const stream = fs.createReadStream(fullPath);
+      return { stream, contentLength: stat.size };
+    }
+
+    if (this.ossType === "minio" && this.minioClient && this.minioBucket) {
+      const stat = await this.minioClient.statObject(this.minioBucket, key);
+      const stream = await this.minioClient.getObject(this.minioBucket, key);
+      const meta = (stat as any)?.metaData || {};
+      const contentType = meta["content-type"] || meta["Content-Type"] || undefined;
+      const contentLength = (stat as any)?.size || undefined;
+      return { stream, contentType, contentLength };
+    }
+
+    throw new Error("getFileStream is not supported for current OSS type");
+  }
+
   async getResult(xOssPubKeyUrl: string, file: any) {
     // 通过 Base64 解码公钥地址
     const pubKeyAddr = Buffer.from(xOssPubKeyUrl, "base64").toString("ascii");
@@ -328,15 +361,7 @@ export class FileService {
         };
       }
 
-      const presigned = await this.minioClient.presignedGetObject(
-        this.minioBucket,
-        objectName,
-        24 * 60 * 60
-      );
-      const cleanUrl = presigned.includes("?")
-        ? presigned.substring(0, presigned.indexOf("?"))
-        : presigned;
-      return { name: originalName, url: cleanUrl };
+      return { name: originalName, url: `/oss/${objectName}` };
     }
 
     // local
@@ -370,10 +395,27 @@ export class FileService {
       return true;
     }
 
+    // minio
+    if (this.ossType === "minio" && this.minioClient && this.minioBucket) {
+      const prefix = `/oss/`;
+      const key = filePath.startsWith(prefix)
+        ? filePath.substring(prefix.length)
+        : filePath.startsWith("http")
+          ? new URL(filePath).pathname.replace(/^\/+/, "").split("/").slice(1).join("/")
+          : filePath.replace(/^\/+/, "");
+
+      await this.minioClient.removeObject(this.minioBucket, key);
+      return true;
+    }
+
     // local
     try {
       const storageRoot = this.ossConf.local.storagePath;
-      const rel = filePath.startsWith("/") ? filePath.substring(1) : filePath;
+      const rel = filePath.startsWith("/oss/")
+        ? filePath.substring("/oss/".length)
+        : filePath.startsWith("/")
+          ? filePath.substring(1)
+          : filePath;
       const fullPath = path.isAbsolute(filePath) ? filePath : path.join(storageRoot, rel);
       await fs.promises.unlink(fullPath);
       return true;

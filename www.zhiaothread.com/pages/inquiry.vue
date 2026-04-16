@@ -121,7 +121,7 @@ const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const requestURL = useRequestURL()
 const config = useRuntimeConfig()
-const apiBase = config.public.apiBase
+const apiBase = process.server ? config.apiBase : config.public.apiBase
 
 const canonicalUrl = computed(() => {
   return `${requestURL.origin}${localePath('/inquiry')}`

@@ -151,7 +151,7 @@ useHead(() => ({
   link: [{ rel: 'canonical', href: canonicalUrl.value }]
 }))
 
-const apiBase = config.public.apiBase
+const apiBase = process.server ? config.apiBase : config.public.apiBase
 const pageSize = 9
 
 const page = computed(() => {

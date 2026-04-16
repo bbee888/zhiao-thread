@@ -187,7 +187,7 @@ const localePath = useLocalePath()
 const { t, tm, rt, locale } = useI18n()
 const requestURL = useRequestURL()
 const config = useRuntimeConfig()
-const apiBase = config.public.apiBase
+const apiBase = process.server ? config.apiBase : config.public.apiBase
 
 const unwrapItem = (res) => {
   if (!res) return undefined

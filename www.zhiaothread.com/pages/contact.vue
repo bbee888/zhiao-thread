@@ -368,7 +368,7 @@ const { t, locale, tm, rt } = useI18n()
 const requestURL = useRequestURL()
 const route = useRoute()
 const config = useRuntimeConfig()
-const apiBase = config.public.apiBase
+const apiBase = process.server ? config.apiBase : config.public.apiBase
 const isRtl = computed(() => locale.value === 'ar')
 
 const canonicalUrl = computed(() => {

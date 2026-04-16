@@ -6,6 +6,6 @@ services:
     container_name: zhiao-www
     restart: always
     env_file:
-      - .env
+      - .env.production
     ports:
       - "127.0.0.1:3000:3000"

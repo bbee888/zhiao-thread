@@ -92,7 +92,7 @@
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
-const apiBase = config.public.apiBase
+const apiBase = process.server ? config.apiBase : config.public.apiBase
 
 const unwrapListData = (res) => {
   if (!res) return []

@@ -359,7 +359,7 @@ export class ArticleService {
    * 创建文章
    */
   async createArticle(createArticleDto: CreateArticleDto) {
-    console.log('[文章] 接收到的DTO:', JSON.stringify(createArticleDto, null, 2));
+    // console.log('[文章] 接收到的DTO:', JSON.stringify(createArticleDto, null, 2));
     
     const article = this.articleRepository.create({
       cateId: createArticleDto.cateId ? Number(createArticleDto.cateId) : undefined,
@@ -369,13 +369,13 @@ export class ArticleService {
     });
 
     const savedArticle = await this.articleRepository.save(article);
-    console.log('[文章] 主表保存成功, ID:', savedArticle.id);
+    // console.log('[文章] 主表保存成功, ID:', savedArticle.id);
 
     // 保存多语言数据
     if (createArticleDto.langData && Object.keys(createArticleDto.langData).length > 0) {
-      console.log('[文章] 开始保存多语言数据:', createArticleDto.langData);
+      // console.log('[文章] 开始保存多语言数据:', createArticleDto.langData);
       await this.saveArticleLangData(savedArticle.id, createArticleDto.langData);
-      console.log('[文章] 多语言数据保存成功');
+      // console.log('[文章] 多语言数据保存成功');
     } else {
       console.log('[文章] 没有多语言数据需要保存');
     }
@@ -438,21 +438,21 @@ export class ArticleService {
     langData: Record<string, ArticleLangData>
   ): Promise<void> {
     try {
-      console.log('[文章] saveArticleLangData 参数 - articleId:', articleId, 'langData:', JSON.stringify(langData));
+      // console.log('[文章] saveArticleLangData 参数 - articleId:', articleId, 'langData:', JSON.stringify(langData));
       
       // 过滤掉空值
       const filteredLangData = Object.entries(langData).filter(([_, data]) => data && data.title && data.title.trim() !== '');
-      console.log('[文章] 过滤后的多语言数据:', JSON.stringify(Object.fromEntries(filteredLangData)));
+      // console.log('[文章] 过滤后的多语言数据:', JSON.stringify(Object.fromEntries(filteredLangData)));
       
       if (filteredLangData.length === 0) {
-        console.log('[文章] 没有有效的多语言数据需要保存');
+        // console.log('[文章] 没有有效的多语言数据需要保存');
         return;
       }
 
       // 删除旧的多语言数据
-      console.log('[文章] 删除旧的多语言数据，articleId:', articleId);
+      // console.log('[文章] 删除旧的多语言数据，articleId:', articleId);
       await this.articleLangRepository.delete({ articleId });
-      console.log('[文章] 旧数据删除成功');
+      // console.log('[文章] 旧数据删除成功');
 
       // 插入新的多语言数据
       const langEntities = filteredLangData.map(([lang, data]) =>

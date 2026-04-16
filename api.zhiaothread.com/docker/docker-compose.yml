@@ -1,72 +1,72 @@
-# youlai-nest（MySQL + Redis + API）Docker Compose 配置
+# zhiao-thread（MySQL + Redis + API）Docker Compose 配置
 # 使用方法：在 docker 目录下执行 docker compose up -d --build
 
 networks:
-  youlai-nest:
+  zhiao-thread:
     driver: bridge
 
 services:
-  mysql:
-    image: mysql:8.0
-    container_name: youlai-nest-mysql
-    restart: unless-stopped
-    environment:
-      - TZ=Asia/Shanghai
-      - MYSQL_DATABASE=zhiao-thread
-      - MYSQL_USER=zhiao-thread
-      - MYSQL_PASSWORD=sdWQtEsptYsyCpXd
-      - MYSQL_ROOT_PASSWORD=mysql_nn867Z
-    volumes:
-      - ./mysql/data:/var/lib/mysql
-    ports:
-      - 3306:3306
-    networks:
-      - youlai-nest
+#   mysql:
+#     image: mysql:8.0
+#     container_name: zhiao-thread-mysql
+#     restart: unless-stopped
+#     environment:
+#       - TZ=Asia/Shanghai
+#       - MYSQL_DATABASE=zhiao-thread
+#       - MYSQL_USER=zhiao-thread
+#       - MYSQL_PASSWORD=sdWQtEsptYsyCpXd
+#       - MYSQL_ROOT_PASSWORD=mysql_nn867Z
+#     volumes:
+#       - ./mysql/data:/var/lib/mysql
+#     ports:
+#       - 3306:3306
+#     networks:
+#       - zhiao-thread
 
-  # Redis 缓存
-  redis:
-    image: redis:7.2.3
-    container_name: youlai-nest-redis
-    restart: unless-stopped
-    command: redis-server --requirepass please-change --appendonly no
-    environment:
-      - TZ=Asia/Shanghai
-    volumes:
-      - ./redis/data:/data
-    ports:
-      - 6379:6379
-    networks:
-      - youlai-nest
+#   # Redis 缓存
+#   redis:
+#     image: redis:7.2.3
+#     container_name: zhiao-thread-redis
+#     restart: unless-stopped
+#     command: redis-server --requirepass please-change --appendonly no
+#     environment:
+#       - TZ=Asia/Shanghai
+#     volumes:
+#       - ./redis/data:/data
+#     ports:
+#       - 6379:6379
+#     networks:
+#       - zhiao-thread
 
   api:
     build:
       context: ..
       dockerfile: Dockerfile
-    container_name: youlai-nest-api
+    container_name: zhiao-thread-api
     restart: unless-stopped
-    depends_on:
-      - mysql
-      - redis
     environment:
       - NODE_ENV=prod
       - APP_PORT=8000
-      - MYSQL_HOST=mysql
+      - MYSQL_HOST=1Panel-mysql-phTh
       - MYSQL_PORT=3306
-      - MYSQL_USER=zhiao-thread
-      - MYSQL_PASSWORD=sdWQtEsptYsyCpXd
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=mysql_nn867Z
       - MYSQL_DB=zhiao-thread
       - TYPEORM_LOGGING=false
-      - REDIS_HOST=redis
+      - REDIS_HOST=1Panel-redis-Kuze
       - REDIS_PORT=6379
       - REDIS_PASSWORD=redis_htTTAD
       - JWT_SECRET_KEY=shangXBandSzy
       - JWT_EXPIRES_IN=7200
       - JWT_ISSUER=zhiao-thread
-      - OSS_TYPE=local
-      - OSS_LOCAL_STORAGE_PATH=/data/oss
+      - OSS_TYPE=minio
+      - OSS_MINIO_ENDPOINT=http://1Panel-minio-ozt4:9000
+      - OSS_MINIO_ACCESS_KEY=minio_43fY5Q
+      - OSS_MINIO_SECRET_KEY=minio_K5hRTA
+      - OSS_MINIO_BUCKET=zhiao-oss
     volumes:
       - ./oss:/data/oss
     ports:
-      - 127.0.0.1:8000:8000
+      - 8000:8000
     networks:
       - zhiao-thread

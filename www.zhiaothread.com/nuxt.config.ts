@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
+  router: {
+    options: {
+      hashMode: false  // 强制 history 模式
+    }
+  },
 
   i18n: {
     locales: [
@@ -24,13 +29,22 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     detectBrowserLanguage: false,
     seo: true,
-    baseUrl: (globalThis as any).process?.env?.NUXT_PUBLIC_SITE_URL || (globalThis as any).process?.env?.SITE_URL || ''
+    baseUrl: ''
   } as any,
 
   runtimeConfig: {
+    apiBase: 'http://localhost:8000/api/v1',
+    siteUrl: 'http://localhost:3000',
     public: {
-      apiBase: (globalThis as any).process?.env?.NUXT_PUBLIC_API_BASE || 'http://localhost:8000/api/v1',
-      siteUrl: (globalThis as any).process?.env?.NUXT_PUBLIC_SITE_URL || (globalThis as any).process?.env?.SITE_URL || ''
+      apiBase: 'http://localhost:8000/api/v1',
+      siteUrl: 'http://localhost:3000'
+    }
+  },
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {}
     }
   },
 

@@ -59,7 +59,7 @@
 const localePath = useLocalePath()
 const { t, locale } = useI18n()
 const config = useRuntimeConfig()
-const apiBase = config.public.apiBase
+const apiBase = process.server ? config.apiBase : config.public.apiBase
 const fallbackCover = '/img/a3.jpg'
 
 const pickLangValue = (langData) => {

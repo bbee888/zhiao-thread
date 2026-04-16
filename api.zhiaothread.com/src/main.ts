@@ -34,7 +34,7 @@ async function bootstrap() {
       // 使用 process.cwd() 获取项目根目录，或者使用 __dirname 向上查找
       storagePath = path.resolve(process.cwd(), storagePath);
     }
-    logger.log(`本地存储路径: ${storagePath}`);
+    // logger.log(`本地存储路径: ${storagePath}`);
     // 使用 express 的 static 中间件提供静态文件服务，挂载到 /oss 路径下
     app.use("/oss", express.static(storagePath));
     // 为了兼容旧路径，同时也挂载到根路径（可选）
@@ -94,7 +94,7 @@ async function bootstrap() {
   // Swagger 配置
   const config = new DocumentBuilder()
     .setTitle("youlai-nest")
-    .setDescription(`youlai 全家桶（Node/Nest 11）权限管理后台接口文档 new`)
+    .setDescription(`智奥线业权限管理后台接口文档 new`)
     .setVersion("1.0")
     .addBearerAuth()
     .build();
