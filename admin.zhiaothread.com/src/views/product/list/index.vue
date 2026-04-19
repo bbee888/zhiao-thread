@@ -5,11 +5,20 @@
         <el-form-item label="产品分类" prop="cateId">
           <el-select v-model="queryParams.cateId" placeholder="全部" clearable style="width: 150px">
             <el-option label="全部分类" value="" />
-            <el-option v-for="item in categoryOptions" :key="item.value" :label="item.label" :value="item.value" />
+            <el-option
+              v-for="item in categoryOptions"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value"
+            />
           </el-select>
         </el-form-item>
         <el-form-item label="关键字" prop="keywords">
-          <el-input v-model="queryParams.keywords" placeholder="产品名称" @keyup.enter="handleQuery" />
+          <el-input
+            v-model="queryParams.keywords"
+            placeholder="产品名称"
+            @keyup.enter="handleQuery"
+          />
         </el-form-item>
         <el-form-item label="状态" prop="status">
           <el-select v-model="queryParams.status" placeholder="全部" clearable style="width: 100px">
@@ -28,7 +37,12 @@
       <div class="page-toolbar">
         <div class="page-toolbar__left">
           <el-button type="success" icon="plus" @click="openDialog()">新增</el-button>
-          <el-button type="danger" :disabled="selectIds.length === 0" icon="delete" @click="handleDelete()">
+          <el-button
+            type="danger"
+            :disabled="selectIds.length === 0"
+            icon="delete"
+            @click="handleDelete()"
+          >
             删除
           </el-button>
         </div>
@@ -38,8 +52,13 @@
         <el-table-column type="selection" width="55" align="center" />
         <el-table-column prop="cover" label="主图" width="100">
           <template #default="scope">
-            <el-image v-if="scope.row.cover" :src="resolveImageUrl(scope.row.cover)" :preview-src-list="[resolveImageUrl(scope.row.cover)]" fit="cover"
-              style="width: 60px; height: 60px" />
+            <el-image
+              v-if="scope.row.cover"
+              :src="resolveImageUrl(scope.row.cover)"
+              :preview-src-list="[resolveImageUrl(scope.row.cover)]"
+              fit="cover"
+              style="width: 60px; height: 60px"
+            />
           </template>
         </el-table-column>
         <el-table-column prop="langData" label="产品名称" min-width="200">
@@ -63,44 +82,94 @@
         </el-table-column>
         <el-table-column label="操作" fixed="right" align="left" width="150">
           <template #default="scope">
-            <el-button type="primary" link size="small" icon="edit" @click.stop="openDialog(scope.row.id)">
+            <el-button
+              type="primary"
+              link
+              size="small"
+              icon="edit"
+              @click.stop="openDialog(scope.row.id)"
+            >
               编辑
             </el-button>
-            <el-button type="danger" link size="small" icon="delete" @click.stop="handleDelete(scope.row.id)">
+            <el-button
+              type="danger"
+              link
+              size="small"
+              icon="delete"
+              @click.stop="handleDelete(scope.row.id)"
+            >
               删除
             </el-button>
           </template>
         </el-table-column>
       </el-table>
 
-      <Pagination v-show="total > 0" v-model:page="queryParams.page" v-model:limit="queryParams.limit"
-        :total="total" @pagination="fetchData" />
+      <Pagination
+        v-show="total > 0"
+        v-model:page="queryParams.page"
+        v-model:limit="queryParams.limit"
+        :total="total"
+        @pagination="fetchData"
+      />
     </el-card>
 
-    <el-dialog v-model="dialogState.visible" :title="dialogState.title" width="70%" @closed="closeDialog" top="10px">
-      <el-form ref="productFormRef" :model="formData" :rules="rules" label-width="100px">
+    <el-dialog
+      v-model="dialogState.visible"
+      :title="dialogState.title"
+      width="70%"
+      top="10px"
+      @closed="closeDialog"
+    >
+      <el-form
+        ref="productFormRef"
+        v-loading="dialogLoading"
+        :model="formData"
+        :rules="rules"
+        label-width="100px"
+      >
         <el-form-item label="产品分类" prop="cateId">
           <el-select v-model="formData.cateId" placeholder="请选择分类" style="width: 100%">
-            <el-option v-for="item in categoryOptions" :key="item.value" :label="item.label" :value="item.value" />
+            <el-option
+              v-for="item in categoryOptions"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value"
+            />
           </el-select>
         </el-form-item>
 
         <el-form-item label="多语言内容">
           <el-tabs v-model="activeTab" type="border-card" style="width: 100%">
-            <el-tab-pane v-for="lang in languageList" :key="lang.code" :label="lang.name" :name="lang.code">
+            <el-tab-pane
+              v-for="lang in languageList"
+              :key="lang.code"
+              :label="lang.name"
+              :name="lang.code"
+            >
               <el-form-item label="产品标题" label-width="80px" style="margin-bottom: 20px">
-                <el-input v-model="getLangData(lang.code).title" :placeholder="`请输入 ${lang.name}标题`" />
+                <el-input
+                  v-model="getLangData(lang.code).title"
+                  :placeholder="`请输入 ${lang.name}标题`"
+                />
               </el-form-item>
               <el-form-item label="产品详情" label-width="80px">
-                <WangEditor v-model="getLangData(lang.code).content" :placeholder="`请输入 ${lang.name} 详情内容`" height="400px" />
+                <WangEditor
+                  v-model="getLangData(lang.code).content"
+                  :placeholder="`请输入 ${lang.name} 详情内容`"
+                  height="400px"
+                />
               </el-form-item>
               <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px">
-                <el-divider content-position="left">SEO 设置 ({{ lang.name }} )</el-divider>
-                <el-form-item label="关键词" label-width="100px" style="margin-bottom: 8px;">
+                <el-divider content-position="left">SEO 设置 ({{ lang.name }})</el-divider>
+                <el-form-item label="关键词" label-width="100px" style="margin-bottom: 8px">
                   <el-input v-model="getLangData(lang.code).keywords" placeholder="Keywords" />
                 </el-form-item>
                 <el-form-item label="描述" label-width="100px">
-                  <el-input v-model="getLangData(lang.code).description" type="textarea" placeholder="Description" />
+                  <el-input
+                    v-model="getLangData(lang.code).description"
+                    type="textarea"
+                    placeholder="Description"
+                  />
                 </el-form-item>
               </div>
             </el-tab-pane>
@@ -191,7 +260,7 @@
 
       <template #footer>
         <div class="dialog-footer">
-          <el-button type="primary" @click="handleSubmit">确定</el-button>
+          <el-button type="primary" :loading="dialogLoading" @click="handleSubmit">确定</el-button>
           <el-button @click="closeDialog">取消</el-button>
         </div>
       </template>
@@ -211,7 +280,13 @@ import type { FormInstance, FormRules } from "element-plus";
 const queryFormRef = ref<FormInstance>();
 const productFormRef = ref<FormInstance>();
 
-const queryParams = reactive<any>({ page: 1, limit: 10, cateId: undefined, keywords: "", status: undefined });
+const queryParams = reactive<any>({
+  page: 1,
+  limit: 10,
+  cateId: undefined,
+  keywords: "",
+  status: undefined,
+});
 const productList = ref<any[]>([]);
 const categoryOptions = ref<any[]>([]);
 const loading = ref(false);
@@ -220,8 +295,10 @@ const total = ref(0);
 
 const dialogState = reactive({ title: "", visible: false });
 const activeTab = ref("zh");
+const dialogLoading = ref(false);
 
 const formData = reactive<any>({
+  id: undefined,
   cateId: undefined,
   cover: "",
   price: 0,
@@ -262,8 +339,16 @@ function resolveImageUrl(url?: string) {
 }
 
 function getLangData(code: string): any {
-  if (!formData.langData[code] || typeof formData.langData[code] !== 'object') {
-    formData.langData[code] = { title: "", content: "", color: "", length: "", tenacity: "", keywords: "", description: "" };
+  if (!formData.langData[code] || typeof formData.langData[code] !== "object") {
+    formData.langData[code] = {
+      title: "",
+      content: "",
+      color: "",
+      length: "",
+      tenacity: "",
+      keywords: "",
+      description: "",
+    };
   }
   return formData.langData[code];
 }
@@ -274,10 +359,9 @@ function initLangData() {
   });
 }
 
-function fetchCategoryOptions() {
-  CategoryAPI.getOptions().then((data) => {
-    categoryOptions.value = data;
-  });
+async function fetchCategoryOptions() {
+  const data = await CategoryAPI.getOptions();
+  categoryOptions.value = data;
 }
 
 function fetchData() {
@@ -308,33 +392,44 @@ function handleSelectionChange(selection: any[]) {
 }
 
 async function openDialog(id?: number) {
-  await fetchCategoryOptions();
   dialogState.visible = true;
-  if (id) {
-    dialogState.title = "修改产品";
-    const data = await ProductAPI.getFormData(id);
-    Object.assign(formData, data);
-    // 确保 langData 是对象
-    if (!formData.langData || typeof formData.langData !== 'object') {
+  dialogLoading.value = true;
+  try {
+    if (languageList.value.length === 0) {
+      await fetchLanguages();
+    }
+    await fetchCategoryOptions();
+
+    if (id !== undefined && id !== null) {
+      dialogState.title = "修改产品";
+      formData.id = Number(id);
+      const data = await ProductAPI.getFormData(Number(id));
+      Object.assign(formData, data);
+      formData.id = Number((data as any)?.id ?? id);
+    } else {
+      dialogState.title = "新增产品";
+      formData.id = undefined;
+      formData.cateId = undefined;
+      formData.cover = "";
+      formData.price = 0;
+      formData.model = "";
+      formData.color = "";
+      formData.length = "";
+      formData.tenacity = "";
+      formData.sort = 100;
+      formData.status = 1;
       formData.langData = {};
     }
-  } else {
-    dialogState.title = "新增产品";
-    formData.id = undefined;
-    formData.cateId = undefined;
-    formData.cover = "";
-    formData.price = 0;
-    formData.model = "";
-    formData.color = "";
-    formData.length = "";
-    formData.tenacity = "";
-    formData.sort = 100;
-    formData.status = 1;
-    formData.langData = {};
+
+    if (!formData.langData || typeof formData.langData !== "object") {
+      formData.langData = {};
+    }
+
+    await nextTick();
+    initLangData();
+  } finally {
+    dialogLoading.value = false;
   }
-  // 统一调用 initLangData，确保所有语言字段都已初始化
-  await nextTick();
-  initLangData();
 }
 
 function handleSubmit() {
@@ -342,8 +437,8 @@ function handleSubmit() {
     if (valid) {
       loading.value = true;
       try {
-        if (formData.id) {
-          await ProductAPI.update(formData.id, formData);
+        if (formData.id !== undefined && formData.id !== null) {
+          await ProductAPI.update(Number(formData.id), formData);
           ElMessage.success("修改成功");
         } else {
           await ProductAPI.create(formData);
@@ -359,7 +454,7 @@ function handleSubmit() {
 }
 
 function handleDelete(id?: any) {
-  const ids = (id && typeof id === "number") ? [id] : [...selectIds.value];
+  const ids = id && typeof id === "number" ? [id] : [...selectIds.value];
   if (ids.length === 0) {
     ElMessage.warning("请勾选删除项");
     return;
